@@ -41,7 +41,7 @@ keywords = "ai,xr,ar,vr"
 ## Social Accounts
 [params.social]
 
-linkedin = "company/graphwiz-ai-cloud-xr"
+linkedin = "https://www.linkedin.com/company/graphwiz-ai-cloud-xr"
 email = "info@graphwiz.ai"
 
 ## Extras
