@@ -50,4 +50,4 @@ sCdnN6RNxFCgfHuLvWizqam0ClprKHD+UUI0TpIdraIhLTo71Q==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-For direct contact, you can reach me at [tobias@example.com](mailto:tobias@example.com).
+For direct contact, you can reach me at [spam@tobias-weiss.org](mailto:spam@tobias-weiss.org).
