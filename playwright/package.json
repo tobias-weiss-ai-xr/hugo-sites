@@ -1,0 +1,11 @@
+{
+  "name": "hugo-sites-tests",
+  "version": "1.0.0",
+  "description": "Playwright tests for Hugo Sites",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}
