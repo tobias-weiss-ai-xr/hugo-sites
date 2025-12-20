@@ -2,8 +2,6 @@
 categories = ["research", "publications", "technology"]
 date = "2025-12-18T00:00:00+01:00"
 draft = false
-slug = "research-and-publications"
-tags = ["research", "ai", "xr", "devops", "digital-sovereignty", "publications"]
 title = "Research and Publications"
 comments = false
 showcomments = false

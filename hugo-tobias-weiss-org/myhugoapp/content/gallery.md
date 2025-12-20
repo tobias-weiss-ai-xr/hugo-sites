@@ -2,7 +2,6 @@
 categories = ["gallery", "portfolio"]
 date = "2022-01-01T00:00:00-01:00"
 draft = false
-slug = "visual-gallery"
 tags = ["gallery", "portfolio", "visuals", "art", "photography", "places", "inspiration"]
 title = "Visual Gallery: Art, Places, and Inspiration"
 comments = false

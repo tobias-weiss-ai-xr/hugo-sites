@@ -2,9 +2,8 @@
 categories = ["research", "ai", "xr"]
 date = "2024-12-18T00:00:00+01:00"
 draft = false
-slug = "genai-sales-agents-vr-timing"
-tags = ["genai", "virtual-reality", "sales-agents", "ux", "human-computer-interaction", "ai-in-retail"]
 title = "Impact of GenAI Sales Agent Timing in VR Commerce"
+
 comments = false
 showcomments = false
 showpagemeta = false
