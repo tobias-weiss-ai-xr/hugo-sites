@@ -15,11 +15,7 @@
   <a href="https://instagram.com/{{.}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
   {{ end }}
   {{ with .Site.Params.social.linkedin }}
-    {{ if (findRE "^company/" .) }}
-      <a href="https://linkedin.com/{{.}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-    {{ else }}
-      <a href="https://linkedin.com/in/{{.}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-    {{ end }}
+    <a href="{{ if (hasPrefix . "http") }}{{ . }}{{ else }}{{ if (findRE "^company/" .) }}https://linkedin.com/{{ . }}{{ else }}https://linkedin.com/in/{{ . }}{{ end }}{{ end }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
   {{ end }}
   {{ with .Site.Params.social.stackoverflow }}
   <a href="https://stackoverflow.com/users/{{.}}"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
