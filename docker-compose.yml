@@ -15,12 +15,17 @@ services:
       - --certificatesresolvers.mytlschallenge.acme.tlschallenge=true
       - --certificatesresolvers.mytlschallenge.acme.email=spam@tobias-weiss.org
       - --certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json
-      # - --log.level=DEBUG # Uncomment for debugging
     ports:
-      - "8083:8080" # Traefik Dashboard
+      - "8083:80" # Exposed for HAProxy internal reach if needed, but Hugo sites use ports below
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./letsencrypt:/letsencrypt
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-dash.rule=Host(`traefik.graphwiz.ai`)"
+      - "traefik.http.routers.traefik-dash.entrypoints=websecure"
+      - "traefik.http.routers.traefik-dash.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.traefik-dash.service=api@internal"
     networks:
       - web
 
