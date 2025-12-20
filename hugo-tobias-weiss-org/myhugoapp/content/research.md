@@ -47,4 +47,5 @@ Bridging advanced AI capabilities with robust, maintainable operational workflow
     *   [Gradient Boosting and XGBoost (PDF)](/downloads/Gradient%20Boosting%20Trees%20and%20XGBoost.pdf)
 *   **Videos:**
     *   [AI Agent Demo (MP4)](https://mail.tobias-weiss.org/ai_agent_video.mp4)
-    *   [Research Showcase (MP4)](/downloads/cl_and_de_video_v2.mp4)
+        *   [Research Showcase (YouTube)](https://www.youtube.com/watch?v=xmOPRZV1n5M&list=PLW2sLQzdv6rujR3O_7y_30reYqPb8losj&index=10)
+    
