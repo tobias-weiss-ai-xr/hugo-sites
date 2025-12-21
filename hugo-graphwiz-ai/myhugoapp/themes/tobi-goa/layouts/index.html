@@ -8,66 +8,45 @@
 
 {{ partial "main_menu.html" . }}
 
-<!-- First Video: Cyber Monkey Overlay -->
+<!-- YouTube Video 1: Cyber Monkey Overlay -->
 <div class="container intro-section">
   <div class="row">
     <div class="col-md-12">
       <div class="video-wrapper">
         <div class="video-container">
-          <video
-            id="cyber-monkey-video"
-            controls
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/xmOPRZV1n5M"
+            title="Cyber Monkey Overlay - GraphWiz XR Technology Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
             class="intro-video"
-          >
-            <source src="/videos/cyber_monkey_overlay.mp4" type="video/mp4">
-            <p class="video-fallback">
-              Your browser doesn't support HTML5 video.
-              <a href="/videos/cyber_monkey_overlay.mp4" download="cyber_monkey_overlay.mp4">Download the video</a> instead.
-            </p>
-          </video>
-          <div class="video-loading" id="cyber-monkey-loading">
-            <div class="loading-spinner"></div>
-            <p>Loading video...</p>
-          </div>
+          ></iframe>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Second Video: GraphWiz Intro -->
+<!-- YouTube Video 2: GraphWiz Introduction -->
 <div class="container intro-section">
   <div class="row">
     <div class="col-md-12">
       <h2 style="text-align: center; margin-bottom: 20px; color: #333;">GraphWiz Introduction</h2>
       <div class="video-wrapper">
         <div class="video-container">
-          <video
-            id="graphwiz-video"
-            controls
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/xmOPRZV1n5M"
+            title="GraphWiz Introduction - AI-Driven Business Intelligence Platform"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
             class="intro-video"
-            poster="/img/graphwiz_big.png" alt="GraphWiz - AI-driven business intelligence and operational excellence platform"
-          >
-            <source src="/videos/GraphWizIntro.mp4" type="video/mp4">
-            <p class="video-fallback">
-              Your browser doesn't support HTML5 video.
-              <a href="/videos/GraphWizIntro.mp4" download="GraphWizIntro.mp4">Download the video</a> instead.
-            </p>
-          </video>
-          <div class="video-loading" id="video-loading">
-            <div class="loading-spinner"></div>
-            <p>Loading video...</p>
-          </div>
+          ></iframe>
         </div>
       </div>
     </div>
@@ -126,59 +105,9 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
   border-radius: 15px;
 }
 
-.video-loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  z-index: 10;
-  transition: opacity 0.3s ease;
-}
-
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #007bff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 10px;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.video-fallback {
-  padding: 20px;
-  text-align: center;
-  background: #f8f9fa;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.video-fallback a {
-  color: #007bff;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-/* Hide loading spinner when video is ready */
-video[poster] + .video-loading {
-  display: none;
-}
 
 @media (max-width: 900px) {
   .video-wrapper {
@@ -212,7 +141,6 @@ video[poster] + .video-loading {
   }
 
   .intro-video {
-    object-fit: contain;
     border-radius: 10px;
   }
 }
@@ -241,64 +169,5 @@ video[poster] + .video-loading {
 }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Handle Cyber Monkey Video
-  const cyberMonkeyVideo = document.getElementById('cyber-monkey-video');
-  const cyberMonkeyLoading = document.getElementById('cyber-monkey-loading');
-
-  if (cyberMonkeyVideo && cyberMonkeyLoading) {
-    cyberMonkeyVideo.addEventListener('canplay', function() {
-      cyberMonkeyLoading.style.opacity = '0';
-      setTimeout(() => {
-        cyberMonkeyLoading.style.display = 'none';
-      }, 300);
-    });
-
-    cyberMonkeyVideo.addEventListener('error', function() {
-      cyberMonkeyLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
-      cyberMonkeyLoading.style.background = 'rgba(255, 0, 0, 0.8)';
-    });
-
-    // Fallback timeout
-    setTimeout(() => {
-      if (cyberMonkeyLoading.style.display !== 'none') {
-        cyberMonkeyLoading.style.opacity = '0';
-        setTimeout(() => {
-          cyberMonkeyLoading.style.display = 'none';
-        }, 300);
-      }
-    }, 5000);
-  }
-
-  // Handle GraphWiz Video
-  const graphwizVideo = document.getElementById('graphwiz-video');
-  const videoLoading = document.getElementById('video-loading');
-
-  if (graphwizVideo && videoLoading) {
-    graphwizVideo.addEventListener('canplay', function() {
-      videoLoading.style.opacity = '0';
-      setTimeout(() => {
-        videoLoading.style.display = 'none';
-      }, 300);
-    });
-
-    graphwizVideo.addEventListener('error', function() {
-      videoLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
-      videoLoading.style.background = 'rgba(255, 0, 0, 0.8)';
-    });
-
-    // Fallback timeout
-    setTimeout(() => {
-      if (videoLoading.style.display !== 'none') {
-        videoLoading.style.opacity = '0';
-        setTimeout(() => {
-          videoLoading.style.display = 'none';
-        }, 300);
-      }
-    }, 5000);
-  }
-});
-</script>
 
 {{ partial "footer.html" . }}
