@@ -10,7 +10,6 @@ showcomments = false
 showpagemeta = false
 +++
 
-# Extended Reality (XR) Research and Projects
 
 Explore my research into the intersection of emerging technologies and their impact on human-computer interaction. My work focuses on **Extended Reality (XR)**, encompassing Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR), with a particular emphasis on their application in commercial and educational contexts.
 

@@ -10,7 +10,6 @@ showcomments = false
 showpagemeta = false
 +++
 
-# GraphWiz Hubs: Your Immersive Virtual Environment
 
 GraphWiz provides a dedicated Mozilla Hubs instance, offering a powerful and accessible platform for connection, communication, and exploration within immersive 3D spaces.
 

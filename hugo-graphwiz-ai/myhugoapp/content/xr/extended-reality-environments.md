@@ -10,7 +10,6 @@ showcomments = false
 showpagemeta = false
 +++
 
-# Extended Reality (XR) Environments: A Comprehensive Overview
 
 Extended Reality (XR) is an umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR). These digital ecosystems redefine human-computer interaction by creating immersive and interactive experiences.
 

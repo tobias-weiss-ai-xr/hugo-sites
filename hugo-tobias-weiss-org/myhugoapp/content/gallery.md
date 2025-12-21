@@ -9,7 +9,6 @@ showcomments = false
 showpagemeta = false
 +++
 
-# Visual Gallery: Art, Places, and Inspiration
 
 Explore a curated collection of visual content showcasing diverse interests and experiences.
 

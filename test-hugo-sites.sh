@@ -64,6 +64,24 @@ test_content() {
     fi
 }
 
+test_html_rendering() {
+    local url="$1"
+    local description="$2"
+
+    echo -n "Testing HTML rendering: $description... "
+
+    local content=$(curl -s --max-time 10 "$url")
+
+    # Check for escaped HTML patterns that shouldn't be present
+    if echo "$content" | grep -q "&lt;div class=\|&lt;section id=\|<pre><code>.*&lt;"; then
+        echo -e "${RED}FAIL${NC} (Found escaped HTML content)"
+        ((FAILED++))
+    else
+        echo -e "${GREEN}PASS${NC}"
+        ((PASSED++))
+    fi
+}
+
 test_redirect() {
     local url="$1"
     local expected_location="$2"
@@ -136,11 +154,11 @@ test_url "https://graphwiz.ai/workshops/" 200 "Workshops page" 500
 test_url "https://graphwiz.ai/focus-areas/" 200 "Focus Areas page" 500
 test_url "https://graphwiz.ai/digital-sovereignty/" 200 "Digital Sovereignty page" 500
 
-test_content "https://graphwiz.ai/" "🌐 / AI 🤖 / Enthusiast 🌟 / DevOps 🛠️ / Digital Sovereignty 🔐 / XR 🕶️" "GraphWiz headline"
+test_content "https://graphwiz.ai/" "🌐 / AI 🤖 / DevOps 🛠️ / Digital Sovereignty 🔐 / XR 🕶️" "GraphWiz headline"
 test_content "https://graphwiz.ai/" "Transforming complex technology into solutions for 🚀 efficiency, 🌐 market reach, and 💰 sustainable revenue." "GraphWiz sub-headline"
-test_content "https://graphwiz.ai/ai/" "Driving Revenue with AI" "AI page revenue content"
-test_content "https://graphwiz.ai/digital-sovereignty/" "Your Data, Your Models, Your Future" "Digital Sovereignty content"
-test_content "https://graphwiz.ai/focus-areas/" "Core Pillars &amp; Focus Areas" "Focus Areas content"
+test_content "https://graphwiz.ai/ai/" "AI for Business Growth: Driving Revenue with Intelligent Automation" "AI page revenue content"
+test_content "https://graphwiz.ai/digital-sovereignty/" "Digital Sovereignty: Securing Your Business Future" "Digital Sovereignty content"
+test_content "https://graphwiz.ai/focus-areas/" "Our Core Focus Areas: Driving Business Value" "Focus Areas content"
 echo ""
 
 echo "=== Tobias Weiss Content Tests ==="
@@ -152,8 +170,16 @@ test_url "https://tobias-weiss.org/research/" 200 "Research page" 1000
 test_url "https://tobias-weiss.org/interference-timing-genai-vr/" 200 "GenAI Research Article" 1000
 
 test_content "https://tobias-weiss.org/gallery/" "swiper-wrapper" "Swiper.js presence"
-test_content "https://tobias-weiss.org/research/" "Latest Publications &amp; Articles" "Research sections"
+test_content "https://tobias-weiss.org/research/" "Publications and Resources" "Research sections"
 test_content "https://tobias-weiss.org/research/" "/downloads/Dissertation_Tobias_Weiss.pdf" "Dissertation link"
+echo ""
+
+echo "=== HTML Rendering Quality Tests ==="
+test_html_rendering "https://tobias-weiss.org/interference-timing-genai-vr/" "GenAI Research Article HTML"
+test_html_rendering "https://tobias-weiss.org/gallery/" "Gallery page HTML"
+test_html_rendering "https://tobias-weiss.org/research/" "Research page HTML"
+test_html_rendering "https://chemie-lernen.org/" "Chemie Lernen homepage HTML"
+test_html_rendering "https://graphwiz.ai/" "GraphWiz homepage HTML"
 echo ""
 
 echo "=== Three.js CDN Test ==="

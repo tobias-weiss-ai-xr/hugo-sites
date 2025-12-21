@@ -23,6 +23,10 @@ theme = "hugo-cards"
     url = "https://hubs.chemie-lernen.org/"
     weight = 20
 [[menu.main]]
+    name = "Roadmap"
+    url = "/pages/roadmap/"
+    weight = 25
+[[menu.main]]
     name = "Über uns"
     url = "/pages/about/"
     weight = 30

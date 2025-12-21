@@ -10,7 +10,6 @@ showcomments = false
 showpagemeta = false
 +++
 
-# Hello WebXR: Your Gateway to Immersive Web Experiences
 
 Discover the power of Virtual Reality directly through your web browser with this immersive WebXR experience. Accessible with a single click on any WebXR-enabled browser, this application is a prime example of comfortable VR accessibility.
 

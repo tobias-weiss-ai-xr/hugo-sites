@@ -8,7 +8,6 @@ showcomments = false
 showpagemeta = false
 +++
 
-# Pretty Good Privacy (PGP) Key
 
 Pretty Good Privacy (PGP) is a method for encrypting and decrypting data, providing cryptographic privacy and authentication when used with properly configured email software.
 
