@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRZ der Univesität Marburg: Digitale Transformation & Change Leadership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Uni Marburg Inspiriert (Blau & Professional Grey) -->
+    <!-- Primär: Slate-800 (Stabilität), Accent: Sky-600 (Innovation), Warning: Amber-500 -->
+
+    <!-- Application Structure Plan: 
+         1. Hero Section: Fokus auf das HRZ Marburg als Motor der Digitalisierung.
+         2. Status Quo (Daten): Analyse, warum IT-Projekte an Hochschulen oft an Akzeptanz hürden scheitern.
+         3. Die HRZ-Change-Kurve: Interaktives Modell der emotionalen Phasen bei IT-Umstellungen (z.B. neue Cloud-Dienste).
+         4. Strategische Handlungsempfehlungen: Konkrete Checklisten für Marburger IT-Leiter.
+         5. Leadership-Radar: Analyse von Kompetenzprofilen für moderne Rechenzentrums-Führung.
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Abbruchgründe IT-Projekte -> Donut Chart -> Fokus auf mangelnde Nutzerbeteiligung.
+         2. Change Curve -> Line Chart -> Visualisierung des Leistungseinbruchs während der Migrationsphase.
+         3. Führungsstile -> Radar Chart -> Vergleich Service-Orientierung vs. Technische Exzellenz.
+         4. KEIN SVG/Mermaid. Alle Visualisierungen via Chart.js oder Tailwind-Komponenten.
+    -->
+    
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b; /* slate-800 */
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Roboto Slab', serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        .hrz-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+        }
+        .nav-active {
+            color: #0284c7; /* sky-600 */
+            border-bottom: 2px solid #0284c7;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-sky-700 rounded flex items-center justify-center text-white font-bold mr-3">HRZ</div>
+                    <span class="text-sky-600">Digitale Transformation & Change Leadership</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <button onclick="scrollToSection('status')" class="text-slate-600 hover:text-sky-600 px-2 py-1 text-sm font-medium transition">Status Quo</button>
+                    <button onclick="scrollToSection('kurve')" class="text-slate-600 hover:text-sky-600 px-2 py-1 text-sm font-medium transition">Psychologie</button>
+                    <button onclick="scrollToSection('empfehlungen')" class="text-slate-600 hover:text-sky-600 px-2 py-1 text-sm font-medium transition">Empfehlungen</button>
+                    <button onclick="scrollToSection('radar')" class="text-slate-600 hover:text-sky-600 px-2 py-1 text-sm font-medium transition">Führung</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="relative overflow-hidden bg-slate-900 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-6xl mb-6">
+                    Wandel gestalten am <span class="text-sky-400">Hochschulrechenzentrum</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-slate-300 leading-8">
+                    Digitale Transformation an der Uni Marburg ist kein rein technisches Problem, sondern eine kulturelle Herausforderung. Wir verbinden IT-Exzellenz mit empathischer Führung.
+                </p>
+                <div class="mt-10 flex justify-center gap-x-6">
+                    <button onclick="scrollToSection('empfehlungen')" class="rounded-md bg-sky-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-sky-500 transition">Zu den Handlungsempfehlungen</button>
+                </div>
+            </div>
+        </div>
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-sky-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-32">
+
+        <!-- SECTION 1: DER STATUS QUO -->
+        <section id="status" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-sky-600 pl-4">Warum IT-Change an Hochschulen scheitert</h2>
+                    <p class="text-lg text-slate-600 mb-6">
+                        Die Philipps-Universität ist ein komplexes Ökosystem. Widerstände gegen neue IT-Dienste (wie MFA-Zwang oder ERP-Wechsel) entstehen oft durch eine Lücke in der Kommunikation zwischen Rechenzentrum und Fachbereichen.
+                    </p>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex items-start">
+                            <span class="text-sky-600 mr-3 text-xl">&#10003;</span>
+                            <span><strong>Kulturelle Silos:</strong> Trennung zwischen zentraler IT und dezentralen Instituten.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-sky-600 mr-3 text-xl">&#10003;</span>
+                            <span><strong>Mangelnde Beteiligung:</strong> Lösungen werden "über die Köpfe" hinweg entwickelt.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-sky-600 mr-3 text-xl">&#10003;</span>
+                            <span><strong>Kommunikationsdefizite:</strong> Technischer Fokus statt Nutzen-Argumentation.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hrz-card p-8 bg-white">
+                    <h3 class="text-center font-bold text-slate-800 mb-6">Allgemeine Hürden bei der IT-Einführung</h3>
+                    <div class="chart-container">
+                        <canvas id="failureChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DIE CHANGE-KURVE IM HRZ-KONTEXT -->
+        <section id="kurve" class="scroll-mt-24 bg-white rounded-3xl p-10 shadow-sm border border-slate-100">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Das emotionale Tal der Migration</h2>
+                <p class="text-slate-600">
+                    Jedes neue System erzeugt einen zeitweiligen Produktivitätsverlust. Klicken Sie auf die Phasen, um zu sehen, wie das HRZ-Leadership reagieren sollte.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-3">
+                    <div class="chart-container" style="height: 400px;">
+                        <canvas id="curveChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200" id="phase-detail">
+                    <h4 class="text-xl font-bold text-sky-700 mb-3">Wählen Sie eine Phase</h4>
+                    <p class="text-slate-600 text-sm">Interagieren Sie mit den Datenpunkten im Diagramm, um spezifische Führungsaufgaben für das HRZ Marburg zu erhalten.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: KONKRETE HANDLUNGSEMPFEHLUNGEN -->
+        <section id="empfehlungen" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Handlungsempfehlungen für das HRZ Marburg</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="hrz-card p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-full flex items-center justify-center mb-4 text-2xl">&#128227;</div>
+                    <h3 class="font-bold text-lg mb-2">Frühe Partizipation</h3>
+                    <p class="text-slate-600 text-sm mb-4">Etablierung von "Key-User-Netzwerken" in den Fachbereichen (FB 01 bis FB 21) bereits in der Pilotphase.</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-sky-600 uppercase">Priorität: Hoch</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hrz-card p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mb-4 text-2xl">&#128172;</div>
+                    <h3 class="font-bold text-lg mb-2">Nutzenorientiertes Storytelling</h3>
+                    <p class="text-slate-600 text-sm mb-4">Weg von Feature-Listen, hin zur Antwort auf: "Wie spart mir dieses IT-Tool 15 Minuten pro Tag in der Verwaltung?"</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-amber-600 uppercase">Priorität: Medium</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hrz-card p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-4 text-2xl">&#128640;</div>
+                    <h3 class="font-bold text-lg mb-2">Iterative Rollouts</h3>
+                    <p class="text-slate-600 text-sm mb-4">Vermeidung von "Big-Bang"-Szenarien. Einführung in Phasen mit sichtbaren "Quick Wins" für Studierende und Personal.</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-green-600 uppercase">Priorität: Hoch</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="hrz-card p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center mb-4 text-2xl">&#128269;</div>
+                    <h3 class="font-bold text-lg mb-2">Fehlerkultur stärken</h3>
+                    <p class="text-slate-600 text-sm mb-4">Institutionalisierte Retrospektiven nach IT-Störungen. Fokus auf Prozessoptimierung statt Schuldzuweisung.</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-purple-600 uppercase">Internes Ziel</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="hrz-card p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-slate-100 text-slate-700 rounded-full flex items-center justify-center mb-4 text-2xl">&#128218;</div>
+                    <h3 class="font-bold text-lg mb-2">Schulungs-Multiplikatoren</h3>
+                    <p class="text-slate-600 text-sm mb-4">Training-of-Trainers Ansatz, um IT-Wissen direkt in die Sekretariate und Labore zu tragen.</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-slate-600 uppercase">Struktur</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="hrz-card p-6 flex flex-col">
+                    <div class="w-12 h-12 bg-red-100 text-red-700 rounded-full flex items-center justify-center mb-4 text-2xl">&#128737;</div>
+                    <h3 class="font-bold text-lg mb-2">Transparenz bei Ausfällen</h3>
+                    <p class="text-slate-600 text-sm mb-4">Proaktive Status-Dashboards und klare Zeitpläne reduzieren Angst und Widerstand bei Wartungsfenstern.</p>
+                    <div class="mt-auto pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-red-600 uppercase">Vertrauen</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: LEADERSHIP RADAR -->
+        <section id="radar" class="scroll-mt-24 pb-20">
+            <div class="bg-slate-900 rounded-3xl p-8 lg:p-16 text-white overflow-hidden relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Führungsprofile im Rechenzentrum</h2>
+                        <p class="text-slate-400 mb-8">
+                            Eine moderne HRZ-Leitung ist mehr als ein Systemadministrator. Die Rolle erfordert eine Balance zwischen Stabilität (Security/Uptime) und Agilität (Transformation/Lehre).
+                        </p>
+                        <div class="space-y-4">
+                            <button onclick="updateRadar('tech')" class="w-full text-left p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-sky-500 transition">
+                                <h4 class="font-bold text-sky-400">Das "Verwalter"-Profil</h4>
+                                <p class="text-xs text-slate-400">Fokus: Verfügbarkeit, Kostenkontrolle, starre Prozesse.</p>
+                            </button>
+                            <button onclick="updateRadar('modern')" class="w-full text-left p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-sky-500 transition">
+                                <h4 class="font-bold text-emerald-400">Das "Transformator"-Profil</h4>
+                                <p class="text-xs text-slate-400">Fokus: Innovation, Nutzerzentrierung, agiles Mindset.</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                        <div class="chart-container">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 GraphWiz - Erstellt für das HRZ der Philipps-Universität Marburg.
+            </p>
+            <p class="text-slate-400 text-xs mt-2 italic">
+                Hinweis: Dieser Inhalt dient der strategischen Planung und Schulung im Bereich Change Management.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA DEFAULTS ---
+        const failureData = {
+            labels: ['Kulturelle Widerstände', 'Schlechte Kommunikation', 'Technische Komplexität', 'Ressourcenmangel'],
+            datasets: [{
+                data: [45, 25, 15, 15],
+                backgroundColor: ['#0284c7', '#0ea5e9', '#7dd3fc', '#e2e8f0'],
+                borderWidth: 0
+            }]
+        };
+
+        const curvePhases = [
+            { label: "Schock", val: 90, info: "<strong>Reaktion:</strong> Überraschung bei plötzlichen IT-Änderungen.<br><strong>Handlung:</strong> Transparente Vorankündigung mind. 4 Wochen vorher." },
+            { label: "Ablehnung", val: 85, info: "<strong>Reaktion:</strong> 'Das alte ILIAS war besser'.<br><strong>Handlung:</strong> Fokus auf Vergleich: Was wird konkret einfacher?" },
+            { label: "Einsicht", val: 55, info: "<strong>Reaktion:</strong> Verständnis, dass es nötig ist, aber Frust über Lernaufwand.<br><strong>Handlung:</strong> Massive Schulungsangebote & Support-Hotline." },
+            { label: "Tal der Tränen", val: 35, info: "<strong>Reaktion:</strong> Tiefster Produktivitätsstand.<br><strong>Handlung:</strong> Führung muss Präsenz zeigen, Fehler eingestehen, Kurs halten." },
+            { label: "Ausprobieren", val: 65, info: "<strong>Reaktion:</strong> Entdeckung neuer Workflows.<br><strong>Handlung:</strong> Best-Practices aus den Fachbereichen teilen." },
+            { label: "Erkenntnis", val: 80, info: "<strong>Reaktion:</strong> Gewöhnung tritt ein.<br><strong>Handlung:</strong> Feedback sammeln für nächste Optimierungsschleife." },
+            { label: "Integration", val: 95, info: "<strong>Reaktion:</strong> Neuer Standard etabliert.<br><strong>Handlung:</strong> Erfolg feiern und Prozess verankern." }
+        ];
+
+        const radarProfiles = {
+            tech: {
+                data: [95, 30, 90, 20, 90, 20],
+                label: 'Verwalter-Profil'
+            },
+            modern: {
+                data: [75, 95, 70, 90, 60, 85],
+                label: 'Transformator-Profil'
+            }
+        };
+
+        // --- CHART INITIALIZATION ---
+        
+        // Donut
+        const initStatusChart = () => {
+            const ctx = document.getElementById('failureChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: failureData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                    }
+                }
+            });
+        };
+
+        // Line
+        let curveChart;
+        const initCurveChart = () => {
+            const ctx = document.getElementById('curveChart').getContext('2d');
+            curveChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: curvePhases.map(p => p.label),
+                    datasets: [{
+                        label: 'Produktivität / Akzeptanz',
+                        data: curvePhases.map(p => p.val),
+                        borderColor: '#0284c7',
+                        backgroundColor: 'rgba(2, 132, 199, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 6,
+                        pointHoverRadius: 10,
+                        pointBackgroundColor: '#fff',
+                        pointBorderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, max: 100, display: false },
+                        x: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: true }
+                    },
+                    onClick: (e, active) => {
+                        if (active.length > 0) {
+                            const idx = active[0].index;
+                            showPhaseDetail(idx);
+                        }
+                    }
+                }
+            });
+        };
+
+        // Radar
+        let radarChart;
+        const initRadarChart = () => {
+            const ctx = document.getElementById('radarChart').getContext('2d');
+            radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Stabilität', 'Innovation', 'Effizienz', 'Empathie', 'Kontrolle', 'Agilität'],
+                    datasets: [{
+                        label: 'Aktuelles Profil',
+                        data: radarProfiles.tech.data,
+                        backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                        borderColor: '#38bdf8',
+                        pointBackgroundColor: '#38bdf8'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255,255,255,0.1)' },
+                            grid: { color: 'rgba(255,255,255,0.1)' },
+                            pointLabels: { color: '#94a3b8', font: { size: 10 } },
+                            ticks: { display: false },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        };
+
+        // --- ACTIONS ---
+
+        const showPhaseDetail = (idx) => {
+            const phase = curvePhases[idx];
+            const detail = document.getElementById('phase-detail');
+            detail.innerHTML = `
+                <h4 class="text-xl font-bold text-sky-700 mb-3">${phase.label}</h4>
+                <div class="p-3 bg-white rounded border border-slate-200 mb-4 text-sm text-slate-700">
+                    ${phase.info}
+                </div>
+                <div class="text-xs text-slate-400 italic">Klicken Sie auf andere Punkte für weitere Phasen.</div>
+            `;
+            detail.classList.add('ring-2', 'ring-sky-500', 'ring-offset-2');
+            setTimeout(() => detail.classList.remove('ring-2', 'ring-sky-500', 'ring-offset-2'), 500);
+        };
+
+        const updateRadar = (style) => {
+            const profile = radarProfiles[style];
+            radarChart.data.datasets[0].data = profile.data;
+            radarChart.data.datasets[0].label = profile.label;
+            radarChart.data.datasets[0].borderColor = style === 'modern' ? '#34d399' : '#38bdf8';
+            radarChart.data.datasets[0].backgroundColor = style === 'modern' ? 'rgba(52, 211, 153, 0.2)' : 'rgba(56, 189, 248, 0.2)';
+            radarChart.update();
+        };
+
+        const scrollToSection = (id) => {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Init all
+        window.onload = () => {
+            initStatusChart();
+            initCurveChart();
+            initRadarChart();
+        };
+    </script>
+</body>
+</html>

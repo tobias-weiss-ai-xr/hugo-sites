@@ -10,7 +10,7 @@ showpagemeta: false
 ---
 
 <div style="text-align: center;">
-    <img src="/img/graphwiz_big.png" alt="GraphWiz Logo" width="300"/>
+    <img src="/img/graphwiz_big.png" alt="GraphWiz Logo - AI-driven business intelligence and operational excellence platform specializing in graph visualization and XR solutions" width="300"/>
     <p>
         <a href="https://graphwiz.ai">Visit graphwiz.ai 🌐</a>
     </p>

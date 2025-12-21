@@ -3,19 +3,19 @@
 {{ $files := readDir (print "static/" $path) }}
 
 <!-- Slider main container -->
-<div id="swiper-{{ $id }}" class="swiper" style="width: 100%; height: auto; max-width: 800px; margin: 20px auto;">
+<div id="swiper-{{ $id }}" class="swiper" style="width: 100%; height: auto; max-width: 800px; margin: 20px auto;" role="region" aria-label="Image gallery carousel" aria-roledescription="carousel">
   <div class="swiper-wrapper">
     {{ range $files }}
       {{ if (findRE "\\.(jpg|jpeg|png|gif|webp)$" .Name) }}
-        <div class="swiper-slide">
-          <img src="{{ relURL (print $path "/" .Name) }}" alt="{{ .Name }}" style="width: 100%; height: 500px; object-fit: cover; border-radius: 8px;">
+        <div class="swiper-slide" role="group" aria-roledescription="slide">
+          <img src="{{ relURL (print $path "/" .Name) }}" alt="{{ .Name | replaceRE "(?i)(comfyui|screenshot|pxl)_" "" | replaceRE "\\.jpg|\\.png|\\.jpeg|\\.webp$" "" | title | replace "-" " " }} - Gallery image from Tobias Weiss portfolio" style="width: 100%; height: 500px; object-fit: cover; border-radius: 8px;" loading="lazy">
         </div>
       {{ end }}
     {{ end }}
   </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination" role="tablist" aria-label="Image carousel navigation"></div>
+  <div class="swiper-button-prev" role="button" aria-label="Previous image" tabindex="0"></div>
+  <div class="swiper-button-next" role="button" aria-label="Next image" tabindex="0"></div>
 </div>
 
 <script>

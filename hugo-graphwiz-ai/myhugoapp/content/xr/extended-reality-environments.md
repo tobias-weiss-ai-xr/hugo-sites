@@ -32,6 +32,19 @@ XR provides safe, repeatable, and high-fidelity training for critical sectors li
 ### 3. Digital Twins & Industrial Simulation
 XR enables the creation of "Digital Twins" for physical assets and infrastructure. These virtual replicas allow for real-time monitoring, performance simulation, and "what-if" scenario planning without real-world risk.
 
+### 4. Virtual Reality Training & Simulation
+
+Advanced XR environments enable sophisticated training and simulation applications across industries. Through immersive virtual scenarios, professionals can practice complex procedures, explore technical concepts, and develop skills in safe, controlled environments that replicate real-world conditions.
+
+<div class="text-center">
+  <img src="https://tobias-weiss.org/img/things/vr-experiments.jpg"
+       alt="Virtual Reality Training Simulation - Professional immersive training environment demonstrating extended reality applications for skill development and procedural practice"
+       class="img-fluid rounded shadow-lg mb-4"
+       style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
+These implementations showcase how XR environments transform professional development and technical training, making complex procedures and abstract concepts more accessible through hands-on, experiential learning.
+
 ## The Future: Spatial Computing and User Sovereignty
 
 As XR hardware advances (lighter, more powerful devices), XR environments are poised to become pervasive interfaces. The paradigm is shifting towards **Spatial Computing**, where digital information is seamlessly integrated into our physical surroundings.

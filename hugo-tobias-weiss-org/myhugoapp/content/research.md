@@ -21,6 +21,14 @@ Exploring the socio-technical implications of large-scale AI models and the nece
 
 ### 2. Immersive Educational Environments (XR) 🥽
 Investigating the application of eXtended Reality (XR) for learning complex subjects like chemistry and physics.
+
+<div class="text-center">
+  <img src="/img/things/vr-experiments.jpg"
+       alt="Virtual Reality Chemistry Experiments - Students conducting immersive chemistry experiments in virtual reality laboratory environment for educational research"
+       class="img-fluid rounded shadow-lg mb-4"
+       style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
+
 *   **Social VR:** Utilizing platforms like Mozilla Hubs for collaborative scientific exploration 🤝.
 *   **Data Visualization:** Developing 3D data mapping and interactive simulations 🧊.
 

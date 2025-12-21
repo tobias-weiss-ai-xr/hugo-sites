@@ -11,11 +11,11 @@
             {{ if .Params.img }}
             {{ with .Resources.Match .Params.img }}
               {{ range . }}
-                <img width="100%" src="{{ .RelPermalink }}" alt="{{ .Title }}">
+                <img width="100%" src="{{ .RelPermalink }}" alt="{{ .Title }} - Featured image for {{ $.Title }}" loading="lazy">
               {{ end }}
             {{ end }}
             {{ else }}
-            <img width="600" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="webjeda">
+            <img width="600" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="{{ .Title }} - Default featured image" loading="lazy">
             {{ end }}
         </div>
             
