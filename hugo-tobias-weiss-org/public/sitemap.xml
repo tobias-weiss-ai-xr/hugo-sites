@@ -3,18 +3,358 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
-    <priority>0</priority>
+    <loc>https://tobias-weiss.org/categories/</loc>
+    <lastmod>2025-12-22T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
-    <priority>0</priority>
+    <loc>https://tobias-weiss.org/categories/change-management/</loc>
+    <lastmod>2025-12-22T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
-    <priority>0</priority>
+    <loc>https://tobias-weiss.org/categories/digital-transformation/</loc>
+    <lastmod>2025-12-22T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/leadership/</loc>
+    <lastmod>2025-12-22T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/leadership/</loc>
+    <lastmod>2025-12-22T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/</loc>
+    <lastmod>2025-12-22T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/projects/chemie-lernen/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/chemistry/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/education/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/education/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/mozilla-hubs/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/personal-portfolio/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/personal-project/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/projects/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/projects/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/research/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/vr/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/vr/</loc>
+    <lastmod>2025-12-21T16:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/about/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/ai/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/business-solutions/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/company/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/graph-visualization/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/graphwiz/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/innovation/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/xr/</loc>
+    <lastmod>2025-12-19T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/xr/</loc>
+    <lastmod>2025-12-18T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/publications/</loc>
+    <lastmod>2025-12-18T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/research/</loc>
+    <lastmod>2025-12-18T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/research/</loc>
+    <lastmod>2025-12-18T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/technology/</loc>
+    <lastmod>2025-12-18T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/interference-timing-genai-vr/</loc>
+    <lastmod>2024-12-18T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/collaboration/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/collaboration/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/hubs/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/hubs/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/xr/personal-hubs-instance/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/self-hosting/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/virtual-environments/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/xr/</loc>
+    <lastmod>2023-11-25T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/analytics/</loc>
+    <lastmod>2023-11-13T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</loc>
+    <lastmod>2023-11-13T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/behavioral-analytics/</loc>
+    <lastmod>2023-11-13T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/interaction-design/</loc>
+    <lastmod>2023-11-13T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/webxr/</loc>
+    <lastmod>2023-11-13T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/learning-environments/</loc>
+    <lastmod>2023-08-11T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</loc>
+    <lastmod>2023-08-11T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/ar/</loc>
+    <lastmod>2022-03-03T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/hello-webxr/</loc>
+    <lastmod>2022-03-03T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/xr/hello-webxr/</loc>
+    <lastmod>2022-03-03T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/art/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/bio/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/biography/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/experience/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/gallery/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/gallery/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/inspiration/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/it/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/personal/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/photography/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/places/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/portfolio/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/portfolio/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/story/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/story/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/gallery/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/tags/visuals/</loc>
+    <lastmod>2022-01-01T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/contact/</loc>
+    <lastmod>2021-02-17T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/pgp/</loc>
+    <lastmod>2021-02-17T00:00:00-01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobias-weiss.org/categories/security/</loc>
+    <lastmod>2021-02-17T00:00:00-01:00</lastmod>
   </url>
   
 </urlset>

@@ -62,6 +62,11 @@ hightlightjs = true
     weight = 100
     url = "/ai/"
 [[menu.main]]
+    name = "Delegation Systems"
+    weight = 150
+    identifier = "advanced-delegation-systems"
+    url = "/advanced-delegation-systems/"
+[[menu.main]]
     name = "eXtended Reality"
     weight = 200
     identifier = "xr"
@@ -86,3 +91,8 @@ hightlightjs = true
     weight = 400
     identifier = "Workshops"
     url = "/workshops"
+[[menu.main]]
+    name = "Personal Blog"
+    weight = 450
+    identifier = "personal-blog"
+    url = "https://tobias-weiss.org/"

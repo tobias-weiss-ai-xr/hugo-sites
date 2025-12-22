@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>collaboration on Tobias Weiss</title>
+    <link>https://tobias-weiss.org/categories/collaboration/</link>
+    <description>Recent content in collaboration on Tobias Weiss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 25 Nov 2023 00:00:00 -0100</lastBuildDate>
+    
+	<atom:link href="https://tobias-weiss.org/categories/collaboration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Personal Hubs Instance: A Dedicated XR Space</title>
+      <link>https://tobias-weiss.org/xr/personal-hubs-instance/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/personal-hubs-instance/</guid>
+      <description>I have set up a personal instance of Mozilla Hubs to explore and demonstrate the capabilities of this versatile VR platform 🥽. This dedicated space allows for a more controlled environment to showcase and experiment with features for socializing, collaboration, and immersive experiences 🌌.
+Key Features and Benefits 🔑:  Browser-Native Access: Easily join and interact within 3D environments directly from your web browser, requiring no additional software 🌐. Customizable Presence: Utilize personalized avatars to represent yourself in the virtual space 👤.</description>
+    </item>
+    
+  </channel>
+</rss>

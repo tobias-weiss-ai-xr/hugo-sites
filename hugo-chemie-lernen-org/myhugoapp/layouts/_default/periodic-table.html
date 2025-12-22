@@ -188,6 +188,11 @@
             symbol.textContent = table[ i ];
             element.appendChild( symbol );
 
+            element.style.cursor = 'pointer';
+            element.onclick = () => {
+                window.open(`https://wiki.chemie-lernen.org/bin/view/Elements/${table[i+1]}`, '_blank');
+            };
+
             const details = document.createElement( 'div' );
             details.className = 'details';
             details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];

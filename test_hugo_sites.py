@@ -167,6 +167,90 @@ class TestTraefikRouting:
                 f"Expected '{expected_title}' for {url}"
 
 
+class Test404Pages:
+    """Test custom 404 error pages for all sites"""
+
+    sites = [
+        ("https://tobias-weiss.org/nonexistent-page", "Page Not Found", "Tobias Weiss"),
+        ("https://graphwiz.ai/invalid-url", "Digital Territory Not Found", "GraphWiz"),
+        ("https://chemie-lernen.org/missing-page", "404", "Chemie Lernen")
+    ]
+
+    @pytest.mark.parametrize("url,expected_title,site_name", sites)
+    def test_404_page_accessible(self, url, expected_title, site_name):
+        """Verify 404 pages are accessible and return proper content"""
+        response = requests.get(url, timeout=10)
+        assert response.status_code == 404, \
+            f"Expected 404 status code for {url}, got {response.status_code}"
+        assert len(response.content) >= 1000, \
+            f"404 page content too small for {site_name}: {len(response.content)} bytes"
+        assert expected_title in response.text, \
+            f"Expected to find '{expected_title}' in {site_name} 404 page"
+
+    def test_tobias_weiss_404_navigation(self):
+        """Test Tobias Weiss 404 page has proper navigation links"""
+        url = "https://tobias-weiss.org/nonexistent-page"
+        response = requests.get(url, timeout=10)
+        assert response.status_code == 404
+
+        # Check for main navigation links
+        expected_links = [
+            "/graphwiz/",
+            "/research/",
+            "/gallery/",
+            "/leadership/",
+            "/pgp/"
+        ]
+        for link in expected_links:
+            assert link in response.text, f"Missing navigation link {link} in Tobias Weiss 404 page"
+
+    def test_graphwiz_404_navigation(self):
+        """Test GraphWiz 404 page has proper navigation links"""
+        url = "https://graphwiz.ai/invalid-url"
+        response = requests.get(url, timeout=10)
+        assert response.status_code == 404
+
+        # Check for main navigation links
+        expected_links = [
+            "/focus-areas/",
+            "/ai/",
+            "/advanced-delegation-systems/",
+            "/xr/",
+            "/digital-sovereignty/",
+            "/ops",
+            "/security",
+            "/workshops"
+        ]
+        for link in expected_links:
+            assert link in response.text, f"Missing navigation link {link} in GraphWiz 404 page"
+
+    def test_404_pages_have_contact_info(self):
+        """Test 404 pages include contact information"""
+        test_cases = [
+            ("https://tobias-weiss.org/missing", "spam@tobias-weiss.org"),
+            ("https://graphwiz.ai/missing", "info@graphwiz.ai")
+        ]
+
+        for url, expected_email in test_cases:
+            response = requests.get(url, timeout=10)
+            assert response.status_code == 404
+            assert expected_email in response.text, \
+                f"Missing contact email {expected_email} in 404 page"
+
+    def test_404_pages_return_home_link(self):
+        """Test 404 pages have links back to homepage"""
+        test_cases = [
+            "https://tobias-weiss.org/nonexistent",
+            "https://graphwiz.ai/nonexistent",
+            "https://chemie-lernen.org/nonexistent"
+        ]
+
+        for url in test_cases:
+            response = requests.get(url, timeout=10)
+            assert response.status_code == 404
+            assert "/" in response.text, "404 page should have link to homepage"
+
+
 class TestDockerContainers:
     """Test Docker container health (requires local execution)"""
 

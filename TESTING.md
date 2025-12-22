@@ -102,6 +102,26 @@ Both test suites cover:
 - PGP page with public key
 - Multiple domain access (tobias-weiss.org, www.tobias-weiss.org, next.tobias-weiss.org)
 
+### 404 Error Page Tests
+- Custom 404 pages for all domains with proper 404 status codes
+- Navigation links to main sections in 404 pages
+- Contact information availability in error pages
+- Homepage links for easy navigation from error pages
+
+**Tobias Weiss 404 Page Features**:
+- Navigation to: graphwiz, research, gallery, leadership, pgp
+- Contact email: spam@tobias-weiss.org
+- Professional tone matching personal site style
+
+**GraphWiz AI 404 Page Features**:
+- Navigation to: focus-areas, ai, advanced-delegation-systems, xr, digital-sovereignty, ops, security, workshops
+- Contact email: info@graphwiz.ai
+- Technology-focused tone with digital sovereignty branding
+
+**Chemie Lernen 404 Page Features**:
+- Basic 404 error handling (uses theme default)
+- German language context
+
 ### Traefik Tests
 - Domain routing to correct backends
 - HSTS headers on all responses

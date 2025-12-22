@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>publications on Tobias Weiss</title>
+    <link>https://tobias-weiss.org/categories/publications/</link>
+    <description>Recent content in publications on Tobias Weiss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 18 Dec 2025 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://tobias-weiss.org/categories/publications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Research and Publications</title>
+      <link>https://tobias-weiss.org/research/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/research/</guid>
+      <description>My research focuses on the intersection of emerging technologies and their impact on digital sovereignty and human-computer interaction 🔬.
+Core Research Areas 📚: 1. Digital Sovereignty in the Age of AI 🛡️ Exploring the socio-technical implications of large-scale AI models and the necessity of open-source, sovereign infrastructure. Key areas include: * Decentralized model training and execution 🖥️. * Privacy-preserving data analytics 🔒. * Mitigating vendor lock-in in critical infrastructure 🔓.</description>
+    </item>
+    
+  </channel>
+</rss>

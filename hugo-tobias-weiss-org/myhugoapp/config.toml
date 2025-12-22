@@ -68,6 +68,11 @@ hightlightjs = true
     weight = 300
     url = "/gallery/"
 [[menu.main]]
+    name = "leadership"
+    identifier = "leadership"
+    weight = 350
+    url = "/leadership/"
+[[menu.main]]
     name = "pretty good privacy"
     weight = 400
     identifier = "pgp"

@@ -1,14 +1,136 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Tobias Weiss</title>
+    <link>https://tobias-weiss.org/</link>
+    <description>Recent content on Tobias Weiss</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tobias-weiss.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leadership &amp; Change Management</title>
+      <link>https://tobias-weiss.org/leadership/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/leadership/</guid>
+      <description>Leadership in digital transformation requires balancing technical excellence with empathetic change management 🚀.
+The Challenge of IT Change in Academic Settings 🎓 Digital transformation in universities is fundamentally a cultural challenge, not just a technical one. At university computing centers (HRZ), resistance to new IT services often stems from communication gaps between IT departments and academic faculties.
+Common Obstacles:  Cultural Silos: Separation between central IT and decentralized institutes Lack of Participation: Solutions developed &amp;ldquo;over the heads&amp;rdquo; of end users Communication Deficits: Technical focus instead of benefit-oriented arguments  The Change Management Curve 📈 Every new system creates temporary productivity loss.</description>
+    </item>
+    
+    <item>
+      <title>Chemie-Lernen.org: My VR Education Project</title>
+      <link>https://tobias-weiss.org/projects/chemie-lernen/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/projects/chemie-lernen/</guid>
+      <description>Educational Innovation Through Virtual Reality This project represents my personal commitment to transforming education through immersive technology. Chemie-Lernen.org combines my expertise in XR development with educational research to create meaningful learning experiences.
+My Role and Vision As the creator and lead developer of Chemie-Lernen.org, I envisioned a platform that would:
+ Bridge the gap between abstract chemistry concepts and tangible understanding Democratize access to high-quality science education regardless of location Pioneer web-based VR as an accessible alternative to expensive hardware solutions Contribute to research on the effectiveness of VR in educational settings  Technical Implementation Journey Architecture Decisions I chose a stack optimized for accessibility and sustainability:</description>
+    </item>
+    
+    <item>
+      <title>GraphWiz: Your Partner in AI &amp; XR Innovation</title>
+      <link>https://tobias-weiss.org/graphwiz/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/graphwiz/</guid>
+      <description>Visit graphwiz.ai 🌐  GraphWiz is a cutting-edge technology company 🚀 specializing in Artificial Intelligence (AI) 🤖 and Extended Reality (XR) 👓 solutions. We empower businesses to unlock new potentials through advanced graph visualization 📊, data analytics 📈, and immersive experiences 🌌.
+Explore our innovative solutions and see how we can transform your business.</description>
+    </item>
+    
+    <item>
+      <title>Research and Publications</title>
+      <link>https://tobias-weiss.org/research/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/research/</guid>
+      <description>My research focuses on the intersection of emerging technologies and their impact on digital sovereignty and human-computer interaction 🔬.
+Core Research Areas 📚: 1. Digital Sovereignty in the Age of AI 🛡️ Exploring the socio-technical implications of large-scale AI models and the necessity of open-source, sovereign infrastructure. Key areas include: * Decentralized model training and execution 🖥️. * Privacy-preserving data analytics 🔒. * Mitigating vendor lock-in in critical infrastructure 🔓.</description>
+    </item>
+    
+    <item>
+      <title>Impact of GenAI Sales Agent Timing in VR Commerce</title>
+      <link>https://tobias-weiss.org/interference-timing-genai-vr/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/interference-timing-genai-vr/</guid>
+      <description>body { font-family: &#39;Inter&#39;, sans-serif; background-color: #f8fafc; color: #1e293b; font-size: 18px; line-height: 1.7; } /* Chart Container Styling - MANDATORY */ .chart-container { position: relative; width: 100%; max-width: 800px; /* Max width to prevent stretching */ margin-left: auto; margin-right: auto; height: 400px; /* Base height */ max-height: 500px; } @media (max-width: 768px) { .chart-container { height: 300px; } } .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; } .</description>
+    </item>
+    
+    <item>
+      <title>My Personal Hubs Instance: A Dedicated XR Space</title>
+      <link>https://tobias-weiss.org/xr/personal-hubs-instance/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/personal-hubs-instance/</guid>
+      <description>I have set up a personal instance of Mozilla Hubs to explore and demonstrate the capabilities of this versatile VR platform 🥽. This dedicated space allows for a more controlled environment to showcase and experiment with features for socializing, collaboration, and immersive experiences 🌌.
+Key Features and Benefits 🔑:  Browser-Native Access: Easily join and interact within 3D environments directly from your web browser, requiring no additional software 🌐. Customizable Presence: Utilize personalized avatars to represent yourself in the virtual space 👤.</description>
+    </item>
+    
+    <item>
+      <title>Behavioral Graphs: Enhancing XR Interaction</title>
+      <link>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</guid>
+      <description>Behavioral Graphs (BGs) represent an innovative extension to platforms like Mozilla Hubs, designed to enrich XR environments with interactive features 📊. We believe BGs offer a significant advancement beyond traditional &amp;ldquo;gallery-like&amp;rdquo; scenes, pushing the boundaries of user engagement in virtual spaces 🌌.
+What are Behavioral Graphs? 🧠 Behavioral Graphs are dynamic, data-driven systems that analyze and respond to user actions within XR environments. They enable more personalized and interactive experiences by modeling user behavior and providing context-aware assistance or content 🤖.</description>
+    </item>
+    
+    <item>
+      <title>Mozilla Hubs XR Experiments: Enhancing Educational Spaces</title>
+      <link>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</guid>
+      <description>This section details experiments with Mozilla Hubs, exploring its application in university teaching and creating immersive learning environments 🎓. Our goal is to represent complex subjects, like the periodic table, as interactive networks of virtual spaces 🕸️.
+Project Overview: The Periodic Table in VR 🧪 We are developing virtual environments where each element has its own dedicated space, enriched with relevant information. For example, nitrogen&amp;rsquo;s space could illustrate the formation of nitrogen oxides in car traffic or its role in fertilizer production 💨.</description>
+    </item>
+    
+    <item>
+      <title>Running &#39;Hello WebXR&#39; Instance</title>
+      <link>https://tobias-weiss.org/xr/hello-webxr/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/hello-webxr/</guid>
+      <description>The official WebXR Demo Instance is down 🛑. Luckily, I host a private version of it: https://tobias-weiss.org/hello-webxr/ 🌐
+Please use the right controller and the trigger button (index finger) to navigate 🎮.</description>
+    </item>
+    
+    <item>
+      <title>Tobias Weiss: A Professional Journey</title>
+      <link>https://tobias-weiss.org/story/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/story/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual Gallery: Art, Places, and Inspiration</title>
+      <link>https://tobias-weiss.org/gallery/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/gallery/</guid>
+      <description>Explore a curated collection of visual content showcasing diverse interests and experiences.
+Art &amp;amp; Creativity                        (function() { const initSwiper = function() { new Swiper(&#39;#swiper-783621594&#39;, { loop: true, pagination: { el: &#39;#swiper-783621594 .swiper-pagination&#39;, clickable: true, }, navigation: { nextEl: &#39;#swiper-783621594 .swiper-button-next&#39;, prevEl: &#39;#swiper-783621594 .swiper-button-prev&#39;, }, autoplay: { delay: 3000, disableOnInteraction: false, }, }); }; if (document.</description>
+    </item>
+    
+    <item>
+      <title>Pretty Good Privacy (PGP) Key</title>
+      <link>https://tobias-weiss.org/pgp/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/pgp/</guid>
+      <description>Pretty Good Privacy (PGP) is a method for encrypting and decrypting data, providing cryptographic privacy and authentication when used with properly configured email software.
+Feel free to contact me via encrypted email using the following PGP public key:
+-----BEGIN PGP PUBLIC KEY BLOCK----- Version: GnuPG v1 mQENBFYCO74BCADOBNXrIhqop5pQSHAAmozqY7w+/7CuW শর্ত+BEdM5cQ/TGq33xr0NQ sCxcPpRJwhfFyBO3dz9a+M/umenbhQ0tEWsgqf0o1y4BTxdoCvS4IWEXovfNLY7X m4a4+OTkyXrsa4QpD71iSkD2K6A1TYS62oVy46ka/8B/dgWwd9ly/IeqxZI7R7uv NiqnerI5dUaucWS0iOc/+pUFBMVMe5BMsaTfjuNffanpOHcoGwc9yxrUa8Gb53DD qj3jX6d9li+2hp68JfLYQee7iIWDyWvo24XxABEBAAG0JlRvYmlhcyBXZWlzcyA8 dG9iaWFzQHRvYmlhcy13ZWlzcy5vcmc+iQE4BBMBAgAiBQJWAju+AhsDBgsJCAcD AgYVCAIJCgsEFgIDAQIeAQIXgAAKCRAP/o4W38tth590CADGPIwTlfF+Xrsa4QpD71iSkD2K6A1TYS62oVy46ka/8B/dgWwd9ly/IeqxZI7R7uv NiqnerI5dUaucWS0iOc/+pUFBMVMe5BMsaTfjuNffanpOHcoGwc9yxrUa8Gb53DD qj3jX6d9li+2hp68JfLYQee7iIWDyWvo24XxABEBAAG0JlRvYmlhcyBXZWlzcyA8 dG9iaWFzQHRvYmlhcy13ZWlzcy5vcmc+iQE4BBMBAgAiBQJWAju+AhsDBgsJCAcD AgYVCAIJCgsEFgIDAQIeAQIXgAAKCRAP/o4W38tth590CADGPIwTlfFau4WDaJET 7GVLX0iLw4QU19KaXZSjQa6QPkj1l/QX0dNv/YgkfOEVnd4RoJXjrB5MidK8iHaa PSZcB2mWD1t8EDFHgc+Xcaj8d5FCCKFnYnxrNDkTT7YWEZP010c1+e3mzAVzuG8b CjZT6DVA9i+Ak6RnSS5/LnLOpjTt+O9qAOIgGePAUyWCAKxGZvbqG8/hL3nYYLCn GB53E/oBClUbRJCKqULkjHCnzVVNVdIOJ6zTqT7+aw2ib9LHQyEhM9VSBon0cp+1 ImUKY4LQRA0A0uLLLtWZeppQ52id+3sZ3dCMCXzm5Og61GfCkWhtxAyCaDb84ojZ UBwsuQENBFYCO74BCACfQrUkNEWRgyvhXG9ajW8ZBf6y4RoDJqX+uli2jHXiAv/1 tNkj/NwhlPY1WS3QIUCekKg8G7JgEF/hEMrcUo+vaW6mpN7r8cFERc1Yh678VUcY 5VexcwM3wtXezj6sewDxEQ2I/QHCEMCPWZGCe78dx4udKzj+H4NIeCs/wnBzMFBC 0ENHCW2PeZGi0iuw5ZKCLr7bOsPydw/ZSHTWa9ttIW5IDpG3PILF8qVI/DOgC7Mi +8jlbLFm9nBlLg8BBTPIfcCNPf66zpVvQnSTKyvfbUzs8GqlkJbstTc2SJj0gPf5 Zpk/ZdHmh9xL/G42xH0UMaWUuJh1GxBBi9On7YyNABEBAAGJAR8EGAECAAkFAlYC O74CGwwACgkQD/6OFt/LbYewfgf+P+pIZFtkP5mbUQ3s90xXBaZFXiKd8CpPvCv7 Lscr8w78is6hcy3Uzfrh7CwxTbE3CY9RboBjCVM40/dG0V2RttjtO4b6FnbmwKQ2 B22EpBkUt0HIcWcGXDemw5nEygpIpDByUuHO7ubvmccbyDNbgh5Yqj5ROvz7gmEI v3LjTBJ54Cq0/QPt3Rr9/QgTJxptBmY9ezfM8uNtDMovkcDr8Dx+PdrPvtgIqFKy q4cFoYHvmjEHcQshaJ+XRq4hcX0oI7289Nfw8ZfhQCWxpZusfe27noQcEc2G76HQ sCdnN6RNxFCgfHuLvWizqam0ClprKHD+UUI0TpIdraIhLTo71Q== =hARX -----END PGP PUBLIC KEY BLOCK-----  For direct contact, you can reach me at spam@tobias-weiss.</description>
+    </item>
     
   </channel>
 </rss>

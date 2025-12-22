@@ -1,0 +1,305 @@
+{{ partial "header.html" . }}
+
+{{ partial "avatar.html" . }}
+
+{{ partial "info.html" . }}
+
+{{ partial "social.html" . }}
+
+{{ partial "main_menu.html" . }}
+
+<!-- First Video: Cyber Monkey Overlay -->
+<div class="container intro-section">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <video
+            id="cyber-monkey-video"
+            controls
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            class="intro-video"
+          >
+            <source src="/videos/cyber_monkey_overlay.mp4" type="video/mp4">
+            <p class="video-fallback">
+              Your browser doesn't support HTML5 video.
+              <a href="/videos/cyber_monkey_overlay.mp4" download="cyber_monkey_overlay.mp4">Download the video</a> instead.
+            </p>
+          </video>
+          <div class="video-loading" id="cyber-monkey-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading video...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Video: GraphWiz Intro -->
+<div class="container intro-section">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-align: center; margin-bottom: 20px; color: #333;">GraphWiz Introduction</h2>
+      <div class="video-wrapper">
+        <div class="video-container">
+          <video
+            id="graphwiz-video"
+            controls
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            class="intro-video"
+            poster="/img/graphwiz_big.png"
+          >
+            <source src="/videos/GraphWizIntro.mp4" type="video/mp4">
+            <p class="video-fallback">
+              Your browser doesn't support HTML5 video.
+              <a href="/videos/GraphWizIntro.mp4" download="GraphWizIntro.mp4">Download the video</a> instead.
+            </p>
+          </video>
+          <div class="video-loading" id="video-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading video...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Prevent horizontal scrollbar globally */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.row {
+  margin: 0;
+  overflow: hidden;
+}
+
+.intro-section {
+  padding: 30px 15px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  margin: 20px 0;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.video-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 * 100) */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  background: #000;
+}
+
+.intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.video-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.video-fallback {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.video-fallback a {
+  color: #007bff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Hide loading spinner when video is ready */
+video[poster] + .video-loading {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .video-wrapper {
+    max-width: 700px;
+  }
+
+  .intro-section {
+    padding: 30px 15px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 25px 10px;
+    margin: 15px 0;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .video-container {
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  .intro-video {
+    object-fit: contain;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    padding: 20px 5px;
+    margin: 10px 0;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .video-wrapper {
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .video-container {
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  .intro-video {
+    border-radius: 8px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle Cyber Monkey Video
+  const cyberMonkeyVideo = document.getElementById('cyber-monkey-video');
+  const cyberMonkeyLoading = document.getElementById('cyber-monkey-loading');
+
+  if (cyberMonkeyVideo && cyberMonkeyLoading) {
+    cyberMonkeyVideo.addEventListener('canplay', function() {
+      cyberMonkeyLoading.style.opacity = '0';
+      setTimeout(() => {
+        cyberMonkeyLoading.style.display = 'none';
+      }, 300);
+    });
+
+    cyberMonkeyVideo.addEventListener('error', function() {
+      cyberMonkeyLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
+      cyberMonkeyLoading.style.background = 'rgba(255, 0, 0, 0.8)';
+    });
+
+    // Fallback timeout
+    setTimeout(() => {
+      if (cyberMonkeyLoading.style.display !== 'none') {
+        cyberMonkeyLoading.style.opacity = '0';
+        setTimeout(() => {
+          cyberMonkeyLoading.style.display = 'none';
+        }, 300);
+      }
+    }, 5000);
+  }
+
+  // Handle GraphWiz Video
+  const graphwizVideo = document.getElementById('graphwiz-video');
+  const videoLoading = document.getElementById('video-loading');
+
+  if (graphwizVideo && videoLoading) {
+    graphwizVideo.addEventListener('canplay', function() {
+      videoLoading.style.opacity = '0';
+      setTimeout(() => {
+        videoLoading.style.display = 'none';
+      }, 300);
+    });
+
+    graphwizVideo.addEventListener('error', function() {
+      videoLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
+      videoLoading.style.background = 'rgba(255, 0, 0, 0.8)';
+    });
+
+    // Fallback timeout
+    setTimeout(() => {
+      if (videoLoading.style.display !== 'none') {
+        videoLoading.style.opacity = '0';
+        setTimeout(() => {
+          videoLoading.style.display = 'none';
+        }, 300);
+      }
+    }, 5000);
+  }
+});
+</script>
+
+
+{{ partial "footer.html" . }}

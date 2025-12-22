@@ -47,6 +47,12 @@ services:
       - "traefik.http.routers.hugo-chemie.entrypoints=websecure"
       - "traefik.http.routers.hugo-chemie.tls.certresolver=mytlschallenge"
       - "traefik.http.services.hugo-chemie.loadbalancer.server.port=1313"
+      - "traefik.http.routers.hugo-pse.rule=Host(`pse.${HUGO_CHEMIE_DOMAIN}`)"
+      - "traefik.http.routers.hugo-pse.entrypoints=websecure"
+      - "traefik.http.routers.hugo-pse.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-pse.middlewares=pse-redirect"
+      - "traefik.http.middlewares.pse-redirect.redirectregex.regex=^https://pse\\.${HUGO_CHEMIE_DOMAIN}/.*"
+      - "traefik.http.middlewares.pse-redirect.redirectregex.replacement=https://pse.${HUGO_CHEMIE_DOMAIN}/periodic-table/"
     networks:
       - web
 

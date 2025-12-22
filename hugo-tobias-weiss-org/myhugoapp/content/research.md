@@ -53,6 +53,17 @@ Bridging advanced AI capabilities with robust, maintainable operational workflow
     *   [Digitale Souveränität (PDF)](/downloads/CoCreate-Werkstattgespraech-Digitale-Souveraenitaet_75dpi.pdf)
     *   [Gradient Boosting and XGBoost (PDF)](/downloads/Gradient%20Boosting%20Trees%20and%20XGBoost.pdf)
 *   **Videos 🎬:**
-    *   [AI Agent Demo (MP4)](https://mail.tobias-weiss.org/ai_agent_video.mp4)
-    *   [Research Showcase (YouTube)](https://www.youtube.com/watch?v=xmOPRZV1n5M&list=PLW2sLQzdv6rujR3O_7y_30reYqPb8losj&index=10)
-    
+    *   **AI Agent Demo:**
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0;">
+  <iframe
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    src="https://www.youtube.com/embed/xmOPRZV1n5M"
+    title="AI Agent Demo - Research Showcase"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+      
