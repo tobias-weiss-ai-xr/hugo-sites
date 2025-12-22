@@ -1,0 +1,54 @@
+{{ partial "header.html" . }}
+
+<section id="error-pane" class="row text-center error">
+  <h1 class="text-center">404</h1>
+  <h2 class="text-center">🌐 Digital Territory Not Found</h2>
+  <p><strong>Oops!</strong> The requested digital pathway doesn't exist in our network.</p>
+
+  <h3>🚀 Let's Get You Back on Track</h3>
+  <p>The page you're looking for may have been:</p>
+
+  <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+    <li><strong>Relocated</strong> to a new coordinate in our digital space</li>
+    <li><strong>Upgraded</strong> as part of our continuous improvement</li>
+    <li><strong>Merged</strong> into a more comprehensive solution</li>
+    <li><strong>Decommissioned</strong> following our technology lifecycle</li>
+  </ul>
+
+  <div class="row" style="max-width: 900px; margin: 20px auto;">
+    <div class="col-md-4">
+      <h4>🎯 Popular Destinations</h4>
+      <a href="/focus-areas/" class="btn btn-primary">Focus Areas</a><br>
+      <a href="/ai/" class="btn btn-primary">Artificial Intelligence</a><br>
+      <a href="/advanced-delegation-systems/" class="btn btn-primary">Advanced Delegation</a><br>
+      <a href="/xr/" class="btn btn-primary">eXtended Reality</a><br>
+      <a href="/digital-sovereignty/" class="btn btn-primary">Digital Sovereignty</a>
+    </div>
+    <div class="col-md-4">
+      <h4>🛠️ Operations & Security</h4>
+      <a href="/ops" class="btn btn-primary">Operations</a><br>
+      <a href="/security" class="btn btn-primary">Security</a><br>
+      <a href="/workshops" class="btn btn-primary">Workshops</a><br>
+      <br>
+      <h4>🏠 Return to Base</h4>
+      <p><a href="/" class="btn btn-success">Dr. GraphWiz Homepage</a></p>
+    </div>
+    <div class="col-md-4">
+      <h4>🔧 Technical Assistance</h4>
+      <p>For support with Dr. GraphWiz services or to report this issue:</p>
+      <p><a href="mailto:info@graphwiz.ai" class="btn btn-warning">📧 Contact Our Team</a></p>
+    </div>
+  </div>
+
+  <hr style="margin: 30px 0;">
+  <small>
+    <strong>Status Code:</strong> 404 - Resource Not Located<br>
+    <strong>Timestamp:</strong> {{ now.Format "2006-01-02 15:04:05 UTC" }}
+  </small>
+  <br><br>
+  <em>Every error is an opportunity for discovery. Let's find the right path together!</em>
+  <br><br>
+  <small>© 2025 Dr. GraphWiz - Transforming Complex Technology into Solutions</small>
+</section>
+
+{{ partial "footer.html" . }}

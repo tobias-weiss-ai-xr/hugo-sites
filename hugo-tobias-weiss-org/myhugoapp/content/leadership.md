@@ -1,14 +1,44 @@
 +++
-categories = ["leadership", "change-management", "digital-transformation"]
+categories = ["leadership", "change-leadership", "digital-transformation"]
 date = "2025-12-22T00:00:00+01:00"
 draft = false
-title = "Leadership & Change Management"
+title = "Leadership & Change Leadership"
 comments = false
 showcomments = false
 showpagemeta = false
 +++
 
-Leadership in digital transformation requires balancing technical excellence with empathetic change management 🚀.
+Leadership in digital transformation requires balancing technical excellence with empathetic change leadership 🚀.
+
+## The Change Leadership Curve 📈
+
+Every new system creates temporary productivity loss. Understanding these emotional phases is crucial for effective change leadership:
+
+```
+Productivity
+    ^
+    |                             *********************
+    |                         *****                   *****
+    |                      ***                             ***
+    |                    **        Integration Phase         **
+    |                  **                                     **
+    |                **      Realization Phase              **
+    |               **                                       **
+    |             **          Experimentation Phase         **
+    |           **                                           **
+    |          **               Valley of Tears             **
+    |        **                    (Lowest Point)            **
+    |       **                                             **
+    |     **         Insight Phase                        **
+    |    **                                             **
+    |  **         Rejection Phase                       **
+    | **                                             **
+    |**         Shock Phase                           **
+    +------------------------------------------------------------> Time
+   0%                20%                 40%                 60%                80%                 100%
+```
+
+### The Seven Phases of Change Leadership
 
 ## The Challenge of IT Change in Academic Settings 🎓
 
@@ -19,9 +49,7 @@ Digital transformation in universities is fundamentally a cultural challenge, no
 * **Lack of Participation:** Solutions developed "over the heads" of end users
 * **Communication Deficits:** Technical focus instead of benefit-oriented arguments
 
-## The Change Management Curve 📈
-
-Every new system creates temporary productivity loss. Understanding these emotional phases is crucial for effective leadership:
+### Understanding Each Phase of the Change Leadership Curve
 
 ### 1. Shock Phase 🆘
 * **Reaction:** Surprise at sudden IT changes
@@ -51,7 +79,7 @@ Every new system creates temporary productivity loss. Understanding these emotio
 * **Reaction:** New standard established
 * **Leadership Action:** Celebrate success and anchor the process
 
-## Strategic Recommendations for University IT Leadership 📋
+## Strategic Recommendations for University IT Change Leadership 📋
 
 ### 1. Early Participation 🤝
 Establish "Key User Networks" across academic departments already in the pilot phase.
@@ -103,4 +131,4 @@ The most effective university IT leaders cultivate all these competencies, knowi
 
 ---
 
-*This framework draws from practical experience in academic IT change management and is designed to support strategic planning and training in university computing center leadership.*
+*This framework draws from practical experience in academic IT change leadership and is designed to support strategic planning and training in university computing center leadership.*

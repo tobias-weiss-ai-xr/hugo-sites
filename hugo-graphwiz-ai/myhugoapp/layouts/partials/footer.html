@@ -1,0 +1,22 @@
+<footer class="row text-center footer">
+  <hr />
+
+  <!-- Footer Navigation -->
+  <div class="footer-nav">
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a href="/imprint/">Imprint</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="https://tobias-weiss.org/" target="_blank">Personal Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  {{ with .Site.Params.extra }}
+  <h6 class="text-center copyright">{{ .copyright | markdownify }}</h6>
+  {{ if ne .poweredby false }}
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  {{ end }}
+  {{ end }}
+</footer>

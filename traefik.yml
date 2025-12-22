@@ -1,0 +1,52 @@
+api:
+  dashboard: true
+  insecure: true
+
+entryPoints:
+  web:
+    address: ":80"
+
+  websecure:
+    address: ":443"
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: web
+  file:
+    filename: /etc/traefik/traefik.yml
+
+certificatesResolvers:
+  mytlschallenge:
+    acme:
+      tlsChallenge: true
+      email: spam@tobias-weiss.org
+      storage: /letsencrypt/acme.json
+
+http:
+  middlewares:
+    compression:
+      compress:
+        excludedContentTypes:
+          - text/event-stream
+        minResponseBodyBytes: 1024
+
+    security-headers:
+      headers:
+        frameDeny: true
+        browserXssFilter: true
+        contentTypeNosniff: true
+        forceSTSHeader: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 31536000
+        referrerPolicy: "strict-origin-when-cross-origin"
+        permissionsPolicy:
+          - camera=()
+          - microphone=()
+          - payment=()
+
+    https-redirect:
+      redirectScheme:
+        scheme: https
+        permanent: true

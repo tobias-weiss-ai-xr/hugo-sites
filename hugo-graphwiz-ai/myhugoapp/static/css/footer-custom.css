@@ -1,0 +1,40 @@
+/* Footer Navigation Styles */
+.footer-nav {
+  margin: 15px 0;
+}
+
+.footer-nav ul.list-inline {
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.footer-nav .list-inline-item {
+  margin: 0 15px;
+}
+
+.footer-nav .list-inline-item:not(:last-child)::after {
+  content: "|";
+  margin-left: 15px;
+  color: #666;
+}
+
+.footer-nav a {
+  color: #337ab7;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+footer hr {
+  margin: 20px 0;
+  border-color: #eee;
+}

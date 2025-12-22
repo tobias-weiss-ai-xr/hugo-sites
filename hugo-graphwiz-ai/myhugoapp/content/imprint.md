@@ -3,10 +3,6 @@ title: "Imprint"
 date: 2025-12-22T12:00:00+01:00
 draft: false
 type: "page"
-menu:
-  main:
-    weight: 500
-    identifier: "imprint"
 ---
 
 # Imprint / Impressum
@@ -15,21 +11,22 @@ menu:
 
 ## Anbieter / Provider
 
-GraphWiz AI
-AI Consulting & Development Services
-[Mailing Address - Please use contact form for privacy reasons]
+Dr. GraphWiz AI & XR Consulting and Development Services<br>
+Grundstraße 69<br>
+78628 Rottweil<br>
 Germany
 
 ## Kontakt / Contact
 
 E-Mail: info@graphwiz.ai
-LinkedIn: [GraphWiz AI Cloud XR](https://www.linkedin.com/company/graphwiz-ai-cloud-xr/)
+LinkedIn: [Dr. GraphWiz AI Cloud XR](https://www.linkedin.com/company/graphwiz-ai-cloud-xr/)
 Website: https://graphwiz.ai/
 
 ## Geschäftsführung / Management
 
-Tobias Weiß
-[Business Address]
+Tobias Weiß<br>
+Grundstraße 69<br>
+78628 Rottweil<br>
 Germany
 
 ## Umsatzsteuer-Identifikationsnummer / VAT ID
@@ -39,13 +36,14 @@ Germany
 
 ## Inhaltlich verantwortlich / Responsible for Content
 
-Tobias Weiß
-[Business Address]
+Tobias Weiß<br>
+Grundstraße 69<br>
+78628 Rottweil<br>
 Germany
 
 ## Unternehmensbeschreibung / Business Description
 
-GraphWiz AI specializes in artificial intelligence consulting, extended reality (XR) development, and digital sovereignty solutions. Our services include:
+Dr. GraphWiz AI specializes in artificial intelligence consulting, extended reality (XR) development, and digital sovereignty solutions. Our services include:
 
 - AI Strategy and Implementation
 - XR/AR/VR Application Development

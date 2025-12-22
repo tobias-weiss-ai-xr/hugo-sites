@@ -11,7 +11,7 @@ showpagemeta = false
 +++
 
 
-GraphWiz integrates security as a foundational element throughout the development lifecycle 🛡️. Our DevSecOps methodology ensures robust protection and compliance, enabling rapid innovation without compromising integrity 🛡️.
+Dr. GraphWiz integrates security as a foundational element throughout the development lifecycle 🛡️. Our DevSecOps methodology ensures robust protection and compliance, enabling rapid innovation without compromising integrity 🛡️.
 
 ## Integrated Resilience 🔐:
 

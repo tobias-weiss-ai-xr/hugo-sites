@@ -9,17 +9,17 @@ services:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
       - --entrypoints.web.address=:80
-      - --entrypoints.web.http.redirections.entryPoint.to=websecure
-      - --entrypoints.web.http.redirections.entryPoint.scheme=https
       - --entrypoints.websecure.address=:443
       - --certificatesresolvers.mytlschallenge.acme.tlschallenge=true
       - --certificatesresolvers.mytlschallenge.acme.email=spam@tobias-weiss.org
       - --certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json
-    ports:
-      - "8083:80" # Exposed for HAProxy internal reach if needed, but Hugo sites use ports below
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./letsencrypt:/letsencrypt
+      - ./traefik.yml:/etc/traefik/traefik.yml:ro
+    ports:
+      - "80:80"
+      - "443:443"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik-dash.rule=Host(`traefik.graphwiz.ai`)"
@@ -44,8 +44,13 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.hugo-chemie.rule=Host(`${HUGO_CHEMIE_DOMAIN}`, `www.${HUGO_CHEMIE_DOMAIN}`)"
-      - "traefik.http.routers.hugo-chemie.entrypoints=websecure"
-      - "traefik.http.routers.hugo-chemie.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-chemie.entrypoints=web"
+      - "traefik.http.routers.hugo-chemie.middlewares=https-redirect@file"
+      - "traefik.http.routers.hugo-chemie-secure.rule=Host(`${HUGO_CHEMIE_DOMAIN}`, `www.${HUGO_CHEMIE_DOMAIN}`)"
+      - "traefik.http.routers.hugo-chemie-secure.entrypoints=websecure"
+      - "traefik.http.routers.hugo-chemie-secure.tls=true"
+      - "traefik.http.routers.hugo-chemie-secure.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-chemie-secure.middlewares=security-headers@file,compression@file"
       - "traefik.http.services.hugo-chemie.loadbalancer.server.port=1313"
       - "traefik.http.routers.hugo-pse.rule=Host(`pse.${HUGO_CHEMIE_DOMAIN}`)"
       - "traefik.http.routers.hugo-pse.entrypoints=websecure"
@@ -71,8 +76,13 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.hugo-graphwiz.rule=Host(`${HUGO_GRAPHVIZ_DOMAIN}`, `www.${HUGO_GRAPHVIZ_DOMAIN}`, `graphwiz.de`, `www.graphwiz.de`)"
-      - "traefik.http.routers.hugo-graphwiz.entrypoints=websecure"
-      - "traefik.http.routers.hugo-graphwiz.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-graphwiz.entrypoints=web"
+      - "traefik.http.routers.hugo-graphwiz.middlewares=https-redirect@file"
+      - "traefik.http.routers.hugo-graphwiz-secure.rule=Host(`${HUGO_GRAPHVIZ_DOMAIN}`, `www.${HUGO_GRAPHVIZ_DOMAIN}`, `graphwiz.de`, `www.graphwiz.de`)"
+      - "traefik.http.routers.hugo-graphwiz-secure.entrypoints=websecure"
+      - "traefik.http.routers.hugo-graphwiz-secure.tls=true"
+      - "traefik.http.routers.hugo-graphwiz-secure.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-graphwiz-secure.middlewares=security-headers@file,compression@file"
       - "traefik.http.services.hugo-graphwiz.loadbalancer.server.port=1313"
     networks:
       - web
@@ -92,8 +102,13 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.hugo-tobias.rule=Host(`${HUGO_TOBIAS_DOMAIN}`, `www.${HUGO_TOBIAS_DOMAIN}`, `next.${HUGO_TOBIAS_DOMAIN}`)"
-      - "traefik.http.routers.hugo-tobias.entrypoints=websecure"
-      - "traefik.http.routers.hugo-tobias.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-tobias.entrypoints=web"
+      - "traefik.http.routers.hugo-tobias.middlewares=https-redirect@file"
+      - "traefik.http.routers.hugo-tobias-secure.rule=Host(`${HUGO_TOBIAS_DOMAIN}`, `www.${HUGO_TOBIAS_DOMAIN}`, `next.${HUGO_TOBIAS_DOMAIN}`)"
+      - "traefik.http.routers.hugo-tobias-secure.entrypoints=websecure"
+      - "traefik.http.routers.hugo-tobias-secure.tls=true"
+      - "traefik.http.routers.hugo-tobias-secure.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-tobias-secure.middlewares=security-headers@file,compression@file"
       - "traefik.http.services.hugo-tobias.loadbalancer.server.port=1313"
     networks:
       - web

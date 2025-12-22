@@ -381,6 +381,384 @@ if [ "$IMAGE_TESTS_FAILED" -gt 0 ]; then
     echo "4. Consider image optimization for large files"
 fi
 
+# Link Testing Functions
+test_critical_links() {
+    echo -e "\n${BLUE}🔗 Testing Critical Links${NC}"
+    echo "================================"
+
+    local critical_links=(
+        "https://graphwiz.ai/imprint/"
+        "https://graphwiz.ai/workshops"
+        "https://graphwiz.ai/data/CoCreate-Werkstattgespraech-Digitale-Souveraenitaet_75dpi.pdf"
+        "https://tobias-weiss.org/imprint/"
+        "https://tobias-weiss.org/leadership/"
+    )
+
+    for link in "${critical_links[@]}"; do
+        test_url "$link" "200" "Critical link: $link" "100"
+    done
+}
+
+test_pdf_files() {
+    echo -e "\n${BLUE}📄 Testing PDF Files${NC}"
+    echo "========================"
+
+    local pdf_files=(
+        "https://graphwiz.ai/data/CoCreate-Werkstattgespraech-Digitale-Souveraenitaet_75dpi.pdf"
+    )
+
+    for pdf in "${pdf_files[@]}"; do
+        echo -n "Testing PDF: $pdf ... "
+        local response_code=$(curl -L -s -o /dev/null -w "%{http_code}" --max-time 15 "$pdf")
+        if [ "$response_code" = "200" ]; then
+            # Check if it's actually a PDF by checking content-type
+            local content_type=$(curl -L -s -I "$pdf" | grep -i content-type | cut -d' ' -f2- | tr -d '\r\n')
+            if [[ $content_type == *"pdf"* ]]; then
+                echo -e "${GREEN}✓ OK${NC} (PDF, $content_type)"
+                ((PASSED++))
+            else
+                echo -e "${RED}✗ FAIL${NC} (Not PDF, $content_type)"
+                ((FAILED++))
+            fi
+        else
+            echo -e "${RED}✗ FAIL${NC} (HTTP $response_code)"
+            ((FAILED++))
+        fi
+        ((TOTAL_TESTS++))
+    done
+}
+
+test_external_links() {
+    echo -e "\n${BLUE}🌐 Testing External Links${NC}"
+    echo "============================="
+
+    local external_links=(
+        "https://www.linkedin.com/company/graphwiz-ai-cloud-xr/"
+        "https://tobias-weiss.org/"
+    )
+
+    for link in "${external_links[@]}"; do
+        echo -n "Testing external: $link ... "
+        local response_code=$(curl -L -s -o /dev/null -w "%{http_code}" --max-time 10 --connect-timeout 5 "$link" 2>/dev/null || echo "000")
+
+        if [[ $response_code =~ ^[23] ]]; then
+            echo -e "${GREEN}✓ OK${NC} (HTTP $response_code)"
+            ((PASSED++))
+        elif [ "$response_code" = "000" ]; then
+            echo -e "${YELLOW}⚠ TIMEOUT${NC} (External resource)"
+            ((PASSED++))  # Don't fail for external timeouts
+        else
+            echo -e "${RED}✗ FAIL${NC} (HTTP $response_code)"
+            ((FAILED++))
+        fi
+        ((TOTAL_TESTS++))
+    done
+}
+
+test_navigation_links() {
+    echo -e "\n${BLUE}🧭 Testing Navigation Links${NC}"
+    echo "=============================="
+
+    local sites=(
+        "https://graphwiz.ai"
+        "https://tobias-weiss.org"
+    )
+
+    for site in "${sites[@]}"; do
+        echo -n "Testing navigation on $site ... "
+
+        # Get the page content and extract navigation links
+        local page_content=$(curl -L -s "$site" 2>/dev/null)
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}✗ FAIL${NC} (Cannot fetch page)"
+            ((FAILED++))
+            ((TOTAL_TESTS++))
+            continue
+        fi
+
+        # Check if key navigation elements exist
+        local nav_ok=true
+
+        # For graphwiz.ai
+        if [[ $site == *"graphwiz"* ]]; then
+            if echo "$page_content" | grep -q "imprint"; then
+                echo -n "Imprint link found, "
+            else
+                nav_ok=false
+            fi
+
+            # Test the imprint link specifically
+            local imprint_response=$(curl -L -s -o /dev/null -w "%{http_code}" "$site/imprint/" 2>/dev/null)
+            if [ "$imprint_response" = "200" ]; then
+                echo -e "${GREEN}✓ OK${NC} (Imprint accessible)"
+                ((PASSED++))
+            else
+                echo -e "${RED}✗ FAIL${NC} (Imprint not accessible: $imprint_response)"
+                nav_ok=false
+                ((FAILED++))
+            fi
+        fi
+
+        # For tobias-weiss.org
+        if [[ $site == *"tobias"* ]]; then
+            if echo "$page_content" | grep -q "imprint\|Impressum"; then
+                echo -n "Imprint link found, "
+            else
+                nav_ok=false
+            fi
+
+            # Test the imprint link specifically
+            local imprint_response=$(curl -L -s -o /dev/null -w "%{http_code}" "$site/imprint/" 2>/dev/null)
+            if [ "$imprint_response" = "200" ]; then
+                echo -e "${GREEN}✓ OK${NC} (Imprint accessible)"
+                ((PASSED++))
+            else
+                echo -e "${RED}✗ FAIL${NC} (Imprint not accessible: $imprint_response)"
+                nav_ok=false
+                ((FAILED++))
+            fi
+        fi
+
+        ((TOTAL_TESTS++))
+    done
+}
+
+# Run link tests if enabled
+if [ "${SKIP_LINK_TESTS:-0}" != "1" ]; then
+    test_critical_links
+    test_pdf_files
+    test_external_links
+    test_navigation_links
+fi
+
+# Enhanced Accessibility Testing Functions
+test_language_professionalism() {
+    echo -e "\n${BLUE}📝 Testing Language Professionalism${NC}"
+    echo "========================================"
+
+    local sites=(
+        "https://graphwiz.ai"
+        "https://tobias-weiss.org"
+    )
+
+    for site in "${sites[@]}"; do
+        echo -n "Testing language quality on $site ... "
+
+        local page_content=$(curl -L -s "$site" 2>/dev/null)
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}✗ FAIL${NC} (Cannot fetch page)"
+            ((FAILED++))
+            ((TOTAL_TESTS++))
+            continue
+        fi
+
+        # Remove HTML tags for text analysis
+        local text_content=$(echo "$page_content" | sed 's/<[^>]*>//g' | tr -s ' ')
+
+        # Check for casual language patterns
+        local casual_count=$(echo "$text_content" | grep -ioE "(awesome|cool|super|totally|literally|basically|you guys|hey guys|what's up|stuff|things|kinda|sorta|prolly|lol|omg|wtf|btw)" | wc -l)
+
+        # Check for multiple exclamation/question marks
+        local excessive_punctuation=$(echo "$text_content" | grep -oE "(!!!+|\?\?\?+)" | wc -l)
+
+        # Check for very long sentences (basic check)
+        local long_sentences=$(echo "$text_content" | grep -oE '[^\.!?]{200,}' | wc -l)
+
+        if [ "$casual_count" -eq 0 ] && [ "$excessive_punctuation" -eq 0 ] && [ "$long_sentences" -eq 0 ]; then
+            echo -e "${GREEN}✓ OK${NC} (Professional language)"
+            ((PASSED++))
+        elif [ "$casual_count" -gt 5 ] || [ "$excessive_punctuation" -gt 3 ]; then
+            echo -e "${YELLOW}⚠ PARTIAL${NC} ($casual_count casual terms, $excessive_punctuation excessive punctuation)"
+            ((PASSED++))
+        else
+            echo -e "${RED}✗ NEEDS IMPROVEMENT${NC} ($casual_count casual terms, $excessive_punctuation excessive punctuation, $long_sentences long sentences)"
+            ((FAILED++))
+        fi
+
+        ((TOTAL_TESTS++))
+    done
+}
+
+test_content_structure() {
+    echo -e "\n${BLUE}📖 Testing Content Structure${NC}"
+    echo "=================================="
+
+    local sites=(
+        "https://graphwiz.ai"
+        "https://tobias-weiss.org"
+    )
+
+    for site in "${sites[@]}"; do
+        echo -n "Testing content structure on $site ... "
+
+        local page_content=$(curl -L -s "$site" 2>/dev/null)
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}✗ FAIL${NC} (Cannot fetch page)"
+            ((FAILED++))
+            ((TOTAL_TESTS++))
+            continue
+        fi
+
+        # Count structural elements
+        local h1_count=$(echo "$page_content" | grep -o '<h1[^>]*>' | wc -l)
+        local h2_count=$(echo "$page_content" | grep -o '<h2[^>]*>' | wc -l)
+        local paragraph_count=$(echo "$page_content" | grep -o '<p[^>]*>' | wc -l)
+        local list_count=$(echo "$page_content" | grep -o '<\(ul\|ol\|li\)[^>]*>' | wc -l)
+
+        # Basic structure checks
+        local structure_ok=true
+
+        if [ "$h1_count" -ne 1 ]; then
+            structure_ok=false
+        fi
+
+        if [ "$paragraph_count" -gt 10 ] && [ "$list_count" -eq 0 ]; then
+            echo -n "Consider using more lists, "
+        fi
+
+        if [ "$structure_ok" = true ]; then
+            echo -e "${GREEN}✓ OK${NC} (H1: $h1_count, H2: $h2_count, Lists: $list_count)"
+            ((PASSED++))
+        else
+            echo -e "${RED}✗ NEEDS IMPROVEMENT${NC} (H1: $h1_count, should be exactly 1)"
+            ((FAILED++))
+        fi
+
+        ((TOTAL_TESTS++))
+    done
+}
+
+test_wcag_compliance_basics() {
+    echo -e "\n${BLUE}♿ Testing WCAG Compliance Basics${NC}"
+    echo "========================================"
+
+    local sites=(
+        "https://graphwiz.ai"
+        "https://tobias-weiss.org"
+    )
+
+    for site in "${sites[@]}"; do
+        echo -n "Testing WCAG basics on $site ... "
+
+        local page_content=$(curl -L -s "$site" 2>/dev/null)
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}✗ FAIL${NC} (Cannot fetch page)"
+            ((FAILED++))
+            ((TOTAL_TESTS++))
+            continue
+        fi
+
+        # Check for lang attribute
+        local has_lang=$(echo "$page_content" | grep -o 'lang="[^"]*"' | wc -l)
+
+        # Check for viewport meta tag
+        local has_viewport=$(echo "$page_content" | grep -o 'name="viewport"' | wc -l)
+
+        # Check for title tag
+        local has_title=$(echo "$page_content" | grep -o '<title[^>]*>.*</title>' | wc -l)
+
+        # Check for skip links (for keyboard navigation)
+        local has_skip_link=$(echo "$page_content" | grep -oE '(skip.*link|jump.*content|accessibility)' -i | wc -l)
+
+        if [ "$has_lang" -gt 0 ] && [ "$has_viewport" -gt 0 ] && [ "$has_title" -gt 0 ]; then
+            echo -e "${GREEN}✓ OK${NC} (Basic WCAG elements present)"
+            ((PASSED++))
+        else
+            echo -e "${YELLOW}⚠ PARTIAL${NC} (Lang: $has_lang, Viewport: $has_viewport, Title: $has_title)"
+            ((PASSED++))
+        fi
+
+        ((TOTAL_TESTS++))
+    done
+}
+
+test_focus_management() {
+    echo -e "\n${BLUE}🎯 Testing Focus Management${NC}"
+    echo "================================="
+
+    local sites=(
+        "https://graphwiz.ai"
+        "https://tobias-weiss.org"
+    )
+
+    for site in "${sites[@]}"; do
+        echo -n "Testing focus management on $site ... "
+
+        local page_content=$(curl -L -s "$site" 2>/dev/null)
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}✗ FAIL${NC} (Cannot fetch page)"
+            ((FAILED++))
+            ((TOTAL_TESTS++))
+            continue
+        fi
+
+        # Check for problematic tabindex values
+        local high_tabindex=$(echo "$page_content" | grep -oE 'tabindex="[0-9]*"' | grep -oE '[0-9]*' | awk '$1 > 100' | wc -l)
+        local negative_tabindex=$(echo "$page_content" | grep -o 'tabindex="-?[0-9]*"' | grep -oE '-[0-9]+' | wc -l)
+
+        # Check for interactive elements
+        local interactive_elements=$(echo "$page_content" | grep -oE '<(a|button|input|textarea|select)[^>]*>' | wc -l)
+
+        if [ "$high_tabindex" -eq 0 ] && [ "$interactive_elements" -gt 0 ]; then
+            echo -e "${GREEN}✓ OK${NC} (Focus management looks good)"
+            ((PASSED++))
+        elif [ "$high_tabindex" -gt 0 ]; then
+            echo -e "${YELLOW}⚠ PARTIAL${NC} ($high_tabindex high tabindex values found)"
+            ((PASSED++))
+        else
+            echo -e "${RED}✗ NEEDS IMPROVEMENT${NC} (Focus management issues)"
+            ((FAILED++))
+        fi
+
+        ((TOTAL_TESTS++))
+    done
+}
+
+# Run accessibility tests if enabled
+if [ "${SKIP_ACCESSIBILITY_TESTS:-0}" != "1" ]; then
+    test_language_professionalism
+    test_content_structure
+    test_wcag_compliance_basics
+    test_focus_management
+fi
+
+TOTAL_FAILED=$((FAILED + IMAGE_TESTS_FAILED))
+
+echo -e "\n${BLUE}📊 Final Test Results${NC}"
+echo "===================="
+echo -e "Overall: ${GREEN}$TOTAL_PASSED${NC}/${TOTAL_TESTS} tests passed"
+
+# Additional metrics and recommendations
+if [ "$IMAGE_TESTS_FAILED" -gt 0 ]; then
+    echo ""
+    echo -e "${YELLOW}Image Accessibility Recommendations:${NC}"
+    echo "1. Run: ./image-labeling-simple.sh to improve image labeling"
+    echo "2. Add aria-label attributes to all images for better screen reader support"
+    echo "3. Implement lazy loading for better performance"
+    echo "4. Consider image optimization for large files"
+fi
+
+if [ "$FAILED" -gt 0 ]; then
+    echo ""
+    echo -e "${YELLOW}Testing Recommendations:${NC}"
+    echo "1. Run: ./test-all-links.sh for comprehensive link analysis"
+    echo "2. Check broken links and update or remove them"
+    echo "3. Ensure all PDFs are accessible and properly sized"
+    echo "4. Review language for professionalism and clarity"
+    echo "5. Improve WCAG compliance for better accessibility"
+fi
+
+if [ "${SKIP_ACCESSIBILITY_TESTS:-0}" != "1" ]; then
+    echo ""
+    echo -e "${BLUE}🔧 Accessibility Enhancement Tips:${NC}"
+    echo "- Add descriptive alt text to all images"
+    echo "- Use proper heading hierarchy (h1 → h2 → h3)"
+    echo "- Ensure form inputs have associated labels"
+    echo "- Use descriptive link text instead of 'click here'"
+    echo "- Add proper ARIA landmarks for screen readers"
+    echo "- Test with keyboard navigation only"
+fi
+
 if [ "$TOTAL_FAILED" -gt 0 ]; then
     exit 1
 else

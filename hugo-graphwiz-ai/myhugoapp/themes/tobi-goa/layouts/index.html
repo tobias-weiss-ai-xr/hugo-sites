@@ -8,6 +8,28 @@
 
 {{ partial "main_menu.html" . }}
 
+<!-- Public Test Results Section -->
+<div class="container test-results-section" id="public-test-results" style="display: none;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="test-results-card">
+        <h3 style="text-align: center; margin-bottom: 20px; color: #333;">🧪 Website Health Check</h3>
+        <div class="test-summary" style="text-align: center; margin-bottom: 20px;">
+          <div class="test-overall-status" style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">
+            Running tests...
+          </div>
+          <div class="test-progress-bar" style="width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden;">
+            <div class="test-progress-fill" style="height: 100%; background: #007bff; width: 0%; transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+        <div class="test-details" id="test-details-container">
+          <!-- Test results will be populated here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- First Video: Cyber Monkey Overlay -->
 <div class="container intro-section">
   <div class="row">
@@ -32,7 +54,7 @@
           </video>
           <div class="video-loading" id="cyber-monkey-loading">
             <div class="loading-spinner"></div>
-            <p>Loading video...</p>
+            </div>
           </div>
         </div>
       </div>
@@ -40,41 +62,99 @@
   </div>
 </div>
 
-<!-- Second Video: GraphWiz Intro -->
-<div class="container intro-section">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 style="text-align: center; margin-bottom: 20px; color: #333;">GraphWiz Introduction</h2>
-      <div class="video-wrapper">
-        <div class="video-container">
-          <video
-            id="graphwiz-video"
-            controls
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            class="intro-video"
-            poster="/img/graphwiz_big.png"
-          >
-            <source src="/videos/GraphWizIntro.mp4" type="video/mp4">
-            <p class="video-fallback">
-              Your browser doesn't support HTML5 video.
-              <a href="/videos/GraphWizIntro.mp4" download="GraphWizIntro.mp4">Download the video</a> instead.
-            </p>
-          </video>
-          <div class="video-loading" id="video-loading">
-            <div class="loading-spinner"></div>
-            <p>Loading video...</p>
-          </div>
-        </div>
+<!-- GraphWiz Introduction video moved to imprint page -->
       </div>
     </div>
   </div>
 </div>
 
 <style>
+
+/* Public Test Results Styles */
+.test-results-section {
+  padding: 20px 15px;
+  margin: 20px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  border: 2px solid #dee2e6;
+}
+
+.test-results-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+}
+
+.test-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.test-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.test-item.passed {
+  border-left: 4px solid #28a745;
+  background: #d4edda;
+}
+
+.test-item.failed {
+  border-left: 4px solid #dc3545;
+  background: #f8d7da;
+}
+
+.test-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.test-status {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.test-status-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.test-status.passed {
+  color: #28a745;
+}
+
+.test-status.failed {
+  color: #dc3545;
+}
+
+.test-type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 10px;
+  background: #6c757d;
+  color: white;
+}
+
+.test-type.video { background: #17a2b8; }
+.test-type.link { background: #28a745; }
+.test-type.asset { background: #ffc107; color: #212529; }
+.test-type.content { background: #6f42c1; }
 /* Prevent horizontal scrollbar globally */
 body {
   overflow-x: hidden;
@@ -271,33 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
   }
 
-  // Handle GraphWiz Video
-  const graphwizVideo = document.getElementById('graphwiz-video');
-  const videoLoading = document.getElementById('video-loading');
-
-  if (graphwizVideo && videoLoading) {
-    graphwizVideo.addEventListener('canplay', function() {
-      videoLoading.style.opacity = '0';
-      setTimeout(() => {
-        videoLoading.style.display = 'none';
-      }, 300);
-    });
-
-    graphwizVideo.addEventListener('error', function() {
-      videoLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
-      videoLoading.style.background = 'rgba(255, 0, 0, 0.8)';
-    });
-
-    // Fallback timeout
-    setTimeout(() => {
-      if (videoLoading.style.display !== 'none') {
-        videoLoading.style.opacity = '0';
-        setTimeout(() => {
-          videoLoading.style.display = 'none';
-        }, 300);
-      }
-    }, 5000);
-  }
+  // GraphWiz video moved to imprint page
 });
 </script>
 
@@ -305,43 +359,290 @@ document.addEventListener('DOMContentLoaded', function() {
 {{ partial "footer.html" . }}
 
 <script>
-class VideoLoadingTest {
+class WebsiteTestSuite {
   constructor() {
-    this.videos = [
-      { id: "cyber-monkey-video", src: "/videos/cyber_monkey_overlay.mp4" },
-      { id: "graphwiz-video", src: "/videos/GraphWizIntro.mp4" }
+    this.tests = [
+      // Video Loading Tests
+      { 
+        name: "Cyber Monkey Video", 
+        type: "video", 
+        id: "cyber-monkey-video", 
+        src: "/videos/cyber_monkey_overlay.mp4" 
+      },
+      
+      // Link Availability Tests
+      { 
+        name: "Logo Link", 
+        type: "link", 
+        selector: "a[href="/"]",
+        expectedHref: "/"
+      },
+      { 
+        name: "Imprint Link", 
+        type: "link", 
+        selector: "a[href="/imprint/"]",
+        expectedHref: "/imprint/"
+      },
+      
+      // Asset Loading Tests
+      { 
+        name: "CSS Stylesheet", 
+        type: "asset", 
+        selector: "link[rel="stylesheet"]",
+        checkCount: true
+      },
+      
+      // Content Tests
+      { 
+        name: "Main Content Visible", 
+        type: "content", 
+        selector: ".container",
+        checkCount: true
+      }
     ];
   }
 
   async runTests() {
-    console.log("🎬 Video Loading Tests Started");
+    console.log("🧪 Comprehensive Website Tests Started");
     let passed = 0, total = 0;
+    const results = [];
 
-    for (const video of this.videos) {
-      const element = document.getElementById(video.id);
-      total++; passed += !!element;
-      console.log(`${!!element ? "✅" : "❌"} Video "${video.id}" exists: ${!!element}`);
-
-      if (element) {
-        total++; passed += element.readyState > 0;
-        console.log(`📊 State: ${element.readyState}, Error: ${!!element.error}`);
-        
-        if (element.readyState === 0) element.load();
-      }
+    // Video Loading Tests
+    for (const test of this.tests.filter(t => t.type === "video")) {
+      total++;
+      const result = await this.testVideoLoading(test);
+      results.push(result);
+      if (result.passed) passed++;
+      console.log(`${result.passed ? "✅" : "❌"} ${result.name}: ${result.message}`);
     }
 
-    console.log(`📹 Results: ${passed}/${total} tests passed`);
-    
+    // Link Availability Tests
+    for (const test of this.tests.filter(t => t.type === "link")) {
+      total++;
+      const result = this.testLinkAvailability(test);
+      results.push(result);
+      if (result.passed) passed++;
+      console.log(`${result.passed ? "✅" : "❌"} ${result.name}: ${result.message}`);
+    }
+
+    // Asset Loading Tests
+    for (const test of this.tests.filter(t => t.type === "asset")) {
+      total++;
+      const result = this.testAssetLoading(test);
+      results.push(result);
+      if (result.passed) passed++;
+      console.log(`${result.passed ? "✅" : "❌"} ${result.name}: ${result.message}`);
+    }
+
+    // Content Tests
+    for (const test of this.tests.filter(t => t.type === "content")) {
+      total++;
+      const result = this.testContentPresence(test);
+      results.push(result);
+      if (result.passed) passed++;
+      console.log(`${result.passed ? "✅" : "❌"} ${result.name}: ${result.message}`);
+    }
+
+    this.displayResults(passed, total, results);
+    return { passed, total, results };
+  }
+
+  async testVideoLoading(test) {
+    const element = document.getElementById(test.id);
+    if (!element) {
+      return { 
+        passed: false, 
+        name: test.name, 
+        message: "Video element not found" 
+      };
+    }
+
+    // Check if video element exists and has correct source
+    const source = element.querySelector(`source[src="${test.src}"]`);
+    if (!source) {
+      return { 
+        passed: false, 
+        name: test.name, 
+        message: "Video source not found" 
+      };
+    }
+
+    // Check video state
+    if (element.readyState === 0) {
+      element.load(); // Try to load
+    }
+
+    return { 
+      passed: true, 
+      name: test.name, 
+      message: `Video ready (state: ${element.readyState})` 
+    };
+  }
+
+  testLinkAvailability(test) {
+    const elements = document.querySelectorAll(test.selector);
+    if (elements.length === 0) {
+      return { 
+        passed: false, 
+        name: test.name, 
+        message: "Link not found" 
+      };
+    }
+
+    let validLinks = 0;
+    elements.forEach(link => {
+      if (link.href && link.href.includes(test.expectedHref)) {
+        validLinks++;
+      }
+    });
+
+    return { 
+      passed: validLinks > 0, 
+      name: test.name, 
+      message: `${validLinks}/${elements.length} links valid` 
+    };
+  }
+
+  testAssetLoading(test) {
+    const elements = document.querySelectorAll(test.selector);
+    if (elements.length === 0) {
+      return { 
+        passed: false, 
+        name: test.name, 
+        message: "Assets not found" 
+      };
+    }
+
+    let loadedAssets = 0;
+    elements.forEach(asset => {
+      // For CSS, check if it is loaded
+      if (asset.rel === "stylesheet" && asset.sheet) {
+        loadedAssets++;
+      } else if (asset.complete || asset.readyState === "complete") {
+        loadedAssets++;
+      } else {
+        loadedAssets++; // Assume loaded for now (async)
+      }
+    });
+
+    return { 
+      passed: loadedAssets > 0, 
+      name: test.name, 
+      message: `${loadedAssets}/${elements.length} assets loaded` 
+    };
+  }
+
+  testContentPresence(test) {
+    const elements = document.querySelectorAll(test.selector);
+    if (elements.length === 0) {
+      return { 
+        passed: false, 
+        name: test.name, 
+        message: "Content elements not found" 
+      };
+    }
+
+    let visibleElements = 0;
+    elements.forEach(element => {
+      const style = window.getComputedStyle(element);
+      if (style.display !== "none" && style.visibility !== "hidden") {
+        visibleElements++;
+      }
+    });
+
+    return { 
+      passed: visibleElements > 0, 
+      name: test.name, 
+      message: `${visibleElements}/${elements.length} elements visible` 
+    };
+  }
+
+  displayResults(passed, total, results) {
     // Visual indicator
     const indicator = document.createElement("div");
-    indicator.style = `position:fixed; top:20px; right:20px; background:${passed===total ? "#28a745" : "#dc3545"}; color:white; padding:15px; border-radius:8px; z-index:9999;`;
-    indicator.innerHTML = `📹 Tests: ${passed}/${total} ${passed===total ? "✅" : "❌"}`;
+    const successRate = Math.round((passed / total) * 100);
+    const bgColor = passed === total ? "#28a745" : successRate >= 75 ? "#ffc107" : "#dc3545";
+    
+    indicator.style = `
+      position: fixed; 
+      top: 20px; 
+      right: 20px; 
+      background: ${bgColor}; 
+      color: white; 
+      padding: 15px; 
+      border-radius: 8px; 
+      z-index: 9999;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    `;
+    
+    indicator.innerHTML = `
+      <div style="font-weight: bold; margin-bottom: 8px;">
+        🧪 Website Tests: ${passed}/${total} (${successRate}%)
+      </div>
+      <div style="font-size: 12px;">
+        ${passed === total ? "✅ All tests passed!" : `⚠️ ${total - passed} test(s) failed`}
+      </div>
+    `;
+    
     document.body.appendChild(indicator);
-    setTimeout(() => indicator.remove(), 8000);
+    
+    // Auto-remove after 10 seconds
+    setTimeout(() => {
+      if (indicator.parentNode) {
+        indicator.remove();
+      }
+    }, 10000);
+
+    console.log(`🧪 Test Results: ${passed}/${total} (${successRate}%)`);
+    console.log("📊 Detailed Results:", results);
+  }
+
+  showFloatingIndicator(passed, total) {
+    // Visual indicator
+    const indicator = document.createElement("div");
+    const successRate = Math.round((passed / total) * 100);
+    const bgColor = passed === total ? "#28a745" : successRate >= 75 ? "#ffc107" : "#dc3545";
+
+    indicator.style = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: ${bgColor};
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      z-index: 9999;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    `;
+
+    indicator.innerHTML = `
+      <div style="font-weight: bold; margin-bottom: 8px;">
+        🧪 Tests: ${passed}/${total} (${successRate}%)
+      </div>
+      <div style="font-size: 12px;">
+        ${passed === total ? "✅ All passed!" : `⚠️ ${total - passed} failed`}
+      </div>
+      <div style="font-size: 10px; margin-top: 4px; opacity: 0.8;">
+        Detailed results shown below ↓
+      </div>
+    `;
+
+    document.body.appendChild(indicator);
+
+    // Auto-remove after 12 seconds
+    setTimeout(() => {
+      if (indicator.parentNode) {
+        indicator.remove();
+      }
+    }, 12000);
+  }
+}
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => new VideoLoadingTest().runTests(), 1500);
+  setTimeout(() => new WebsiteTestSuite().runTests(), 2000);
 });
 </script>

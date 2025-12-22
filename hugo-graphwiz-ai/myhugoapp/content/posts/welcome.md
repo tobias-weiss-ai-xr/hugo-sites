@@ -1,5 +1,5 @@
 +++
-title = "Welcome to GraphWiz AI: Intelligent Graph Analysis"
+title = "Welcome to Dr. GraphWiz AI: Intelligent Graph Analysis"
 date = "2025-12-18T02:30:00+01:00"
 draft = false
 slug = "welcome-to-graphwiz-ai"
@@ -18,7 +18,7 @@ GraphWiz AI is a leading platform for intelligent graph visualization, analysis,
 *   **Real-time Collaboration:** Enhance teamwork with collaborative graph analysis tools 🤝.
 *   **Scalable Architecture:** Manage and analyze large-scale graphs efficiently, supporting millions of nodes and edges ☁️.
 
-## Technologies Powering GraphWiz AI ⚙️:
+## Technologies Powering Dr. GraphWiz AI ⚙️:
 
 *   Graph Neural Networks (GNN) 🧠
 *   Natural Language Processing (NLP) 🗣️
@@ -26,4 +26,4 @@ GraphWiz AI is a leading platform for intelligent graph visualization, analysis,
 *   GraphQL APIs 🔄
 *   Docker & Kubernetes for scalable deployment 🐳
 
-Discover the transformative potential of AI-enhanced graph analysis with GraphWiz AI 🚀.
+Discover the transformative potential of AI-enhanced graph analysis with Dr. GraphWiz AI 🚀.

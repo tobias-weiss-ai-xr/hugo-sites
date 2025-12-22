@@ -10,7 +10,7 @@ layoutdir = "layouts"
 publishdir = "public"
 
 author = "Tobias Weiss"
-title = "Tobias Weiss"
+title = "Tobias Weiss - AI Research & Leadership | XR Development & Technology Innovation"
 
 theme = "tobi-goa"
 
@@ -35,8 +35,8 @@ dateformat = "Jan 2, 2006"
 
 ## Site Meta Settings
 [params.meta]
-description = "Personal homepage"
-keywords = "ai,it,guitar,biking,jogging,hugo,xr,ar,vr"
+description = "Personal homepage of Tobias Weiss - AI researcher, technology leader, and XR developer. Explore insights on artificial intelligence, extended reality, innovation, and digital transformation."
+keywords = "Tobias Weiss, AI research, artificial intelligence, machine learning, XR development, extended reality, AR/VR, technology leadership, innovation, digital transformation"
 
 ## Social Accounts
 [params.social]

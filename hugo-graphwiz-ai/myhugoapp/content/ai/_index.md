@@ -11,7 +11,7 @@ showpagemeta = false
 +++
 
 
-GraphWiz bridges the gap between advanced Artificial Intelligence and tangible business outcomes 🤝. Our strategy focuses on transforming technological potential into sustainable revenue growth through four core pillars:
+Dr. GraphWiz bridges the gap between advanced Artificial Intelligence and tangible business outcomes 🤝. Our strategy focuses on transforming technological potential into sustainable revenue growth through four core pillars:
 
 ## 1. Strategic Business Alignment 🎯
 
