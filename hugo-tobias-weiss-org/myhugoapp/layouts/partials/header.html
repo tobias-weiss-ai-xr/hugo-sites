@@ -10,6 +10,27 @@
 {{ with .Site.Params.meta.description }}<meta name="description" content="{{ . }}">{{ end }}
 {{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
 
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+{{ with .Site.Params.social.email }}<meta name="contact" content="{{ . }}">{{ end }}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
+{{ with .Site.Params.meta.description }}<meta property="og:description" content="{{ . }}">{{ end }}
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.authorimage }}">
+<meta property="og:locale" content="{{ .Site.LanguageCode }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
+{{ with .Site.Params.meta.description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.authorimage }}">
+
 <base href="{{ .Site.BaseURL }}">
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
@@ -24,6 +45,8 @@
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
+
+{{ partial "structured-data.html" . }}
 
 
 {{ if .Site.Params.extra.highlightjs }}

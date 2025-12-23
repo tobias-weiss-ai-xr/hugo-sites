@@ -14,8 +14,18 @@ showpagemeta = false
 In today's technology-driven landscape, **Digital Sovereignty** is a strategic imperative, empowering organizations to maintain full control over their digital destiny and avoid vendor lock-in 🏛️.
 
 <div class="text-center my-5">
-  <img src="/img/logo-opendesk.svg" alt="OpenDesk - Sovereign Digital Collaboration Platform" class="mx-auto h-16 md:h-20 lg:h-24 max-w-full dark:invert" />
-  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">OpenDesk - Sovereign Digital Collaboration Platform</p>
+  <a href="https://opendesk.eu" target="_blank" rel="noopener noreferrer">
+    <img src="/img/logo-opendesk.svg" alt="OpenDesk - Sovereign Digital Collaboration Platform" class="mx-auto h-16 md:h-20 lg:h-24 max-w-full dark:invert" />
+  </a>
+  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+    <a href="https://opendesk.eu" target="_blank" rel="noopener noreferrer">OpenDesk - Sovereign Digital Collaboration Platform</a>
+  </p>
+</div>
+
+<div class="text-center my-5">
+  <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">
+    <a href="https://f13-os.de/" target="_blank" rel="noopener noreferrer">F13 - Sovereign AI Assistance for Public Administration</a> 🏛️
+  </p>
 </div>
 
 ## Why Digital Sovereignty is Crucial for Revenue Growth 📈:
@@ -71,6 +81,51 @@ The Marburg University evaluation demonstrates that sovereign digital platforms 
 - **Future-Proof Architecture**: No vendor lock-in, ensuring institutional autonomy
 
 This real-world implementation validates our approach to digital sovereignty, proving that open-source solutions can deliver enterprise-grade performance while maintaining complete control over digital infrastructure.
+
+## F13: Sovereign AI Assistance for Public Administration 🏛️
+
+### A Model-Agnostic, Open-Source AI Platform
+
+**F13** represents a groundbreaking approach to sovereign AI deployment in public administration. Developed "by the administration for the administration," F13 is a fully sovereign and model-agnostic AI assistance platform that can be operated on independent infrastructure.
+
+#### Key Features:
+
+**🔒 Complete Digital Sovereignty**
+- **Self-Hosted Infrastructure**: Full control over data processing and storage
+- **Model-Agnostic Design**: Flexibility to use various AI models based on specific requirements
+- **Open Source**: Since July 2025, F13 is freely available as open source software
+- **Community-Driven Development**: Collaborative evolution with contributions from administrations, organizations, and developers
+
+**⚙️ Modular AI Functions**
+F13 provides a comprehensive suite of AI capabilities for daily administrative work:
+- **Information Processing**: Intelligent document analysis and data extraction
+- **Text Generation**: Automated creation of correspondence, reports, and documentation
+- **Research Assistance**: Advanced search and knowledge retrieval capabilities
+- **Secure Integration**: Designed for use in sensitive government environments
+
+**🏛️ Built for Public Administration**
+- Developed specifically for government use cases
+- Compliance with German data protection regulations
+- Transparent and cooperative approach to administrative digitalization
+- Practice-tested in real-world administrative scenarios
+- Aligned with the common good rather than commercial interests
+
+**🤝 Open Collaboration**
+F13 invites participation from:
+- Interested administrations and public organizations
+- Developers who want to adapt and enhance the system
+- Contributors committed to open source principles
+- Anyone working to bring AI foundational solutions to German administration
+
+#### Benefits for Organizations:
+
+- **Zero Vendor Lock-in**: Complete autonomy in deployment and customization
+- **Regulatory Compliance**: Built specifically for German administrative requirements
+- **Cost Efficiency**: Open source eliminates licensing fees
+- **Community Support**: Collaborative problem-solving and shared innovations
+- **Future-Proof**: Adaptable to emerging AI technologies and regulations
+
+F13 exemplifies how sovereign AI platforms can serve the public sector while maintaining the highest standards of data protection, transparency, and democratic control. It represents a model for how governments can embrace AI transformation without sacrificing sovereignty or public trust.
 
 ## Our Sovereignty-First Approach 🚀:
 

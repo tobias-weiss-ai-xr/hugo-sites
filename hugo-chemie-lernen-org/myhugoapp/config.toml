@@ -3,6 +3,8 @@ languageCode = "de-de"
 title = "Chemie Lernen - Interaktive Chemie-Lernräume in Virtual Reality | VR Chemieunterricht"
 theme = "hugo-cards"
 
+enableRobotsTXT = true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -13,6 +15,11 @@ theme = "hugo-cards"
   custom_css = ["css/custom.css"]
   defaultImage = "gopher.jpg"
   footer_description = "Chemie Lernen - Ihre Plattform für innovative Chemie-Lernräume in Virtual Reality. Machen Sie komplexe chemische Konzepte greifbar und erlebbar."
+
+[params.meta]
+  keywords = "Chemie Lernen, VR Chemieunterricht, Virtual Reality Bildung, Chemie lernen online, interaktiver Chemieunterricht, digitale Bildung, VR Lernräume, Chemie studieren, innovative Chemie, immersive Bildung"
+
+author = "Chemie Lernen Team"
 
 [[menu.main]]
     name = "Wiki"

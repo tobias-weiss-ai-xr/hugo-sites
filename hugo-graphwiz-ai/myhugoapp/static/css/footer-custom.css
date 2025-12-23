@@ -9,12 +9,15 @@
 }
 
 .footer-nav .list-inline-item {
-  margin: 0 15px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
+/* Add consistent spacing on both sides of separator pipe */
 .footer-nav .list-inline-item:not(:last-child)::after {
   content: "|";
-  margin-left: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
   color: #666;
 }
 
@@ -37,4 +40,7 @@ footer {
 footer hr {
   margin: 20px 0;
   border-color: #eee;
+}
+.footer-nav .list-inline-item.imprint-item {
+  margin: 0;
 }

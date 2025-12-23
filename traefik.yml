@@ -9,10 +9,13 @@ entryPoints:
   websecure:
     address: ":443"
 
+  traefik:
+    address: ":8080"
+
 providers:
   docker:
     exposedByDefault: false
-    network: web
+    network: hugo-sites_web
   file:
     filename: /etc/traefik/traefik.yml
 

@@ -30,14 +30,14 @@
   </div>
 </div>
 
-<!-- First Video: Cyber Monkey Overlay -->
+<!-- First Video: GraphWiz Intro -->
 <div class="container intro-section">
   <div class="row">
     <div class="col-md-12">
       <div class="video-wrapper">
         <div class="video-container">
           <video
-            id="cyber-monkey-video"
+            id="graphwiz-intro-video"
             controls
             autoplay
             muted
@@ -46,23 +46,16 @@
             preload="auto"
             class="intro-video"
           >
-            <source src="/videos/cyber_monkey_overlay.mp4" type="video/mp4">
+            <source src="/videos/GraphWizIntro.mp4" type="video/mp4">
             <p class="video-fallback">
               Your browser doesn't support HTML5 video.
-              <a href="/videos/cyber_monkey_overlay.mp4" download="cyber_monkey_overlay.mp4">Download the video</a> instead.
+              <a href="/videos/GraphWizIntro.mp4" download="GraphWizIntro.mp4">Download the video</a> instead.
             </p>
           </video>
-          <div class="video-loading" id="cyber-monkey-loading">
+          <div class="video-loading" id="graphwiz-intro-loading">
             <div class="loading-spinner"></div>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- GraphWiz Introduction video moved to imprint page -->
       </div>
     </div>
   </div>
@@ -323,35 +316,33 @@ video[poster] + .video-loading {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Handle Cyber Monkey Video
-  const cyberMonkeyVideo = document.getElementById('cyber-monkey-video');
-  const cyberMonkeyLoading = document.getElementById('cyber-monkey-loading');
+  // Handle GraphWiz Intro Video
+  const graphwizIntroVideo = document.getElementById('graphwiz-intro-video');
+  const graphwizIntroLoading = document.getElementById('graphwiz-intro-loading');
 
-  if (cyberMonkeyVideo && cyberMonkeyLoading) {
-    cyberMonkeyVideo.addEventListener('canplay', function() {
-      cyberMonkeyLoading.style.opacity = '0';
+  if (graphwizIntroVideo && graphwizIntroLoading) {
+    graphwizIntroVideo.addEventListener('canplay', function() {
+      graphwizIntroLoading.style.opacity = '0';
       setTimeout(() => {
-        cyberMonkeyLoading.style.display = 'none';
+        graphwizIntroLoading.style.display = 'none';
       }, 300);
     });
 
-    cyberMonkeyVideo.addEventListener('error', function() {
-      cyberMonkeyLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
-      cyberMonkeyLoading.style.background = 'rgba(255, 0, 0, 0.8)';
+    graphwizIntroVideo.addEventListener('error', function() {
+      graphwizIntroLoading.innerHTML = '<p>⚠️ Video failed to load</p>';
+      graphwizIntroLoading.style.background = 'rgba(255, 0, 0, 0.8)';
     });
 
     // Fallback timeout
     setTimeout(() => {
-      if (cyberMonkeyLoading.style.display !== 'none') {
-        cyberMonkeyLoading.style.opacity = '0';
+      if (graphwizIntroLoading.style.display !== 'none') {
+        graphwizIntroLoading.style.opacity = '0';
         setTimeout(() => {
-          cyberMonkeyLoading.style.display = 'none';
+          graphwizIntroLoading.style.display = 'none';
         }, 300);
       }
     }, 5000);
   }
-
-  // GraphWiz video moved to imprint page
 });
 </script>
 
@@ -363,13 +354,13 @@ class WebsiteTestSuite {
   constructor() {
     this.tests = [
       // Video Loading Tests
-      { 
-        name: "Cyber Monkey Video", 
-        type: "video", 
-        id: "cyber-monkey-video", 
-        src: "/videos/cyber_monkey_overlay.mp4" 
+      {
+        name: "GraphWiz Intro Video",
+        type: "video",
+        id: "graphwiz-intro-video",
+        src: "/videos/GraphWizIntro.mp4"
       },
-      
+
       // Link Availability Tests
       { 
         name: "Logo Link", 

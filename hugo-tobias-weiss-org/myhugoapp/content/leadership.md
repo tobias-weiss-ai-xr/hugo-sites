@@ -14,38 +14,18 @@ Leadership in digital transformation requires balancing technical excellence wit
 
 Every new system creates temporary productivity loss. Understanding these emotional phases is crucial for effective change leadership:
 
-```
-Productivity
-    ^
-    |                             *********************
-    |                         *****                   *****
-    |                      ***                             ***
-    |                    **        Integration Phase         **
-    |                  **                                     **
-    |                **      Realization Phase              **
-    |               **                                       **
-    |             **          Experimentation Phase         **
-    |           **                                           **
-    |          **               Valley of Tears             **
-    |        **                    (Lowest Point)            **
-    |       **                                             **
-    |     **         Insight Phase                        **
-    |    **                                             **
-    |  **         Rejection Phase                       **
-    | **                                             **
-    |**         Shock Phase                           **
-    +------------------------------------------------------------> Time
-   0%                20%                 40%                 60%                80%                 100%
-```
+<img src="/img/ChangeLeadershipCurve.png" alt="The Change Leadership Curve" style="width: 100%; max-width: 800px; height: auto;">
+
+*The Change Leadership Curve: Productivity temporarily drops during change management before reaching new levels of effectiveness.*
 
 ### The Seven Phases of Change Leadership
 
-## The Challenge of IT Change in Academic Settings 🎓
+## The Challenge of IT Change in Organizations 🎓
 
-Digital transformation in universities is fundamentally a cultural challenge, not just a technical one. At university computing centers (HRZ), resistance to new IT services often stems from communication gaps between IT departments and academic faculties.
+Digital transformation in organizations is fundamentally a cultural challenge, not just a technical one. In IT environments, resistance to new services often stems from communication gaps between IT departments and business units.
 
 ### Common Obstacles:
-* **Cultural Silos:** Separation between central IT and decentralized institutes
+* **Cultural Silos:** Separation between central IT and decentralized departments
 * **Lack of Participation:** Solutions developed "over the heads" of end users
 * **Communication Deficits:** Technical focus instead of benefit-oriented arguments
 
@@ -79,10 +59,10 @@ Digital transformation in universities is fundamentally a cultural challenge, no
 * **Reaction:** New standard established
 * **Leadership Action:** Celebrate success and anchor the process
 
-## Strategic Recommendations for University IT Change Leadership 📋
+## Strategic Recommendations for IT Change Leadership 📋
 
 ### 1. Early Participation 🤝
-Establish "Key User Networks" across academic departments already in the pilot phase.
+Establish "Key User Networks" across departments already in the pilot phase.
 **Priority: High**
 
 ### 2. Benefit-Oriented Storytelling 📖
@@ -90,7 +70,7 @@ Move away from feature lists toward answering: "How does this IT tool save me 15
 **Priority: Medium**
 
 ### 3. Iterative Rollouts 🔄
-Avoid "Big Bang" scenarios. Introduce in phases with visible "Quick Wins" for students and staff.
+Avoid "Big Bang" scenarios. Introduce in phases with visible "Quick Wins" for users.
 **Priority: High**
 
 ### 4. Strengthen Error Culture 🛠️
@@ -98,14 +78,14 @@ Institutionalized retrospectives after IT outages. Focus on process optimization
 **Internal Goal**
 
 ### 5. Training Multipliers 📚
-Training-of-Trainers approach to bring IT knowledge directly into administrative offices and labs.
+Training-of-Trainers approach to bring IT knowledge directly into teams.
 **Structure**
 
 ### 6. Transparency During Outages 🔍
 Proactive status dashboards and clear timelines reduce anxiety and resistance during maintenance windows.
 **Trust Building**
 
-## Leadership Profiles in Computing Centers 🎭
+## Leadership Profiles in IT Organizations 🎭
 
 ### The "Administrator" Profile
 * **Focus:** Availability, cost control, rigid processes
@@ -115,7 +95,7 @@ Proactive status dashboards and clear timelines reduce anxiety and resistance du
 * **Focus:** Innovation, user-centricity, agile mindset
 * **Characteristics:** Balanced stability, high innovation, high empathy, high agility
 
-Modern university IT leadership requires transitioning from pure administration to transformation - balancing stability (security/uptime) with agility (innovation/teaching).
+Modern IT leadership requires transitioning from pure administration to transformation - balancing stability (security/uptime) with agility (innovation/growth).
 
 ## Key Leadership Competencies 🌟
 
@@ -127,8 +107,8 @@ Modern university IT leadership requires transitioning from pure administration 
 * **Control:** Maintaining appropriate governance
 * **Agility:** Adapting quickly to changing requirements
 
-The most effective university IT leaders cultivate all these competencies, knowing when to emphasize each based on organizational context and transformation goals.
+The most effective IT leaders cultivate all these competencies, knowing when to emphasize each based on organizational context and transformation goals.
 
 ---
 
-*This framework draws from practical experience in academic IT change leadership and is designed to support strategic planning and training in university computing center leadership.*
+*This framework draws from practical experience in IT change leadership and is designed to support strategic planning and training in organizational IT leadership.*

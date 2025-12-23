@@ -1,0 +1,90 @@
+{{- if .IsHome }}
+<!-- Structured Data for Home Page (Person) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ .Site.Params.author }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.meta.description }}",
+  "inLanguage": "{{ .Site.LanguageCode }}",
+  "image": "{{ .Site.BaseURL }}{{ .Site.Params.authorimage }}",
+  "sameAs": [
+    "https://github.com/{{ .Site.Params.social.github }}",
+    "{{ .Site.Params.social.linkedin }}",
+    "https://instagram.com/{{ .Site.Params.social.instagram }}"
+  ],
+  "jobTitle": "AI Researcher & Technology Leader",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Dr. GraphWiz AI & XR Consulting"
+  },
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Extended Reality",
+    "AR/VR",
+    "XR Development",
+    "Technology Leadership",
+    "Innovation",
+    "Digital Transformation"
+  ]
+}
+</script>
+{{- else if .IsPage }}
+<!-- Structured Data for Content Pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ if in .Section "research" }}ScholarlyArticle{{ else if in .Section "projects" }}Project{{ else }}Article{{ end }}",
+  "headline": "{{ .Title }}",
+  "url": "{{ .Permalink }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.meta.description }}{{ end }}",
+  "inLanguage": "{{ .Site.LanguageCode }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{- else if .IsSection }}
+<!-- Structured Data for Section Pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "{{ .Permalink }}",
+  "name": "{{ .Title }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.meta.description }}{{ end }}",
+  "inLanguage": "{{ .Site.LanguageCode }}"
+}
+</script>
+{{- end }}
+
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.meta.description }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

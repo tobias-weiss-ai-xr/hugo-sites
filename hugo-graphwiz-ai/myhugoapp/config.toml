@@ -9,8 +9,8 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 
-author = "Dr. GraphWiz"
-title = "Dr. GraphWiz - AI & XR Consulting | Digital Sovereignty & DevOps Solutions"
+author = "Dr. GraphWiz AI & XR Consulting and Development Services"
+title = "Dr. GraphWiz AI & XR Consulting and Development Services"
 
 theme = "tobi-goa"
 
@@ -27,7 +27,7 @@ enableRobotsTXT = true
 
 ## Site Settings
 [params]
-author = "Dr. GraphWiz"
+author = "Dr. GraphWiz AI & XR Consulting and Development Services"
 intro = "🌐 / AI 🤖 / DevOps 🛠️ / Digital Sovereignty 🔐 / XR 🕶️"
 description = "Transforming complex technology into solutions for 🚀 efficiency, 🌐 market reach, and 💰 sustainable revenue."
 authorimage = "graphwiz_big.png"
