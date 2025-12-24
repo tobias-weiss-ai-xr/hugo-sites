@@ -1,0 +1,57 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+        fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    - name: Build with Hugo
+      run: |
+        cd myhugoapp
+        hugo --minify
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./myhugoapp/public
+        commit_message: "Deploy to GitHub Pages"
+
+    - name: Run post-deployment visual tests
+      uses: nick-fields/retry@v2
+      with:
+        timeout_minutes: 10
+        max_attempts: 3
+        command: |
+          cd tests
+          npx playwright install --with-deps chromium
+          npx playwright test screenshots.spec.js
+
+    - name: Upload deployment test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: deployment-test-results
+        path: tests/test-results/
+        retention-days: 30

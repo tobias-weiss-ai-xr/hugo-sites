@@ -25,13 +25,9 @@ enableRobotsTXT = true
 author = "Chemie Lernen Team"
 
 [[menu.main]]
-    name = "Hubs"
-    url = "https://hubs.chemie-lernen.org/"
-    weight = 10
-[[menu.main]]
     name = "Periodensystem"
     url = "/perioden-system-der-elemente/"
-    weight = 20
+    weight = 10
 [[menu.main]]
     name = "Molekülstudio"
     url = "/molekuel-studio/"

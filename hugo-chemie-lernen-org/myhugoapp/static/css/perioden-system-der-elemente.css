@@ -9,9 +9,10 @@ body {
     overflow-x: hidden !important;
 }
 
-/* Dark mode support for PSE page body */
+/* Dark mode support for PSE page body - greenish */
 [data-theme="dark"] body {
-    background-color: #0f1419 !important;
+    background-color: #0a1a0f !important;
+    color: #c8e6c9 !important;
 }
 
 /* Hide default header for PSE page */
@@ -38,9 +39,9 @@ body > .container > .wrapper {
     padding: 0 !important;
 }
 
-/* Dark mode support for container */
+/* Dark mode support for container - greenish */
 [data-theme="dark"] #container {
-    background-color: #0f1419 !important;
+    background-color: #0a1a0f !important;
 }
 
 #menu {
@@ -67,31 +68,31 @@ body > .container > .wrapper {
     margin: 0 !important;
 }
 
-/* Dark mode support for menu and footer on PSE page */
+/* Dark mode support for menu and footer on PSE page - greenish */
 [data-theme="dark"] #menu {
-    background-color: #0f1419 !important;
-    border-bottom: 1px solid #2d3748 !important;
+    background-color: #0a1a0f !important;
+    border-bottom: 1px solid #1b5e20 !important;
 }
 
 [data-theme="dark"] .site-footer {
-    background-color: #0f1419 !important;
-    border-top: 1px solid #2d3748 !important;
-    color: #71767b !important;
+    background-color: #0a1a0f !important;
+    border-top: 1px solid #1b5e20 !important;
+    color: #81c784 !important;
 }
 
 [data-theme="dark"] .site-footer a {
-    color: #b0b3b8 !important;
+    color: #81c784 !important;
 }
 
 [data-theme="dark"] .site-footer a:hover {
-    color: #3b82f6 !important;
+    color: #4caf50 !important;
 }
 
 .element {
     width: 120px;
     height: 160px;
-    box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
-    border: 1px solid rgba(127,255,255,0.25);
+    box-shadow: 0px 0px 12px rgba(76,175,80,0.5);
+    border: 1px solid rgba(76,175,80,0.25);
     font-family: Helvetica, sans-serif;
     text-align: center;
     line-height: normal;
@@ -102,8 +103,8 @@ body > .container > .wrapper {
 }
 
 .element:hover {
-    box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
-    border: 1px solid rgba(127,255,255,0.75);
+    box-shadow: 0px 0px 12px rgba(76,175,80,0.75);
+    border: 1px solid rgba(76,175,80,0.75);
 }
 
 .element .number {
@@ -111,7 +112,7 @@ body > .container > .wrapper {
     top: 20px;
     right: 20px;
     font-size: 12px;
-    color: rgba(127,255,255,0.75);
+    color: rgba(76,175,80,0.75);
 }
 
 .element .symbol {
@@ -122,7 +123,7 @@ body > .container > .wrapper {
     font-size: 60px;
     font-weight: bold;
     color: rgba(255,255,255,0.75);
-    text-shadow: 0 0 10px rgba(0,255,255,0.95);
+    text-shadow: 0 0 10px rgba(76,175,80,0.95);
 }
 
 .element .details {
@@ -150,21 +151,21 @@ button {
 }
 
 button:hover {
-    background-color: #007bff !important;
-    border-color: #007bff !important;
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
     color: #fff !important;
 }
 
 button:active {
-    background-color: #0056b3 !important;
-    border-color: #0056b3 !important;
+    background-color: #388e3c !important;
+    border-color: #388e3c !important;
     color: #fff !important;
 }
 
 /* Active button styling */
 button.active-mode {
-    background-color: #007bff !important;
-    border-color: #007bff !important;
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
     color: #fff !important;
 }
 

@@ -1,0 +1,108 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+        fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    - name: Build with Hugo
+      run: |
+        cd myhugoapp
+        hugo --minify
+
+    - name: Check for broken links
+      run: |
+        pip install linkchecker
+        linkchecker myhugoapp/public/
+
+    - name: Upload Hugo artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: hugo-site
+        path: myhugoapp/public/
+
+  visual-tests:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install Playwright
+      run: |
+        npx playwright install --with-deps chromium
+
+    - name: Build Hugo site for testing
+      run: |
+        cd myhugoapp
+        hugo
+
+    - name: Run visual screenshot tests
+      run: |
+        cd tests
+        npx playwright test screenshots.spec.js
+
+    - name: Run green color consistency tests
+      run: |
+        cd tests
+        npx playwright test test-green-colors.spec.js
+
+    - name: Run molecule studio visual tests
+      run: |
+        cd tests
+        npx playwright test test-molecule-studio-visual.spec.js
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-report
+        path: tests/test-results/
+        retention-days: 30
+
+    - name: Upload screenshots
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: screenshots
+        path: tests/screenshots/
+        retention-days: 30
+
+  link-check:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build Hugo site
+      run: |
+        cd myhugoapp
+        hugo
+
+    - name: Link Checker
+      uses: lycheeverse/lychee-action@v1
+      with:
+        args: myhugoapp/public/ --verbose --no-progress --exclude-mail --exclude "https://hubs.chemie-lernen.org"

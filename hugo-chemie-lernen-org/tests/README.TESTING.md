@@ -21,6 +21,7 @@ npx playwright test
 
 ## Test Files
 
+- `test-green-colors.spec.js` - Green color consistency tests across all pages
 - `test-molecule-studio-visual.spec.js` - Comprehensive visual tests for Molekülstudio and Periodensystem
 - `screenshots.spec.js` - Simple screenshot tests for all main pages
 

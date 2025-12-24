@@ -115,6 +115,94 @@ const moleculeData = {
             { atom1: 'C-2', atom2: 'H-3', type: 'single' },
             { atom1: 'C-2', atom2: 'H-4', type: 'single' }
         ]
+    },
+    'THC': {
+        formula: 'C₂₁H₃₀O₂',
+        elements: {
+            'C': { radius: 0.7, color: '#909090' },
+            'H': { radius: 0.3, color: '#FFFFFF' },
+            'O': { radius: 0.6, color: '#FF0D0D' }
+        },
+        atoms: [
+            // Benzene ring (simplified representation)
+            { id: 'C-1', element: 'C', position: [0.0, 0.0, 0.0] },
+            { id: 'C-2', element: 'C', position: [1.4, 0.0, 0.0] },
+            { id: 'C-3', element: 'C', position: [2.1, 1.21, 0.0] },
+            { id: 'C-4', element: 'C', position: [1.4, 2.42, 0.0] },
+            { id: 'C-5', element: 'C', position: [0.0, 2.42, 0.0] },
+            { id: 'C-6', element: 'C', position: [-0.7, 1.21, 0.0] },
+            // Pyran ring oxygen
+            { id: 'O-1', element: 'O', position: [-0.7, -1.3, 0.0] },
+            // Pyran ring carbons
+            { id: 'C-7', element: 'C', position: [0.7, -1.3, 0.0] },
+            { id: 'C-8', element: 'C', position: [1.4, 0.0, 0.0] },
+            // Pentyl side chain (simplified)
+            { id: 'C-9', element: 'C', position: [2.8, 0.0, 0.0] },
+            { id: 'C-10', element: 'C', position: [3.5, 0.86, 0.0] },
+            { id: 'C-11', element: 'C', position: [4.2, 0.0, 0.0] },
+            { id: 'C-12', element: 'C', position: [4.9, 0.86, 0.0] },
+            { id: 'C-13', element: 'C', position: [5.6, 0.0, 0.0] },
+            // Methyl group
+            { id: 'C-14', element: 'C', position: [2.1, 1.21, 0.0] },
+            // Hydroxyl group
+            { id: 'O-2', element: 'O', position: [-1.9, 2.8, 0.0] },
+            { id: 'H-1', element: 'H', position: [0.0, -0.94, 0.0] },
+            { id: 'H-2', element: 'H', position: [2.34, -0.94, 0.0] },
+            { id: 'H-3', element: 'H', position: [2.8, 2.27, 0.0] },
+            { id: 'H-4', element: 'H', position: [1.4, 3.36, 0.0] },
+            { id: 'H-5', element: 'H', position: [-0.7, 3.36, 0.0] },
+            { id: 'H-6', element: 'H', position: [-1.64, 1.21, 0.0] },
+            { id: 'H-7', element: 'H', position: [0.7, -2.24, 0.0] },
+            { id: 'H-8', element: 'H', position: [3.5, -0.86, 0.0] },
+            { id: 'H-9', element: 'H', position: [3.5, 1.72, 0.0] },
+            { id: 'H-10', element: 'H', position: [4.2, -0.86, 0.0] },
+            { id: 'H-11', element: 'H', position: [4.2, 1.72, 0.0] },
+            { id: 'H-12', element: 'H', position: [5.6, -0.94, 0.0] },
+            { id: 'H-13', element: 'H', position: [6.3, 0.0, 0.0] },
+            { id: 'H-14', element: 'H', position: [2.1, 2.15, 0.0] },
+            { id: 'H-15', element: 'H', position: [2.1, 0.27, 0.0] },
+            { id: 'H-16', element: 'H', position: [-2.3, 2.8, 0.0] }
+        ],
+        bonds: [
+            // Benzene ring bonds (alternating single/double)
+            { atom1: 'C-1', atom2: 'C-2', type: 'double' },
+            { atom1: 'C-2', atom2: 'C-3', type: 'single' },
+            { atom1: 'C-3', atom2: 'C-4', type: 'double' },
+            { atom1: 'C-4', atom2: 'C-5', type: 'single' },
+            { atom1: 'C-5', atom2: 'C-6', type: 'double' },
+            { atom1: 'C-6', atom2: 'C-1', type: 'single' },
+            // Pyran ring
+            { atom1: 'C-6', atom2: 'O-1', type: 'single' },
+            { atom1: 'O-1', atom2: 'C-7', type: 'single' },
+            { atom1: 'C-7', atom2: 'C-8', type: 'single' },
+            { atom1: 'C-8', atom2: 'C-2', type: 'single' },
+            // Side chain
+            { atom1: 'C-9', atom2: 'C-10', type: 'single' },
+            { atom1: 'C-10', atom2: 'C-11', type: 'single' },
+            { atom1: 'C-11', atom2: 'C-12', type: 'single' },
+            { atom1: 'C-12', atom2: 'C-13', type: 'single' },
+            // Methyl group
+            { atom1: 'C-3', atom2: 'C-14', type: 'single' },
+            // Hydroxyl group
+            { atom1: 'C-5', atom2: 'O-2', type: 'single' },
+            { atom1: 'O-2', atom2: 'H-16', type: 'single' },
+            // Hydrogen bonds
+            { atom1: 'C-1', atom2: 'H-1', type: 'single' },
+            { atom1: 'C-2', atom2: 'H-2', type: 'single' },
+            { atom1: 'C-3', atom2: 'H-3', type: 'single' },
+            { atom1: 'C-4', atom2: 'H-4', type: 'single' },
+            { atom1: 'C-5', atom2: 'H-5', type: 'single' },
+            { atom1: 'C-6', atom2: 'H-6', type: 'single' },
+            { atom1: 'C-7', atom2: 'H-7', type: 'single' },
+            { atom1: 'C-9', atom2: 'H-8', type: 'single' },
+            { atom1: 'C-10', atom2: 'H-9', type: 'single' },
+            { atom1: 'C-10', atom2: 'H-10', type: 'single' },
+            { atom1: 'C-11', atom2: 'H-11', type: 'single' },
+            { atom1: 'C-11', atom2: 'H-12', type: 'single' },
+            { atom1: 'C-13', atom2: 'H-13', type: 'single' },
+            { atom1: 'C-14', atom2: 'H-14', type: 'single' },
+            { atom1: 'C-14', atom2: 'H-15', type: 'single' }
+        ]
     }
 };
 
