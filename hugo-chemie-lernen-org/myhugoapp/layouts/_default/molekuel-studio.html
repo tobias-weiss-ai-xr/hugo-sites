@@ -258,27 +258,36 @@
 <script type="module">
     import * as THREE from 'three';
 
-    // Elemente
-    const container = document.getElementById('molecule-studio-container');
-    const canvas = document.getElementById('molecule-canvas');
-    const moleculeInput = document.getElementById('molecule-input');
-    const visualizeBtn = document.getElementById('visualize-btn');
-    const moleculeInfo = document.getElementById('molecule-info');
-    const errorMessage = document.getElementById('error-message');
-    const welcomeScreen = document.getElementById('welcome-screen');
-    const loadingScreen = document.getElementById('loading-screen');
-    const controlsInfo = document.getElementById('controls-info');
-    const autoRotateCheckbox = document.getElementById('auto-rotate');
+    // Warte bis DOM komplett geladen ist
+    function initApp() {
+        // Elemente
+        const container = document.getElementById('molecule-studio-container');
+        const canvas = document.getElementById('molecule-canvas');
+        const moleculeInput = document.getElementById('molecule-input');
+        const visualizeBtn = document.getElementById('visualize-btn');
+        const moleculeInfo = document.getElementById('molecule-info');
+        const errorMessage = document.getElementById('error-message');
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const loadingScreen = document.getElementById('loading-screen');
+        const controlsInfo = document.getElementById('controls-info');
+        const autoRotateCheckbox = document.getElementById('auto-rotate');
 
-    // Three.js Variablen
-    let scene, camera, renderer;
-    let moleculeGroup = null;
-    let autoRotate = true;
-    let isDragging = false;
-    let previousMousePosition = { x: 0, y: 0 };
+        if (!container || !canvas || !moleculeInput || !visualizeBtn) {
+            console.error('Ein oder mehrere Elemente nicht gefunden!');
+            return;
+        }
 
-    // Beispieldaten für Moleküle
-    const moleculeData = {
+        console.log('Molekülstudio wird initialisiert...');
+
+        // Three.js Variablen
+        let scene, camera, renderer;
+        let moleculeGroup = null;
+        let autoRotate = true;
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+
+        // Beispieldaten für Moleküle
+        const moleculeData = {
         'Wasser': {
             formula: 'H₂O',
             elements: {
@@ -667,5 +676,13 @@
 
     // Initialize
     init();
+    }
+
+    // Starte die App wenn DOM geladen ist
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+        initApp();
+    }
 </script>
 {{ end }}
