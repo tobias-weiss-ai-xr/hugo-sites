@@ -12,7 +12,11 @@ Die molekulare Welt ist normalerweise unsichtbar – aber mit dem Molekülstudio
 
 ---
 
-[**🧪 Molekülstudio jetzt ausprobieren**](/molekuel-studio/){: .btn .btn-primary .btn-lg}
+<div style="text-align: center; margin: 20px 0;">
+<a href="/molekuel-studio/" style="display: inline-block; padding: 15px 30px; font-size: 18px; font-weight: bold; color: white; background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); border: none; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,123,255,0.3); transition: all 0.3s ease;">
+🧪 Molekülstudio jetzt ausprobieren
+</a>
+</div>
 
 *Kostenlos, werbefrei, keine Anmeldung erforderlich*
 
