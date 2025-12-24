@@ -50,7 +50,7 @@ jobs:
 
     - name: Upload deployment test results
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: deployment-test-results
         path: tests/test-results/
