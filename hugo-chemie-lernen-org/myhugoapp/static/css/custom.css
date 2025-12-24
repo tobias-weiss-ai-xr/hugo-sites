@@ -120,28 +120,60 @@
 /* On mobile, keep the menu aligned right in collapsed view */
 @media (max-width: 767px) {
   .title-row {
-    padding: 15px 0;
+    padding: 10px 0;
   }
 
   .navbar-brand-wrapper {
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-brand {
+    font-size: 16px !important;
+  }
+
+  .site-logo {
+    height: 50px !important;
   }
 
   .theme-toggle-header i {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .navbar {
+    min-height: 50px !important;
+  }
+
+  .navbar-toggle {
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .navbar-nav {
-    float: right !important;
+    float: none !important;
     display: block;
+    text-align: center;
   }
 
   .navbar-nav > li {
-    float: left;
+    float: none;
+    display: inline-block;
   }
 
   .navbar-nav > li > a {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  /* Fix for Molekülstudio page on mobile */
+  .studio-header {
+    margin-top: 10px;
+  }
+
+  #molecule-studio-container {
+    height: 35vh !important;
+    min-height: 220px !important;
+    max-height: 350px !important;
   }
 }

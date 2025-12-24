@@ -1,34 +1,17 @@
-# Playwright test artifacts
-playwright/node_modules/
-playwright/test-results/
-playwright/.playwright/
-playwright/package-lock.json
-playwright/report/
+# Debug logs
+debug/*.txt
 
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-.pytest_cache/
+# File history (temporary tracking)
+file-history/
 
-# Test scripts
-test*.sh
-test*.py
-run*.sh
+# Shell snapshots
+shell-snapshots/
 
-# Backup files
-*.backup
-*_backup.*
+# Session data
+statsig/
 
-# Claude Code working directories
-.claude/
+# Projects cache
+projects/
 
-# Hugo artifacts
-public/
-resources/_gen/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Local history backups
+history.jsonl.backup-*

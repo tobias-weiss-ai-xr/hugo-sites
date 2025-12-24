@@ -4,10 +4,11 @@
 <style>
     #molecule-studio-container {
         width: 100%;
-        height: calc(100vh - 400px);
+        height: 50vh;
         min-height: 400px;
+        max-height: 600px;
         position: relative;
-        background: #f8f9fa;
+        background: #e8f5e9;
         border-radius: 8px;
         overflow: hidden;
     }
@@ -20,7 +21,7 @@
     }
 
     .studio-header {
-        background: white;
+        background: #e8f5e9;
         padding: 20px;
         border-radius: 8px;
         margin-bottom: 20px;
@@ -30,7 +31,7 @@
     .studio-title {
         font-size: 24px;
         font-weight: 300;
-        color: #333;
+        color: #0a3d0a;
         margin-bottom: 15px;
     }
 
@@ -124,7 +125,7 @@
         font-size: 20px;
         font-weight: 300;
         margin-bottom: 8px;
-        color: #333;
+        color: #1b5e20;
     }
 
     .welcome-screen p {
@@ -194,6 +195,84 @@
     .auto-rotate-toggle input[type="checkbox"] {
         cursor: pointer;
     }
+
+    /* Mobile responsive styles */
+    @media (max-width: 767px) {
+        .studio-header {
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        .studio-title {
+            font-size: 18px;
+            margin-bottom: 8px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .studio-header p {
+            font-size: 12px !important;
+            margin-bottom: 10px !important;
+        }
+
+        #molecule-studio-container {
+            height: 35vh;
+            min-height: 220px;
+            max-height: 350px;
+        }
+
+        .input-group {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group input {
+            font-size: 16px;
+            padding: 8px 12px;
+        }
+
+        .input-group button {
+            width: 100%;
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        .suggestions {
+            gap: 5px;
+        }
+
+        .suggestion-chip {
+            font-size: 11px;
+            padding: 4px 8px;
+        }
+
+        .auto-rotate-toggle {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .controls-info {
+            font-size: 10px;
+            padding: 6px 8px;
+            bottom: 5px;
+            left: 5px;
+            right: 5px;
+        }
+
+        .welcome-screen .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-screen h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .welcome-screen p {
+            font-size: 11px;
+        }
+    }
 </style>
 {{ end }}
 
@@ -208,8 +287,8 @@
     </div>
 
     <div class="input-group">
-        <input type="text" id="molecule-input" placeholder="Molekülname eingeben (z.B. Wasser, Methan, Koffein)" />
-        <button id="visualize-btn">Visualisieren</button>
+        <input type="text" id="molecule-input" placeholder="Molekülname eingeben (z.B. Wasser, Methan, Koffein)" aria-label="Molekülname eingeben" />
+        <button id="visualize-btn" aria-label="Molekül visualisieren">Visualisieren</button>
     </div>
 
     <div class="suggestions">
