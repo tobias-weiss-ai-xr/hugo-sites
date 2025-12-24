@@ -258,36 +258,19 @@
 <script type="module">
     import * as THREE from 'three';
 
-    // Warte bis DOM komplett geladen ist
-    function initApp() {
-        // Elemente
-        const container = document.getElementById('molecule-studio-container');
-        const canvas = document.getElementById('molecule-canvas');
-        const moleculeInput = document.getElementById('molecule-input');
-        const visualizeBtn = document.getElementById('visualize-btn');
-        const moleculeInfo = document.getElementById('molecule-info');
-        const errorMessage = document.getElementById('error-message');
-        const welcomeScreen = document.getElementById('welcome-screen');
-        const loadingScreen = document.getElementById('loading-screen');
-        const controlsInfo = document.getElementById('controls-info');
-        const autoRotateCheckbox = document.getElementById('auto-rotate');
+    // Globale Variablen (Modul-Scope)
+    let scene, camera, renderer;
+    let moleculeGroup = null;
+    let autoRotate = true;
+    let isDragging = false;
+    let previousMousePosition = { x: 0, y: 0 };
 
-        if (!container || !canvas || !moleculeInput || !visualizeBtn) {
-            console.error('Ein oder mehrere Elemente nicht gefunden!');
-            return;
-        }
+    // DOM Elemente werden beim Initialisieren gesetzt
+    let container, canvas, moleculeInput, visualizeBtn, moleculeInfo;
+    let errorMessage, welcomeScreen, loadingScreen, controlsInfo, autoRotateCheckbox;
 
-        console.log('Molekülstudio wird initialisiert...');
-
-        // Three.js Variablen
-        let scene, camera, renderer;
-        let moleculeGroup = null;
-        let autoRotate = true;
-        let isDragging = false;
-        let previousMousePosition = { x: 0, y: 0 };
-
-        // Beispieldaten für Moleküle
-        const moleculeData = {
+    // Beispieldaten für Moleküle
+    const moleculeData = {
         'Wasser': {
             formula: 'H₂O',
             elements: {
@@ -383,6 +366,25 @@
     };
 
     function init() {
+        // DOM Elemente abrufen
+        container = document.getElementById('molecule-studio-container');
+        canvas = document.getElementById('molecule-canvas');
+        moleculeInput = document.getElementById('molecule-input');
+        visualizeBtn = document.getElementById('visualize-btn');
+        moleculeInfo = document.getElementById('molecule-info');
+        errorMessage = document.getElementById('error-message');
+        welcomeScreen = document.getElementById('welcome-screen');
+        loadingScreen = document.getElementById('loading-screen');
+        controlsInfo = document.getElementById('controls-info');
+        autoRotateCheckbox = document.getElementById('auto-rotate');
+
+        if (!container || !canvas || !moleculeInput || !visualizeBtn) {
+            console.error('Ein oder mehrere Elemente nicht gefunden!');
+            return;
+        }
+
+        console.log('Molekülstudio wird initialisiert...');
+
         // Scene
         scene = new THREE.Scene();
         scene.background = new THREE.Color(0xf8f9fa);
@@ -674,15 +676,11 @@
         renderer.render(scene, camera);
     }
 
-    // Initialize
-    init();
-    }
-
-    // Starte die App wenn DOM geladen ist
+    // Warte bis DOM geladen ist, dann initialisiere
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initApp);
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        initApp();
+        init();
     }
 </script>
 {{ end }}
