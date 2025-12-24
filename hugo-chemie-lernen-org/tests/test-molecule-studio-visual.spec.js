@@ -542,7 +542,7 @@ test.describe('Periodensystem - Layout Tests', () => {
         expect(menuBox).toBeTruthy();
 
         // Container should end before menu starts
-        expect(containerBox!.y + containerBox!.height).toBeLessThanOrEqual(menuBox!.y);
+        expect(containerBox.y + containerBox.height).toBeLessThanOrEqual(menuBox.y);
 
         // Take screenshot for visual verification
         await page.screenshot({ path: 'test-results/pse-no-overlap.png', fullPage: true });
@@ -570,11 +570,11 @@ test.describe('Periodensystem - Layout Tests', () => {
         const viewportSize = page.viewportSize();
 
         expect(containerBox).toBeTruthy();
-        expect(containerBox!.width).toBeGreaterThan(0);
-        expect(containerBox!.height).toBeGreaterThan(0);
+        expect(containerBox.width).toBeGreaterThan(0);
+        expect(containerBox.height).toBeGreaterThan(0);
 
         // Container should use most of the viewport (minus menu space)
-        expect(containerBox!.width).toBeCloseTo(viewportSize!.width, 50);
+        expect(containerBox.width).toBeCloseTo(viewportSize.width, 50);
     });
 
     test('Menu buttons are clickable and not overlapped', async ({ page }) => {
@@ -592,5 +592,330 @@ test.describe('Periodensystem - Layout Tests', () => {
 
         // Take screenshot
         await page.screenshot({ path: 'test-results/pse-menu-visible.png', fullPage: true });
+    });
+
+    test('Footer is visible below menu', async ({ page }) => {
+        // Check footer exists and is visible
+        const footer = page.locator('.site-footer');
+        await expect(footer).toBeVisible();
+
+        // Get bounding boxes
+        const menu = page.locator('#menu');
+        const menuBox = await menu.boundingBox();
+        const footerBox = await footer.boundingBox();
+
+        expect(menuBox).toBeTruthy();
+        expect(footerBox).toBeTruthy();
+
+        // Footer should be below the menu (footer y > menu y + menu height)
+        expect(footerBox.y).toBeGreaterThan(menuBox.y + menuBox.height);
+
+        // Take screenshot for visual verification
+        await page.screenshot({ path: 'test-results/pse-footer-below-menu.png', fullPage: true });
+    });
+
+    test('Footer does not overlay PSE container', async ({ page }) => {
+        // Get all three elements
+        const container = page.locator('#container');
+        const menu = page.locator('#menu');
+        const footer = page.locator('.site-footer');
+
+        const containerBox = await container.boundingBox();
+        const menuBox = await menu.boundingBox();
+        const footerBox = await footer.boundingBox();
+
+        expect(containerBox).toBeTruthy();
+        expect(menuBox).toBeTruthy();
+        expect(footerBox).toBeTruthy();
+
+        // Verify vertical stacking: container -> menu -> footer
+        // Container ends before or at menu start
+        expect(containerBox.y + containerBox.height).toBeLessThanOrEqual(menuBox.y);
+
+        // Menu ends before footer starts
+        expect(menuBox.y + menuBox.height).toBeLessThanOrEqual(footerBox.y);
+
+        // Take screenshot
+        await page.screenshot({ path: 'test-results/pse-no-footer-overlay.png', fullPage: true });
+    });
+
+    test('PSE elements remain clickable with footer present', async ({ page }) => {
+        // Try to click on an element in the periodic table
+        // First, switch to table view
+        const tableButton = page.locator('#menu button').filter({ hasText: 'TABELLE' });
+        await tableButton.click();
+        await page.waitForTimeout(2000); // Wait for animation
+
+        // Try to click on Hydrogen element (first element)
+        const hydrogen = page.locator('.element').filter({ hasText: 'H' });
+        await expect(hydrogen.first()).toBeVisible();
+
+        // Verify element is clickable by checking bounding box
+        const hydrogenBox = await hydrogen.first().boundingBox();
+        expect(hydrogenBox).toBeTruthy();
+        expect(hydrogenBox.width).toBeGreaterThan(0);
+        expect(hydrogenBox.height).toBeGreaterThan(0);
+
+        // Screenshot for visual verification
+        await page.screenshot({ path: 'test-results/pse-elements-clickable.png', fullPage: true });
+    });
+
+    test('Dark mode - no white stripe on PSE page', async ({ page }) => {
+        // Enable dark mode
+        await page.evaluate(() => {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        });
+        await page.waitForTimeout(500);
+
+        // Get body background color
+        const bodyBg = await page.evaluate(() => {
+            return window.getComputedStyle(document.body).backgroundColor;
+        });
+
+        // Get container background color
+        const containerBg = await page.evaluate(() => {
+            const container = document.getElementById('container');
+            return window.getComputedStyle(container).backgroundColor;
+        });
+
+        // Get menu background color
+        const menuBg = await page.evaluate(() => {
+            const menu = document.getElementById('menu');
+            return window.getComputedStyle(menu).backgroundColor;
+        });
+
+        // All backgrounds should be dark (not white/transparent)
+        expect(bodyBg).not.toBe('rgb(255, 255, 255)');
+        expect(containerBg).not.toBe('rgb(255, 255, 255)');
+        expect(containerBg).not.toBe('rgba(0, 0, 0, 0)');
+        expect(menuBg).not.toBe('rgb(255, 255, 255)');
+
+        // Take screenshot for visual verification
+        await page.screenshot({ path: 'test-results/pse-dark-mode-no-stripe.png', fullPage: true });
+    });
+});
+
+test.describe('Periodensystem - Mobile View Tests', () => {
+
+    test('Mobile viewport - buttons are accessible', async ({ page }) => {
+        // Set mobile viewport
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(1000);
+
+        // Check all buttons are visible
+        const buttons = page.locator('#menu button');
+        const count = await buttons.count();
+        expect(count).toBe(4);
+
+        // Check each button is clickable
+        for (let i = 0; i < count; i++) {
+            const button = buttons.nth(i);
+            await expect(button).toBeVisible();
+
+            const box = await button.boundingBox();
+            expect(box).toBeTruthy();
+            expect(box.width).toBeGreaterThan(0);
+            expect(box.height).toBeGreaterThan(0);
+        }
+
+        // Take screenshot
+        await page.screenshot({ path: 'test-results/pse-mobile-buttons.png', fullPage: true });
+    });
+
+    test('Mobile viewport - container fills available space', async ({ page }) => {
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(1000);
+
+        const container = page.locator('#container');
+        const containerBox = await container.boundingBox();
+
+        expect(containerBox).toBeTruthy();
+        expect(containerBox.width).toBeGreaterThan(0);
+        expect(containerBox.height).toBeGreaterThan(300); // Should be substantial
+
+        // Screenshot
+        await page.screenshot({ path: 'test-results/pse-mobile-container.png', fullPage: true });
+    });
+
+    test('Mobile viewport - mode switching works', async ({ page }) => {
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(1000);
+
+        // Click through each mode
+        const modes = ['TABELLE', 'KUGEL', 'HELIX', 'GITTER'];
+
+        for (const mode of modes) {
+            const button = page.locator(`#menu button`).filter({ hasText: mode });
+            await button.click();
+            await page.waitForTimeout(2500); // Wait for animation
+
+            // Verify button has active styling
+            const bgColor = await button.evaluate((el) => {
+                return window.getComputedStyle(el).backgroundColor;
+            });
+
+            // Active button should have blue color
+            expect(bgColor).toBe('rgb(0, 123, 255)');
+        }
+
+        // Screenshot final state
+        await page.screenshot({ path: 'test-results/pse-mobile-mode-switch.png', fullPage: true });
+    });
+
+    test('Mobile viewport - footer visible below menu', async ({ page }) => {
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(1000);
+
+        // Check footer is visible
+        const footer = page.locator('.site-footer');
+        await expect(footer).toBeVisible();
+
+        const menu = page.locator('#menu');
+        const menuBox = await menu.boundingBox();
+        const footerBox = await footer.boundingBox();
+
+        // Footer should be below menu
+        expect(footerBox.y).toBeGreaterThan(menuBox.y + menuBox.height);
+
+        // Screenshot
+        await page.screenshot({ path: 'test-results/pse-mobile-footer.png', fullPage: true });
+    });
+
+    test('Mobile dark mode - no white stripe', async ({ page }) => {
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+
+        // Enable dark mode
+        await page.evaluate(() => {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        });
+        await page.waitForTimeout(500);
+
+        // Check background colors
+        const bodyBg = await page.evaluate(() => {
+            return window.getComputedStyle(document.body).backgroundColor;
+        });
+
+        const containerBg = await page.evaluate(() => {
+            const container = document.getElementById('container');
+            return window.getComputedStyle(container).backgroundColor;
+        });
+
+        // No white backgrounds
+        expect(bodyBg).not.toBe('rgb(255, 255, 255)');
+        expect(containerBg).not.toBe('rgb(255, 255, 255)');
+
+        // Screenshot
+        await page.screenshot({ path: 'test-results/pse-mobile-dark-mode.png', fullPage: true });
+    });
+
+    test('Tablet viewport - proper layout', async ({ page }) => {
+        await page.setViewportSize({ width: 768, height: 1024 });
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(1000);
+
+        // Check menu buttons
+        const buttons = page.locator('#menu button');
+        await expect(buttons).toHaveCount(4);
+
+        // Check container
+        const container = page.locator('#container');
+        await expect(container).toBeVisible();
+
+        const containerBox = await container.boundingBox();
+        expect(containerBox.width).toBeGreaterThan(0);
+
+        // Screenshot
+        await page.screenshot({ path: 'test-results/pse-tablet-layout.png', fullPage: true });
+    });
+});
+
+test.describe('Periodensystem - Active Button Tests', () => {
+
+    test.beforeEach(async ({ page }) => {
+        await page.goto(`${BASE_URL}/perioden-system-der-elemente/`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(1500); // Wait for initial animation
+    });
+
+    test('Grid button is active on page load', async ({ page }) => {
+        const gridButton = page.locator('#grid');
+        const tableButton = page.locator('#table');
+        const sphereButton = page.locator('#sphere');
+        const helixButton = page.locator('#helix');
+
+        // Grid button should have active class
+        await expect(gridButton).toHaveClass(/active-mode/);
+
+        // Other buttons should not have active class
+        await expect(tableButton).not.toHaveClass(/active-mode/);
+        await expect(sphereButton).not.toHaveClass(/active-mode/);
+        await expect(helixButton).not.toHaveClass(/active-mode/);
+
+        // Screenshot
+        await page.screenshot({ path: 'test-results/pse-active-grid-button.png', fullPage: true });
+    });
+
+    test('Active button changes when clicking different modes', async ({ page }) => {
+        const modes = [
+            { id: 'table', name: 'TABELLE' },
+            { id: 'sphere', name: 'KUGEL' },
+            { id: 'helix', name: 'HELIX' },
+            { id: 'grid', name: 'GITTER' }
+        ];
+
+        for (const mode of modes) {
+            // Click the button
+            await page.click(`#${mode.id}`);
+            await page.waitForTimeout(2500); // Wait for animation
+
+            // Check that only this button has the active class
+            const activeButton = page.locator(`#${mode.id}`);
+            await expect(activeButton).toHaveClass(/active-mode/);
+
+            // Check other buttons don't have active class
+            const otherButtons = page.locator('#menu button').filter({ hasNotText: mode.name });
+            const count = await otherButtons.count();
+
+            for (let i = 0; i < count; i++) {
+                await expect(otherButtons.nth(i)).not.toHaveClass(/active-mode/);
+            }
+        }
+
+        // Screenshot final state
+        await page.screenshot({ path: 'test-results/pse-active-button-changes.png', fullPage: true });
+    });
+
+    test('Active button has different visual style', async ({ page }) => {
+        const gridButton = page.locator('#grid');
+        const tableButton = page.locator('#table');
+
+        // Get background colors
+        const gridBg = await gridButton.evaluate((el) => {
+            return window.getComputedStyle(el).backgroundColor;
+        });
+
+        const tableBg = await tableButton.evaluate((el) => {
+            return window.getComputedStyle(el).backgroundColor;
+        });
+
+        // Active button (grid) should be blue
+        expect(gridBg).toBe('rgb(0, 123, 255)');
+
+        // Inactive button (table) should not be blue
+        expect(tableBg).not.toBe('rgb(0, 123, 255)');
+
+        // Screenshot
+        await page.screenshot({ path: 'test-results/pse-active-button-visual-style.png', fullPage: true });
     });
 });

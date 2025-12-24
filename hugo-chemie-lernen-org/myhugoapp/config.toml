@@ -14,8 +14,9 @@ enableRobotsTXT = true
 
 [params]
   github = "tobias-weiss-ai-xr"
-  custom_css = ["css/custom.css"]
-  defaultImage = "gopher.jpg"
+  custom_css = ["css/custom.css", "css/dark-mode.css"]
+  custom_js = ["js/dark-mode.js"]
+  defaultImage = "recent-article_001.jpg"
   footer_description = "Chemie Lernen - Ihre Plattform für innovative Chemie-Lernräume in Virtual Reality. Machen Sie komplexe chemische Konzepte greifbar und erlebbar."
 
 [params.meta]

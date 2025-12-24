@@ -1,34 +1,6 @@
 version: '3.8'
 
 services:
-  traefik:
-    image: traefik:v2.9
-    container_name: traefik
-    command:
-      - --api.dashboard=true
-      - --providers.docker=true
-      - --providers.docker.exposedbydefault=false
-      - --entrypoints.web.address=:80
-      - --entrypoints.websecure.address=:443
-      - --certificatesresolvers.mytlschallenge.acme.tlschallenge=true
-      - --certificatesresolvers.mytlschallenge.acme.email=spam@tobias-weiss.org
-      - --certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./letsencrypt:/letsencrypt
-      - ./traefik.yml:/etc/traefik/traefik.yml:ro
-    ports:
-      - "80:80"
-      - "443:443"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik-dash.rule=Host(`traefik.graphwiz.ai`)"
-      - "traefik.http.routers.traefik-dash.entrypoints=websecure"
-      - "traefik.http.routers.traefik-dash.tls.certresolver=mytlschallenge"
-      - "traefik.http.routers.traefik-dash.service=api@internal"
-    networks:
-      - web
-
   hugo-chemie-lernen-org:
     build: ./hugo-chemie-lernen-org
     container_name: hugo-chemie-lernen-org
@@ -59,7 +31,7 @@ services:
       - "traefik.http.middlewares.pse-redirect.redirectregex.regex=^https://pse\\.${HUGO_CHEMIE_DOMAIN}/.*"
       - "traefik.http.middlewares.pse-redirect.redirectregex.replacement=https://pse.${HUGO_CHEMIE_DOMAIN}/periodic-table/"
     networks:
-      - web
+      - traefik-web
 
   hugo-graphwiz-ai:
     build: ./hugo-graphwiz-ai
@@ -85,7 +57,7 @@ services:
       - "traefik.http.routers.hugo-graphwiz-secure.middlewares=security-headers@file,compression@file"
       - "traefik.http.services.hugo-graphwiz.loadbalancer.server.port=1313"
     networks:
-      - web
+      - traefik-web
 
   hugo-tobias-weiss-org:
     build: ./hugo-tobias-weiss-org
@@ -111,7 +83,7 @@ services:
       - "traefik.http.routers.hugo-tobias-secure.middlewares=security-headers@file,compression@file"
       - "traefik.http.services.hugo-tobias.loadbalancer.server.port=1313"
     networks:
-      - web
+      - traefik-web
 
   nuxt-contextual-intelligence:
     build: ../nuxt-contextual-intelligence
@@ -132,5 +104,6 @@ services:
       - web
 
 networks:
-  web:
-    driver: bridge
+  traefik-web:
+    external: true
+    name: traefik-web

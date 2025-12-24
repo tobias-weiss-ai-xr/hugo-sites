@@ -1091,6 +1091,68 @@ class TestContentQuality:
                 f"Average paragraph length seems unusual: {avg_paragraph_length:.0f} chars for {site}"
 
 
+class TestMoleculeStudio:
+    """Test Molecule Studio functionality and visual elements"""
+
+    def test_molecule_studio_page_accessible(self):
+        """Verify molecule studio page is accessible"""
+        url = "https://chemie-lernen.org/molecule-studio/"
+        response = requests.get(url, timeout=10)
+        assert response.status_code == 200, f"Molecule Studio page returned {response.status_code}"
+        assert len(response.content) >= 5000, "Molecule Studio page content too small"
+
+    def test_molecule_studio_has_canvas(self):
+        """Verify molecule studio has Three.js canvas"""
+        url = "https://chemie-lernen.org/molecule-studio/"
+        response = requests.get(url, timeout=10)
+        assert "molecule-canvas" in response.text, "Canvas element not found"
+        assert "three.module.js" in response.text, "Three.js not loaded"
+
+    def test_molecule_studio_ui_elements(self):
+        """Verify all UI elements are present"""
+        url = "https://chemie-lernen.org/molecule-studio/"
+        response = requests.get(url, timeout=10)
+
+        required_elements = [
+            "molecule-input",
+            "visualize-btn",
+            "auto-rotate",
+            "welcome-screen",
+            "controls-info"
+        ]
+
+        for element in required_elements:
+            assert element in response.text, f"Required element '{element}' not found"
+
+    def test_molecule_studio_suggestion_chips(self):
+        """Verify all suggestion chips are present"""
+        url = "https://chemie-lernen.org/molecule-studio/"
+        response = requests.get(url, timeout=10)
+
+        required_molecules = ["Wasser", "Methan", "Ammoniak", "Kohlendioxid", "Ethen"]
+
+        for molecule in required_molecules:
+            assert f'data-molecule="{molecule}"' in response.text, \
+                f"Suggestion chip for '{molecule}' not found"
+
+    def test_molecule_studio_threejs_import(self):
+        """Verify Three.js is properly imported via importmap"""
+        url = "https://chemie-lernen.org/molecule-studio/"
+        response = requests.get(url, timeout=10)
+
+        assert 'type="importmap"' in response.text, "Importmap not found"
+        assert "three@0.182.0" in response.text, "Three.js version not specified in importmap"
+
+    def test_molecule_studio_responsive_css(self):
+        """Verify responsive CSS is present"""
+        url = "https://chemie-lernen.org/molecule-studio/"
+        response = requests.get(url, timeout=10)
+
+        # Check for responsive design elements
+        assert "touch-action: none" in response.text, "Touch action CSS not found"
+        assert "canvas" in response.text.lower(), "Canvas element not found"
+
+
 class TestMobileCompatibility:
     """Test mobile compatibility and responsive design"""
 
