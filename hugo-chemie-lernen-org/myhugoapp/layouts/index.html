@@ -2,10 +2,16 @@
 
 <div class="home">
 
-  <!-- Main Site Heading for SEO and Accessibility -->
+  <!-- Featured Image -->
   <div class="row">
     <div class="col-md-12">
-      <h1 class="site-main-heading text-center">{{ .Site.Title }}</h1>
+      <img src="{{ "/images/recent-article_001.jpg" | relURL }}" alt="chemie-lernen.org teaser" class="img-responsive center-block featured-image">
+    </div>
+  </div>
+
+  <!-- Description only - title already in navbar -->
+  <div class="row">
+    <div class="col-md-12">
       {{ if .Site.Params.footer_description }}
       <p class="lead text-center">{{ .Site.Params.footer_description }}</p>
       {{ end }}
@@ -22,7 +28,7 @@
                 <div class="panel panel-default" style="border: 2px solid #007bff;">
 
                   <div class="panel-body" style="background-color: #f0f8ff;">
-                    <h3 class="panel-title pull-left">Besuchen Sie unsere Hubs-Umgebung</h3>
+                    <h3 class="panel-title pull-left">🥽 Hubs-Umgebung</h3>
                   </div>
 
                   <div class="panel-body"><small>
@@ -38,7 +44,7 @@
                 <div class="panel panel-default" style="border: 2px solid #6f42c1;">
 
                   <div class="panel-body" style="background-color: #f8f5ff;">
-                    <h3 class="panel-title pull-left">Interaktives Periodensystem</h3>
+                    <h3 class="panel-title pull-left">⚛️ Periodensystem</h3>
                   </div>
 
                   <div class="panel-body"><small>
@@ -54,7 +60,7 @@
                 <div class="panel panel-default" style="border: 2px solid #fd7e14;">
 
                   <div class="panel-body" style="background-color: #fff8f0;">
-                    <h3 class="panel-title pull-left">Molekülstudio</h3>
+                    <h3 class="panel-title pull-left">🔬 Molekülstudio</h3>
                   </div>
 
                   <div class="panel-body"><small>
