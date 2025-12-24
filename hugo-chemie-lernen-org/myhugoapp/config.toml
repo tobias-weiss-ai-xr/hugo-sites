@@ -1,8 +1,10 @@
 baseURL = "https://chemie-lernen.org/"
 languageCode = "de-de"
-title = "Chemie Lernen - Interaktive Chemie-Lernräume in Virtual Reality | VR Chemieunterricht"
+title = "Chemie Lernen - 📖 Offene, 🖱️ Interaktive und 🥽 Immersive Lerninhalte"
 theme = "hugo-cards"
 
+# Disable LiveReload in production
+disableLiveReload = true
 enableRobotsTXT = true
 
 [markup]
@@ -22,23 +24,27 @@ enableRobotsTXT = true
 author = "Chemie Lernen Team"
 
 [[menu.main]]
-    name = "Wiki"
-    url = "https://wiki.chemie-lernen.org/"
-    weight = 10
-[[menu.main]]
     name = "Hubs"
     url = "https://hubs.chemie-lernen.org/"
+    weight = 10
+[[menu.main]]
+    name = "Periodensystem"
+    url = "/perioden-system-der-elemente/"
     weight = 20
+[[menu.main]]
+    name = "Molekülstudio"
+    url = "/molekuel-studio/"
+    weight = 30
 [[menu.main]]
     name = "Roadmap"
     url = "/pages/roadmap/"
-    weight = 25
+    weight = 40
 [[menu.main]]
     name = "Über uns"
     url = "/pages/about/"
-    weight = 30
+    weight = 50
 [[menu.main]]
     name = "Kontakt"
     url = "/pages/contact/"
-    weight = 40
+    weight = 60
 

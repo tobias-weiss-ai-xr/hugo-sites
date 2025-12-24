@@ -3,39 +3,41 @@ title: "Roadmap: Ausbaustrategie"
 date: 2025-12-20
 ---
 
-The current platform successfully utilizes VR (Mozilla Hubs) to visualize the Periodic Table and basic experiments. To evolve from a research-focused project into a comprehensive learning ecosystem, the following expansions are recommended.
+Die aktuelle Plattform nutzt erfolgreich VR (Mozilla Hubs) zur Visualisierung des Periodensystems und grundlegender Experimente. Um sich von einem forschungsorientierten Projekt zu einem umfassenden Lernökosystem zu entwickeln, werden folgende Erweiterungen empfohlen.
 
-## 1. Immersive VR Scenarios 🥽
+## 1. Immersive VR-Szenarien 🥽
 
-While the Periodic Table is a great start, VR is most powerful when visualizing things that are otherwise invisible or dangerous.
+Während das Periodensystem ein guter Anfang ist, entfaltet VR seine größte Stärke bei der Visualisierung von Dingen, die sonst unsichtbar oder gefährlich sind.
 
-*   **Sub-Atomic Voyages:** Interactive rooms where users can "build" atoms by adding protons, neutrons, and electrons to observe how orbitals (s, p, d, f) change in 3D.
-*   **Molecular Gallery:** A space dedicated to VSEPR theory where users can walk through giant 3D models of complex molecules (e.g., DNA, Caffeine, or polymers) to understand bond angles.
-*   **Hazard-Free Labs:** Simulated "Extreme Experiments" that would be too dangerous for a school lab (e.g., Alkali metals in water, thermite reaction) where students can interact with the variables.
+*   **✓ Molekülstudio (IMPLEMENTIERT):** Interaktive 3D-Webanwendung zur Visualisierung von Molekülen mit Echtzeit-Rendering, Maussteuerung und automatischer Rotation. [Jetzt testen](/molekuel-studio/)
+*   **Subatomare Reisen:** Interaktive Räume, in denen Nutzer Atome durch Hinzufügen von Protonen, Neutronen und Elektronen "aufbauen" können, um zu beobachten, wie sich Orbitale (s, p, d, f) in 3D verändern.
+*   **Molekülgalerie in VR:** Ein Raum, der der VSEPR-Theorie gewidmet ist, in dem Nutzer durch riesige 3D-Modelle komplexer Moleküle (z. B. DNA, Koffein oder Polymere) laufen können, um Bindungswinkel zu verstehen.
+*   **Gefahrfreie Labore:** Simulierte "Extreme Experimente", die zu gefährlich für ein Schullabor wären (z. B. Alkalimetalle in Wasser, Thermit-Reaktion), bei denen Schüler mit den Variablen interagieren können.
 
-## 2. Educational & Gamified Content 🎮
+## 2. Bildungsinhalte und gamifiziertes Lernen 🎮
 
-Transforming the "rooms" into active learning experiences.
+Verwandlung der "Räume" in aktive Lernerfahrungen.
 
-*   **Chemistry Escape Rooms:** Users must solve stoichiometry puzzles or identify unknown substances using chemical tests to unlock the next VR room.
-*   **Scavenger Hunts:** Find all elements of a specific group (e.g., Halogens) hidden within a virtual landscape to earn "Element Badges."
-*   **Guided Narratives:** Voice-guided tours where a virtual "Marie Curie" or "Linus Pauling" explains the history and chemistry of a specific era or discovery.
+*   **Chemie-Escape-Rooms:** Nutzer müssen stöchiometrische Rätsel lösen oder unbekannte Substanzen mithilfe chemischer Tests identifizieren, um den nächsten VR-Raum freizuschalten.
+*   **Schnitzjagden:** Finden Sie alle Elemente einer bestimmten Gruppe (z. B. Halogene), die in einer virtuellen Landschaft versteckt sind, um "Element-Abzeichen" zu verdienen.
+*   **Geführte Erzählungen:** Stimmengeführte Touren, bei denen ein virtuelles "Marie Curie" oder "Linus Pauling" die Geschichte und Chemie einer bestimmten Ära oder Entdeckung erklärt.
 
-## 3. Teacher & Institutional Resources 📚
+## 3. Ressourcen für Lehrer und Institutionen 📚
 
-To increase adoption in schools and universities:
+Um die Einführung an Schulen und Universitäten zu erhöhen:
 
-*   **Lesson Blueprints:** PDF guides for teachers explaining how to integrate a specific VR room into a 45-minute lesson.
-*   **"Multi-User Lab" Days:** Scheduled sessions where an expert/moderator leads a group of students through a complex experiment in the Hub.
-*   **Assessment Tools:** Integration of simple quizzes within the Wiki that correspond to the visual cues found in the VR Hubs.
+*   **Unterrichtsbaupläne:** PDF-Leitfäden für Lehrer, die erklären, wie ein bestimmter VR-Raum in eine 45-minütige Unterrichtsstunde integriert wird.
+*   **"Multi-User-Lab"-Tage:** Geplante Sitzungen, bei denen ein Experte/Moderator eine Gruppe von Schülern durch ein komplexes Experiment im Hub führt.
+*   **Bewertungstools:** Integration einfacher Quizze im Wiki, die den visuellen Hinweisen in den VR-Hubs entsprechen.
 
-## 4. Technical & Accessibility Improvements ⚙️
+## 4. Technische und barrierefreie Verbesserungen ⚙️
 
-*   **Hybrid Learning (WebGL):** Ensure that every VR room has a high-performance "2D/Browser" mode for students without VR headsets or low-bandwidth connections.
-*   **Wiki Expansion:** The Wiki should serve as the "Textbook" to the Hub's "Laboratory." Every VR experiment should have a corresponding deep-dive article explaining the mathematics and theory behind it.
-*   **Interactive Periodic Table (3D):** An online 3D version of the PSE on the main page that acts as a portal—clicking an element teleports the user to a Hub room specific to that element's chemistry.
+*   **✓ Interaktives Periodensystem 3D (IMPLEMENTIERT):** WebGL-basiertes 3D-Periodensystem mit verschiedenen Ansichten (Tabelle, Kugel, Helix, Gitter). [Jetzt erkunden](/perioden-system-der-elemente/)
+*   **✓ Molekülstudio 3D (IMPLEMENTIERT):** Webbasierte Molekülvisualisierung mit Echtzeit-Rendering und interaktiver Steuerung. [Jetzt testen](/molekuel-studio/)
+*   **Hybrides Lernen (WebGL):** Sicherstellen, dass jeder VR-Raum einen leistungsstarken "2D/Browser"-Modus für Schüler ohne VR-Headsets oder langsame Verbindungen bietet.
+*   **Wiki-Erweiterung:** Das Wiki sollte als "Lehrbuch" zum "Labor" des Hubs dienen. Jedes VR-Experiment sollte einen entsprechenden vertiefenden Artikel haben, der die Mathematik und Theorie dahinter erklärt.
 
-## 5. Community & Collaboration 🤝
+## 5. Community & Zusammenarbeit 🤝
 
-*   **User-Generated Hubs:** Allow advanced students or teachers to submit their own Hub layouts or experimental setups.
-*   **Research Blog:** Regular updates on the "Status Quo" of the project, sharing findings on how VR affects retention rates in chemistry students compared to traditional methods.
+*   **Benutzergenerierte Hubs:** Fortgeschrittene Schüler oder Lehrer können ihre eigenen Hub-Layouts oder experimentellen Aufstellungen einreichen.
+*   **Forschungsblog:** Regelmäßige Updates zum "Status Quo" des Projekts, teilen Sie Erkenntnisse darüber, wie VR die Behaltensrate von Chemiestudenten im Vergleich zu herkömmlichen Methoden beeinflusst.
