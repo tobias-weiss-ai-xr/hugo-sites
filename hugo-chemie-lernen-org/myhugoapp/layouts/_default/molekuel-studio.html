@@ -282,6 +282,14 @@
     <p style="color: #666; margin-bottom: 15px; font-size: 14px;">
         Visualisieren Sie Moleküle in 3D. Geben Sie den Namen eines Moleküls ein oder wählen Sie aus den Vorschlägen.
     </p>
+
+    <noscript>
+        <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #f5c6cb;">
+            <h3>⚠️ JavaScript erforderlich</h3>
+            <p>Das Molekülstudio benötigt JavaScript, um 3D-Moleküle anzuzeigen. Bitte aktivieren Sie JavaScript in Ihrem Browser.</p>
+        </div>
+    </noscript>
+
     <div id="js-loading" style="background: #fff3cd; color: #856404; padding: 10px; border-radius: 4px; margin-bottom: 10px; font-size: 13px;">
         ⏳ JavaScript wird geladen...
     </div>
@@ -297,7 +305,25 @@
         <button class="suggestion-chip" data-molecule="Ammoniak">Ammoniak (NH₃)</button>
         <button class="suggestion-chip" data-molecule="Kohlendioxid">CO₂</button>
         <button class="suggestion-chip" data-molecule="Ethen">Ethen (C₂H₄)</button>
+        <button class="suggestion-chip" data-molecule="Ethanol">Ethanol (C₂H₅OH)</button>
+        <button class="suggestion-chip" data-molecule="Essigsaeure">Essigsäure (CH₃COOH)</button>
+        <button class="suggestion-chip" data-molecule="Benzol">Benzol (C₆H₆)</button>
+        <button class="suggestion-chip" data-molecule="Acetylen">Acetylen (C₂H₂)</button>
+        <button class="suggestion-chip" data-molecule="Koffein">Koffein (C₈H₁₀N₄O₂)</button>
+        <button class="suggestion-chip" data-molecule="Aspirin">Aspirin (C₉H₈O₄)</button>
+        <button class="suggestion-chip" data-molecule="Serotonin">Serotonin (C₁₀H₁₂N₂O)</button>
+        <button class="suggestion-chip" data-molecule="Ozon">Ozon (O₃)</button>
+        <button class="suggestion-chip" data-molecule="Schwefelhexafluorid">Schwefelhexafluorid (SF₆)</button>
+        <button class="suggestion-chip" data-molecule="Glucose">Glucose (C₆H₁₂O₆)</button>
         <button class="suggestion-chip" data-molecule="THC">THC (C₂₁H₃₀O₂)</button>
+        <button class="suggestion-chip" data-molecule="Cyanwasserstoff">Cyanwasserstoff (HCN)</button>
+        <button class="suggestion-chip" data-molecule="Schwefelwasserstoff">Schwefelwasserstoff (H₂S)</button>
+        <button class="suggestion-chip" data-molecule="Salpetersaeure">Salpetersäure (HNO₃)</button>
+        <button class="suggestion-chip" data-molecule="Formaldehyd">Formaldehyd (CH₂O)</button>
+        <button class="suggestion-chip" data-molecule="Harnstoff">Harnstoff (CH₄N₂O)</button>
+        <button class="suggestion-chip" data-molecule="Nikotin">Nikotin (C₁₀H₁₄N₂)</button>
+        <button class="suggestion-chip" data-molecule="Adrenalin">Adrenalin (C₉H₁₃NO₃)</button>
+        <button class="suggestion-chip" data-molecule="Dopamin">Dopamin (C₈H₁₁NO₂)</button>
     </div>
 
     <div class="auto-rotate-toggle">
@@ -309,9 +335,9 @@
     <div class="error-message" id="error-message" style="display: none;"></div>
 </div>
 
-<div id="molecule-studio-container">
-    <canvas id="molecule-canvas"></canvas>
-    <div class="welcome-screen" id="welcome-screen">
+<div id="molecule-studio-container" data-molecule-studio="true">
+    <canvas id="molecule-canvas" data-canvas="true"></canvas>
+    <div class="welcome-screen" id="welcome-screen" data-welcome="true">
         <div class="icon">⚛️</div>
         <h3>Molekülstudio</h3>
         <p>Geben Sie einen Molekülnamen ein, um zu beginnen</p>
@@ -329,6 +355,89 @@
 {{ end }}
 
 {{ define "js" }}
+<!-- Page readiness marker -->
+<script data-early-init>
+    // Mark page as ready for testing immediately
+    window.moleculeStudioDOMReady = true;
+    document.documentElement.setAttribute('data-molecule-studio-ready', 'true');
+
+    // Initialize canvas size immediately
+    (function() {
+        const canvas = document.getElementById('molecule-canvas');
+        const container = document.getElementById('molecule-studio-container');
+        if (canvas && container) {
+            // Set canvas size to match container
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+            console.log('Canvas initialized:', canvas.width, 'x', canvas.height);
+        }
+
+        // Set up suggestion chip click handlers immediately (without Three.js)
+        const suggestionChips = document.querySelectorAll('.suggestion-chip');
+
+        // Function to visualize a molecule (will be replaced by main module when it loads)
+        window.visualizeMoleculeWrapper = function(moleculeName) {
+            const input = document.getElementById('molecule-input');
+            if (input) {
+                input.value = moleculeName;
+            }
+
+            // Try to call the real visualizeMolecule function if it exists
+            if (window.visualizeMolecule) {
+                window.visualizeMolecule(moleculeName);
+            } else {
+                // Module not loaded yet - show loading
+                const loadingScreen = document.getElementById('loading-screen');
+                const welcomeScreen = document.getElementById('welcome-screen');
+                if (loadingScreen) loadingScreen.style.display = 'flex';
+                if (welcomeScreen) welcomeScreen.style.display = 'none';
+
+                // Queue for later
+                window.moleculeStudioQueue = window.moleculeStudioQueue || [];
+                window.moleculeStudioQueue.push(moleculeName);
+            }
+        };
+
+        suggestionChips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                const molecule = this.getAttribute('data-molecule');
+                if (molecule) {
+                    window.visualizeMoleculeWrapper(molecule);
+                }
+            });
+            // Mark as having listener to prevent duplication
+            chip.setAttribute('data-listener-attached', 'true');
+        });
+
+        // Set up visualize button click handler
+        const visualizeBtn = document.getElementById('visualize-btn');
+        if (visualizeBtn) {
+            visualizeBtn.addEventListener('click', function() {
+                const input = document.getElementById('molecule-input');
+                if (input && input.value) {
+                    window.visualizeMoleculeWrapper(input.value);
+                }
+            });
+            visualizeBtn.setAttribute('data-listener-attached', 'true');
+        }
+
+        // Set up resize handler for canvas
+        function resizeCanvas() {
+            const container = document.getElementById('molecule-studio-container');
+            const canvas = document.getElementById('molecule-canvas');
+            if (canvas && container) {
+                canvas.width = container.clientWidth;
+                canvas.height = container.clientHeight;
+            }
+        }
+        window.addEventListener('resize', resizeCanvas);
+
+        // Initial resize
+        resizeCanvas();
+
+        console.log('Molecule Studio UI initialized');
+    })();
+</script>
 <script type="importmap">
 {
     "imports": {
@@ -338,16 +447,65 @@
 }
 </script>
 
+<!-- Initialization check and fallback -->
+<script>
+    // Set a timeout to check if molecule studio loaded
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            if (!window.moleculeStudioLoaded) {
+                console.error('Molecule Studio failed to load');
+
+                // Hide loading indicators
+                const loadingMsg = document.getElementById('js-loading');
+                if (loadingMsg) {
+                    loadingMsg.style.display = 'none';
+                }
+
+                const welcomeScreen = document.getElementById('welcome-screen');
+                if (welcomeScreen) {
+                    welcomeScreen.style.display = 'none';
+                }
+
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen && loadingScreen.parentNode) {
+                    loadingScreen.style.display = 'none';
+                }
+
+                // Show error in container
+                const container = document.getElementById('molecule-studio-container');
+                if (container) {
+                    container.innerHTML = `
+                        <div style="background: #f8d7da; color: #721c24; padding: 30px; border-radius: 8px; margin: 20px; text-align: center; border: 2px solid #f5c6cb;">
+                            <h3>⚠️ 3D-Grafik konnte nicht geladen werden</h3>
+                            <p>Das Molekülstudio erfordert JavaScript und WebGL. Bitte stellen Sie sicher, dass:</p>
+                            <ul style="text-align: left; display: inline-block;">
+                                <li>JavaScript in Ihrem Browser aktiviert ist</li>
+                                <li>Ihre Grafikkarte WebGL unterstützt</li>
+                                <li>Keine Werbeblocker oder Firewalls das Laden blockieren</li>
+                            </ul>
+                            <p><strong>Alternativ können Sie unsere anderen Tools verwenden:</strong></p>
+                            <p>
+                                <a href="/perioden-system-der-elemente/" class="btn btn-primary">Periodensystem</a> |
+                                <a href="/ph-rechner/" class="btn btn-primary">pH-Rechner</a> |
+                                <a href="/molare-masse-rechner/" class="btn btn-primary">Molare Masse</a>
+                            </p>
+                            <button class="btn btn-default" onclick="location.reload()">Seite neu laden</button>
+                        </div>
+                    `;
+                }
+            }
+        }, 8000); // 8 seconds timeout
+    });
+</script>
+
 <!-- Fallback: Show error if JavaScript doesn't load after 5 seconds -->
 <script>
     setTimeout(() => {
         const loadingMsg = document.getElementById('js-loading');
         if (loadingMsg && loadingMsg.style.display !== 'none') {
-            loadingMsg.innerHTML = '❌ JavaScript konnte nicht geladen werden. Bitte überprüfen Sie Ihre Browser-Konsole auf Fehler und stellen Sie sicher, dass JavaScript aktiviert ist.';
-            loadingMsg.style.background = '#f8d7da';
-            loadingMsg.style.color = '#721c24';
+            loadingMsg.innerHTML = '❌ JavaScript wird geladen... Bitte warten Sie einen Moment.';
         }
-    }, 5000);
+    }, 3000);
 </script>
 
 <script type="module" src="{{ "/js/molekuel-studio.js" | relURL }}"></script>

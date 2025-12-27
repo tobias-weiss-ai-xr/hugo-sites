@@ -14,7 +14,7 @@ test.describe('Molecule Studio - Visual Button Tests', () => {
 
     test.beforeEach(async ({ page }) => {
         // Navigate to molecule studio page
-        await page.goto(`${BASE_URL}/molecule-studio/`);
+        await page.goto(`${BASE_URL}/molekuel-studio/`);
         await page.waitForLoadState('networkidle');
         // Wait for Three.js to load
         await page.waitForTimeout(1000);
@@ -35,7 +35,7 @@ test.describe('Molecule Studio - Visual Button Tests', () => {
 
         // Check suggestion chips
         const chips = page.locator('.suggestion-chip');
-        await expect(chips).toHaveCount(5);
+        await expect(chips).toHaveCount(24);
 
         // Check auto-rotate checkbox
         await expect(page.locator('#auto-rotate')).toBeVisible();
@@ -445,7 +445,7 @@ test.describe('Molecule Studio - Visual Button Tests', () => {
 test.describe('Molecule Studio - Accessibility Tests', () => {
 
     test.beforeEach(async ({ page }) => {
-        await page.goto(`${BASE_URL}/molecule-studio/`);
+        await page.goto(`${BASE_URL}/molekuel-studio/`);
         await page.waitForLoadState('networkidle');
     });
 
@@ -505,7 +505,7 @@ test.describe('Molecule Studio - Visual Regression', () => {
         const molecules = ['Wasser', 'Methan', 'Ammoniak', 'Kohlendioxid', 'Ethen'];
 
         for (const molecule of molecules) {
-            await page.goto(`${BASE_URL}/molecule-studio/`);
+            await page.goto(`${BASE_URL}/molekuel-studio/`);
             await page.waitForLoadState('networkidle');
             await page.waitForTimeout(500);
 
@@ -760,8 +760,8 @@ test.describe('Periodensystem - Mobile View Tests', () => {
                 return window.getComputedStyle(el).backgroundColor;
             });
 
-            // Active button should have blue color
-            expect(bgColor).toBe('rgb(0, 123, 255)');
+            // Active button should have green color
+            expect(bgColor).toBe('rgb(76, 175, 80)');
         }
 
         // Screenshot final state
@@ -909,11 +909,11 @@ test.describe('Periodensystem - Active Button Tests', () => {
             return window.getComputedStyle(el).backgroundColor;
         });
 
-        // Active button (grid) should be blue
-        expect(gridBg).toBe('rgb(0, 123, 255)');
+        // Active button (grid) should be green
+        expect(gridBg).toBe('rgb(76, 175, 80)');
 
-        // Inactive button (table) should not be blue
-        expect(tableBg).not.toBe('rgb(0, 123, 255)');
+        // Inactive button (table) should not be green
+        expect(tableBg).not.toBe('rgb(76, 175, 80)');
 
         // Screenshot
         await page.screenshot({ path: 'test-results/pse-active-button-visual-style.png', fullPage: true });
