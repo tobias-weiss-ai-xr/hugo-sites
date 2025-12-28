@@ -1,14 +1,202 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/</link>
+    <description>Recent content on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 23 Dec 2025 10:00:00 +0100</lastBuildDate><atom:link href="https://graphwiz.ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PromptToGraph: Engineering Structured Knowledge</title>
+      <link>https://graphwiz.ai/ai/prompt-engineering/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ai/prompt-engineering/</guid>
+      <description> </description>
+    </item>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datenschutzerklärung / Privacy Policy</title>
+      <link>https://graphwiz.ai/privacy/</link>
+      <pubDate>Mon, 22 Dec 2025 12:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/privacy/</guid>
+      <description>Datenschutzerklärung / Privacy Policy Stand / Last Updated: 22. Dezember 2025
+Allgemeines / General Information Der Schutz Ihrer persönlichen Daten ist mir ein wichtiges Anliegen. Diese Webseite erhebt und verarbeitet grundsätzlich keine personenbezogenen Daten, sofern Sie dies nicht freiwillig im Rahmen der Kontaktaufnahme tun.
+The protection of your personal data is important to me. This website generally does not collect or process personal data unless you voluntarily provide it in the context of contact.</description>
+    </item>
     
+    <item>
+      <title>Imprint</title>
+      <link>https://graphwiz.ai/imprint/</link>
+      <pubDate>Mon, 22 Dec 2025 12:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/imprint/</guid>
+      <description>Imprint / Impressum Angaben gemäß § 5 TMG
+Anbieter / Provider Dr. GraphWiz AI &amp;amp; XR Consulting and Development Services
+Grundstraße 69
+78628 Rottweil
+Germany
+Kontakt / Contact E-Mail: info@graphwiz.ai LinkedIn: Dr. GraphWiz AI Cloud XR Website: https://graphwiz.ai/
+Geschäftsführung / Management Tobias Weiß
+Grundstraße 69
+78628 Rottweil
+Germany
+Umsatzsteuer-Identifikationsnummer / VAT ID [Please provide your VAT ID if applicable] (VAT ID to be added upon registration)
+Inhaltlich verantwortlich / Responsible for Content Tobias Weiß</description>
+    </item>
+    
+    <item>
+      <title>UV: The Ultimate Python Toolchain Modernization</title>
+      <link>https://graphwiz.ai/ops/uv-python-toolchain-modernization/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/uv-python-toolchain-modernization/</guid>
+      <description>UV: Revolutionizing Python Development with One Tool to Rule Them All Executive Summary: UV represents a paradigm shift in Python development tooling, consolidating over 10 different Python packaging and environment management tools into a single, blazing-fast binary written in Rust. This modernization dramatically improves development speed, reliability, and consistency across projects and teams.
+The Problem: Python Tool Fragmentation Traditional Python development suffers from tool fragmentation:
+Traditional Tool Purpose Limitations pip Package installation Slow, no dependency resolution lock files pip-tools Dependency locking Additional tool, compilation overhead pipx Isolated application installation Separate tool, limited functionality poetry Dependency management &amp;amp; packaging Complex configuration, slower performance pyenv Python version management Shell integration complexity virtualenv Environment isolation Manual management required twine Package publishing Separate upload process build Package building Additional build step required tox Multi-environment testing Complex configuration overhead The UV Solution: One Tool, Infinite Possibilities UV eliminates this fragmentation by providing all functionality in a single command:</description>
+    </item>
+    
+    <item>
+      <title>Chemie-Lernen.org: Virtual Reality Chemistry Education</title>
+      <link>https://graphwiz.ai/projects/chemie-lernen/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/projects/chemie-lernen/</guid>
+      <description>Transforming Chemistry Education Through Immersive VR Project Overview: Chemie-Lernen.org represents a breakthrough in educational technology, leveraging Virtual Reality to create an engaging, interactive learning platform for chemistry education. This innovative project demonstrates our commitment to applying cutting-edge XR technologies to solve real-world educational challenges.
+The Challenge: Making Abstract Concepts Tangible Traditional chemistry education often struggles with:
+Abstract molecular structures difficult to visualize Limited laboratory access due to safety and resource constraints Passive learning methods that fail to engage modern students Complex periodic table relationships hard to comprehend Our Solution: Immersive Learning Environments Chemie-Lernen.</description>
+    </item>
+    
+    <item>
+      <title>Hello WebXR: Your Gateway to Immersive Web Experiences</title>
+      <link>https://graphwiz.ai/xr/hello_webxr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/xr/hello_webxr/</guid>
+      <description>Hello WebXR: Your Gateway to Immersive Web Experiences Hello WebXR showcase technology stack:
+WebXR API for native browser support Three.js for 3D graphics Spatial Audio with Web Audio API Responsive Design for cross-platform Experience the Future of Web XR Hello WebXR demonstrates the power of modern web technologies for creating immersive virtual and augmented reality experiences directly in your browser. No downloads required - just open the page and step into virtual reality!</description>
+    </item>
+    
+    <item>
+      <title>Extended Reality (XR) Environments: A Comprehensive Overview</title>
+      <link>https://graphwiz.ai/xr/extended-reality-environments/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/xr/extended-reality-environments/</guid>
+      <description>Extended Reality (XR) is an umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR). These digital ecosystems redefine human-computer interaction by creating immersive and interactive experiences.
+Understanding XR Modalities XR environments integrate digital elements with the physical world to varying degrees:
+Virtual Reality (VR): Fully immerses users in a simulated digital space, blocking out the physical environment. Ideal for complete escapism and simulation. Augmented Reality (AR): Overlays digital information onto the real world, enhancing perception without replacing reality.</description>
+    </item>
+    
+    <item>
+      <title>Dr. GraphWiz at CoCreate: Advancing Open Science and Collaboration</title>
+      <link>https://graphwiz.ai/workshops/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/workshops/</guid>
+      <description>Dr. GraphWiz recently participated in the CoCreate: Open Science workshop at Philipps-Universität Marburg 🏛️. This event convened researchers, students, and administrators to foster dialogue on the future of transparent and collaborative research practices 🤝.
+Key Takeaways and Contributions 🔑: Promoting Open Science: The workshop emphasized practical strategies for integrating Open Science principles into research and education, focusing on reproducibility and accessibility 📖. Showcasing Innovation: Dr. GraphWiz presented projects centered on data sovereignty and transparency, demonstrating our commitment to open and user-controlled digital environments 💡.</description>
+    </item>
+    
+    <item>
+      <title>Security-First Approach: Integrated DevSecOps</title>
+      <link>https://graphwiz.ai/security/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/security/</guid>
+      <description>Dr. GraphWiz integrates security as a foundational element throughout the development lifecycle 🛡️. Our DevSecOps methodology ensures robust protection and compliance, enabling rapid innovation without compromising integrity 🛡️.
+Integrated Resilience 🔐: We believe proactive and continuous security is essential. By embedding security practices within development and operations, we create a resilient posture that adapts to evolving threats 🛡️.
+Seamless Integration: Security measures are harmonized within automated pipelines, facilitating rapid delivery with inherent compliance ⚙️.</description>
+    </item>
+    
+    <item>
+      <title>Mastermind Monitoring Architectures: A Deep Dive</title>
+      <link>https://graphwiz.ai/ops/mastermind-monitoring-architectures/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/mastermind-monitoring-architectures/</guid>
+      <description>Comprehensive Monitoring for &amp;ldquo;Mastermind&amp;rdquo; Ecosystems Executive Summary: Selecting the right monitoring solution is critical for operational resilience, compliance, and business continuity. &amp;ldquo;Mastermind&amp;rdquo; applications span distinct sectors: Honeywell MASterMind™ (security/alarm monitoring), Genomenon Mastermind (genomic intelligence), and MasterMind Tech (IoT property management). Each requires a tailored observability approach.
+This report provides a blueprint for monitoring these environments, covering:
+Honeywell MASterMind™: Focuses on zero-downtime, SQL backend performance, and receiver/telephony interface monitoring. Genomenon Mastermind: Emphasizes API latency, uptime, and data freshness.</description>
+    </item>
+    
+    <item>
+      <title>Automated Visual Testing &amp; Screenshots</title>
+      <link>https://graphwiz.ai/ops/automated-testing-and-screenshots/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/automated-testing-and-screenshots/</guid>
+      <description>Ensuring Quality with Automated Visual Verification As part of our commitment to robust operations, we have implemented an automated screenshot service to verify the health and visual integrity of our deployments.
+The Challenge Ensuring that complex, containerized applications like Mozilla Hubs are not only &amp;ldquo;up&amp;rdquo; (responding to pings) but also visually correct and functional for end-users.
+The Solution We developed a lightweight, Dockerized screenshot-service utilizing Puppeteer. This service automatically:
+Navigates to critical application endpoints (Admin Console, Client Landing Page).</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Dr. GraphWiz AI: Intelligent Graph Analysis</title>
+      <link>https://graphwiz.ai/posts/welcome-to-graphwiz-ai/</link>
+      <pubDate>Thu, 18 Dec 2025 02:30:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/posts/welcome-to-graphwiz-ai/</guid>
+      <description>GraphWiz AI is a leading platform for intelligent graph visualization, analysis, and knowledge representation 📊.
+Core Capabilities 🔑: AI-Driven Insights: Uncover patterns and relationships in complex data using advanced machine learning techniques 🤖. Interactive Visualization: Explore data through sophisticated 2D and 3D graph visualizations 🧊. Knowledge Graph Construction: Build and query knowledge graphs for powerful AI applications 🕸️. Real-time Collaboration: Enhance teamwork with collaborative graph analysis tools 🤝. Scalable Architecture: Manage and analyze large-scale graphs efficiently, supporting millions of nodes and edges ☁️.</description>
+    </item>
+    
+    <item>
+      <title>Digital Sovereignty: Securing Your Business Future</title>
+      <link>https://graphwiz.ai/digital-sovereignty/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/digital-sovereignty/</guid>
+      <description>In today&amp;rsquo;s technology-driven landscape, Digital Sovereignty is a strategic imperative, empowering organizations to maintain full control over their digital destiny and avoid vendor lock-in 🏛️.
+OpenDesk - Sovereign Digital Collaboration Platform F13 - Sovereign AI Assistance for Public Administration 🏛️ Why Digital Sovereignty is Crucial for Revenue Growth 📈: 1. Mitigating Vendor Lock-in 🔓 Reliance on proprietary AI platforms introduces risks. Changes in pricing, service terms, or API deprecation can jeopardize revenue streams.</description>
+    </item>
+    
+    <item>
+      <title>Our Core Focus Areas: Driving Business Value</title>
+      <link>https://graphwiz.ai/focus-areas/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/focus-areas/</guid>
+      <description>GraphWiz is dedicated to transforming complex technology into tangible business outcomes 💡. Our expertise spans several key areas crucial for modern enterprise growth:
+1. Global Vision &amp;amp; Market Reach 🌍 We help businesses expand their market presence by developing scalable, localized solutions that navigate the global digital landscape, ensuring impactful reach across borders 🌐.
+2. Artificial Intelligence (AI) 🤖 We translate advanced AI and machine learning capabilities into measurable business impact.</description>
+    </item>
+    
+    <item>
+      <title>Page Not Found</title>
+      <link>https://graphwiz.ai/404/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://graphwiz.ai/404/</guid>
+      <description>404 - Digital Territory Not Found 🌐 Oops! The requested digital pathway doesn&amp;rsquo;t exist in our network.
+🚀 Let&amp;rsquo;s Get You Back on Track The page you&amp;rsquo;re looking for may have been:
+Relocated to a new coordinate in our digital space Upgraded as part of our continuous improvement Merged into a more comprehensive solution Decommissioned following our technology lifecycle 🎯 Popular Destinations Navigate to our core focus areas:
+Focus Areas - Discover our main domains of expertise Artificial Intelligence - AI-powered solutions and insights Advanced Delegation Systems - Smart workflow automation eXtended Reality - Immersive AR/VR experiences Digital Sovereignty - Secure, autonomous digital infrastructure Operations - DevOps and system management Security - Cybersecurity and protection strategies Workshops - Training and knowledge transfer 🔧 Need Technical Assistance?</description>
+    </item>
+    
+    <item>
+      <title>Advanced Delegation Systems for Complex Workflow Management</title>
+      <link>https://graphwiz.ai/advanced-delegation-systems/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/advanced-delegation-systems/</guid>
+      <description>🧠 Advanced Delegation Systems for Complex Workflow Management 📊 Intelligent Task Orchestration Framework
+Graphwiz.ai provides a sophisticated platform for implementing multi-agent delegation architectures, enabling automated coordination of complex computational workflows. Our system abstracts the complexity of distributed task management, allowing researchers and developers to focus on core objectives rather than infrastructure configuration. 🔬
+⚙️ Technical Architecture &amp;amp; Capabilities 🤖 Agent Definition &amp;amp; Management Design and deploy specialized computational agents through our structured interface:</description>
+    </item>
+    
+    <item>
+      <title>AI for Business Growth: Driving Revenue with Intelligent Automation</title>
+      <link>https://graphwiz.ai/ai/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ai/</guid>
+      <description>Dr. GraphWiz bridges the gap between advanced Artificial Intelligence and tangible business outcomes 🤝. Our strategy focuses on transforming technological potential into sustainable revenue growth through four core pillars:
+1. Strategic Business Alignment 🎯 AI initiatives are driven by business objectives, not technology for its own sake. We begin by understanding your unique value chain and identifying high-impact areas such as customer acquisition, churn reduction, and dynamic pricing to ensure AI projects directly contribute to profitability 💰.</description>
+    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hubs on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/tags/hubs/</link>
+    <description>Recent content in hubs on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 25 Nov 2023 00:00:00 -0100</lastBuildDate><atom:link href="https://tobias-weiss.org/tags/hubs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Personal Hubs Instance: A Dedicated XR Space</title>
+      <link>https://tobias-weiss.org/xr/personal-hubs-instance/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/personal-hubs-instance/</guid>
+      <description>I have set up a personal instance of Mozilla Hubs to explore and demonstrate the capabilities of this versatile VR platform 🥽. This dedicated space allows for a more controlled environment to showcase and experiment with features for socializing, collaboration, and immersive experiences 🌌.
+Key Features and Benefits 🔑: Browser-Native Access: Easily join and interact within 3D environments directly from your web browser, requiring no additional software 🌐. Customizable Presence: Utilize personalized avatars to represent yourself in the virtual space 👤.</description>
+    </item>
+    
+    <item>
+      <title>Behavioral Graphs: Enhancing XR Interaction</title>
+      <link>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</guid>
+      <description>Behavioral Graphs (BGs) represent an innovative extension to platforms like Mozilla Hubs, designed to enrich XR environments with interactive features 📊. We believe BGs offer a significant advancement beyond traditional &amp;ldquo;gallery-like&amp;rdquo; scenes, pushing the boundaries of user engagement in virtual spaces 🌌.
+What are Behavioral Graphs? 🧠 Behavioral Graphs are dynamic, data-driven systems that analyze and respond to user actions within XR environments. They enable more personalized and interactive experiences by modeling user behavior and providing context-aware assistance or content 🤖.</description>
+    </item>
+    
+    <item>
+      <title>Mozilla Hubs XR Experiments: Enhancing Educational Spaces</title>
+      <link>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</guid>
+      <description>This section details experiments with Mozilla Hubs, exploring its application in university teaching and creating immersive learning environments 🎓. Our goal is to represent complex subjects, like the periodic table, as interactive networks of virtual spaces 🕸️.
+Project Overview: The Periodic Table in VR 🧪 We are developing virtual environments where each element has its own dedicated space, enriched with relevant information. For example, nitrogen&amp;rsquo;s space could illustrate the formation of nitrogen oxides in car traffic or its role in fertilizer production 💨.</description>
+    </item>
+    
+  </channel>
+</rss>

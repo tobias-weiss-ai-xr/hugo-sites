@@ -1,14 +1,596 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/tags/</link>
+    <description>Recent content in Tags on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 23 Dec 2025 10:00:00 +0100</lastBuildDate><atom:link href="https://graphwiz.ai/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>graph-ai</title>
+      <link>https://graphwiz.ai/tags/graph-ai/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/graph-ai/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>knowledge-graphs</title>
+      <link>https://graphwiz.ai/tags/knowledge-graphs/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/knowledge-graphs/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>llm</title>
+      <link>https://graphwiz.ai/tags/llm/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/llm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nlp</title>
+      <link>https://graphwiz.ai/tags/nlp/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prompt-engineering</title>
+      <link>https://graphwiz.ai/tags/prompt-engineering/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/prompt-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development-tools</title>
+      <link>https://graphwiz.ai/tags/development-tools/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/development-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>https://graphwiz.ai/tags/performance/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pip</title>
+      <link>https://graphwiz.ai/tags/pip/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poetry</title>
+      <link>https://graphwiz.ai/tags/poetry/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/poetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyenv</title>
+      <link>https://graphwiz.ai/tags/pyenv/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/pyenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://graphwiz.ai/tags/python/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uv</title>
+      <link>https://graphwiz.ai/tags/uv/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/uv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chemistry</title>
+      <link>https://graphwiz.ai/tags/chemistry/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/chemistry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>education</title>
+      <link>https://graphwiz.ai/tags/education/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interactive-learning</title>
+      <link>https://graphwiz.ai/tags/interactive-learning/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/interactive-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mozilla-hubs</title>
+      <link>https://graphwiz.ai/tags/mozilla-hubs/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/mozilla-hubs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>periodic-table</title>
+      <link>https://graphwiz.ai/tags/periodic-table/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/periodic-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vr</title>
+      <link>https://graphwiz.ai/tags/vr/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/vr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AR</title>
+      <link>https://graphwiz.ai/tags/ar/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/ar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Three.js</title>
+      <link>https://graphwiz.ai/tags/three.js/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/three.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Audio API</title>
+      <link>https://graphwiz.ai/tags/web-audio-api/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/web-audio-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WebXR</title>
+      <link>https://graphwiz.ai/tags/webxr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/webxr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xr</title>
+      <link>https://graphwiz.ai/tags/xr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/xr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>augmented-reality</title>
+      <link>https://graphwiz.ai/tags/augmented-reality/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/augmented-reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>environments</title>
+      <link>https://graphwiz.ai/tags/environments/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/environments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spatial-computing</title>
+      <link>https://graphwiz.ai/tags/spatial-computing/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/spatial-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual-reality</title>
+      <link>https://graphwiz.ai/tags/virtual-reality/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/virtual-reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business-continuity</title>
+      <link>https://graphwiz.ai/tags/business-continuity/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/business-continuity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>collaboration</title>
+      <link>https://graphwiz.ai/tags/collaboration/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/collaboration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compliance</title>
+      <link>https://graphwiz.ai/tags/compliance/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/compliance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cybersecurity</title>
+      <link>https://graphwiz.ai/tags/cybersecurity/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>digital-strategy</title>
+      <link>https://graphwiz.ai/tags/digital-strategy/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/digital-strategy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>future-readiness</title>
+      <link>https://graphwiz.ai/tags/future-readiness/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/future-readiness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>innovation</title>
+      <link>https://graphwiz.ai/tags/innovation/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/innovation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://graphwiz.ai/tags/security/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>threat-mitigation</title>
+      <link>https://graphwiz.ai/tags/threat-mitigation/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/threat-mitigation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workshops</title>
+      <link>https://graphwiz.ai/tags/workshops/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/workshops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://graphwiz.ai/tags/architecture/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>genomenon</title>
+      <link>https://graphwiz.ai/tags/genomenon/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/genomenon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>honeywell</title>
+      <link>https://graphwiz.ai/tags/honeywell/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/honeywell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iot</title>
+      <link>https://graphwiz.ai/tags/iot/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://graphwiz.ai/tags/monitoring/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>observability</title>
+      <link>https://graphwiz.ai/tags/observability/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/observability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql-server</title>
+      <link>https://graphwiz.ai/tags/sql-server/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/sql-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://graphwiz.ai/tags/docker/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playwright</title>
+      <link>https://graphwiz.ai/tags/playwright/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/playwright/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puppeteer</title>
+      <link>https://graphwiz.ai/tags/puppeteer/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/puppeteer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://graphwiz.ai/tags/testing/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graph-visualization</title>
+      <link>https://graphwiz.ai/tags/graph-visualization/</link>
+      <pubDate>Thu, 18 Dec 2025 02:30:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/graph-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://graphwiz.ai/tags/machine-learning/</link>
+      <pubDate>Thu, 18 Dec 2025 02:30:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ai</title>
+      <link>https://graphwiz.ai/tags/ai/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-protection</title>
+      <link>https://graphwiz.ai/tags/data-protection/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/data-protection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://graphwiz.ai/tags/devops/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>digital-sovereignty</title>
+      <link>https://graphwiz.ai/tags/digital-sovereignty/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/digital-sovereignty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open-standards</title>
+      <link>https://graphwiz.ai/tags/open-standards/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/open-standards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://graphwiz.ai/tags/privacy/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://graphwiz.ai/tags/automation/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>delegation</title>
+      <link>https://graphwiz.ai/tags/delegation/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/delegation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>enterprise-ai</title>
+      <link>https://graphwiz.ai/tags/enterprise-ai/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/enterprise-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multi-agent</title>
+      <link>https://graphwiz.ai/tags/multi-agent/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/multi-agent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>task-orchestration</title>
+      <link>https://graphwiz.ai/tags/task-orchestration/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/task-orchestration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow-management</title>
+      <link>https://graphwiz.ai/tags/workflow-management/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/workflow-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business-intelligence</title>
+      <link>https://graphwiz.ai/tags/business-intelligence/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/business-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>digital-transformation</title>
+      <link>https://graphwiz.ai/tags/digital-transformation/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/digital-transformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ops</title>
+      <link>https://graphwiz.ai/tags/ops/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/tags/ops/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

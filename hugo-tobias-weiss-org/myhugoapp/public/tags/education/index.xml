@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>education on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/tags/education/</link>
+    <description>Recent content in education on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Dec 2025 16:00:00 +0100</lastBuildDate><atom:link href="https://tobias-weiss.org/tags/education/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chemie-Lernen.org: My VR Education Project</title>
+      <link>https://tobias-weiss.org/projects/chemie-lernen/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/projects/chemie-lernen/</guid>
+      <description>Educational Innovation Through Virtual Reality This project represents my personal commitment to transforming education through immersive technology. Chemie-Lernen.org combines my expertise in XR development with educational research to create meaningful learning experiences.
+My Role and Vision As the creator and lead developer of Chemie-Lernen.org, I envisioned a platform that would:
+Bridge the gap between abstract chemistry concepts and tangible understanding Democratize access to high-quality science education regardless of location Pioneer web-based VR as an accessible alternative to expensive hardware solutions Contribute to research on the effectiveness of VR in educational settings Technical Implementation Journey Architecture Decisions I chose a stack optimized for accessibility and sustainability:</description>
+    </item>
+    
+    <item>
+      <title>Mozilla Hubs XR Experiments: Enhancing Educational Spaces</title>
+      <link>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</guid>
+      <description>This section details experiments with Mozilla Hubs, exploring its application in university teaching and creating immersive learning environments 🎓. Our goal is to represent complex subjects, like the periodic table, as interactive networks of virtual spaces 🕸️.
+Project Overview: The Periodic Table in VR 🧪 We are developing virtual environments where each element has its own dedicated space, enriched with relevant information. For example, nitrogen&amp;rsquo;s space could illustrate the formation of nitrogen oxides in car traffic or its role in fertilizer production 💨.</description>
+    </item>
+    
+  </channel>
+</rss>

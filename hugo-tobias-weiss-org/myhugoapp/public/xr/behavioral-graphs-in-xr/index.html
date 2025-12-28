@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Personal homepage of Tobias Weiss - AI researcher, technology leader, and XR developer. Explore insights on artificial intelligence, extended reality, innovation, and digital transformation.">
+<meta name="keywords" content="Tobias Weiss, AI research, artificial intelligence, machine learning, XR development, extended reality, AR/VR, technology leadership, innovation, digital transformation">
+
+
+<link rel="canonical" href="https://tobias-weiss.org/xr/behavioral-graphs-in-xr/">
+
+<meta name="author" content="Tobias Weiss">
+<meta name="contact" content="spam@tobias-weiss.org">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tobias-weiss.org/xr/behavioral-graphs-in-xr/">
+<meta property="og:title" content="Behavioral Graphs: Enhancing XR Interaction - Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation">
+<meta property="og:description" content="Personal homepage of Tobias Weiss - AI researcher, technology leader, and XR developer. Explore insights on artificial intelligence, extended reality, innovation, and digital transformation.">
+<meta property="og:image" content="https://tobias-weiss.org/me_wanted_big.png">
+<meta property="og:locale" content="en-US">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://tobias-weiss.org/xr/behavioral-graphs-in-xr/">
+<meta name="twitter:title" content="Behavioral Graphs: Enhancing XR Interaction - Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation">
+<meta name="twitter:description" content="Personal homepage of Tobias Weiss - AI researcher, technology leader, and XR developer. Explore insights on artificial intelligence, extended reality, innovation, and digital transformation.">
+<meta name="twitter:image" content="https://tobias-weiss.org/me_wanted_big.png">
+
+<base href="https://tobias-weiss.org/">
+
+  <link rel="stylesheet" href="https://tobias-weiss.org/css/style.css">
+
+  
+
+  <title>Behavioral Graphs: Enhancing XR Interaction</title>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Behavioral Graphs: Enhancing XR Interaction",
+  "url": "https:\/\/tobias-weiss.org\/xr\/behavioral-graphs-in-xr\/",
+  "description": "Personal homepage of Tobias Weiss - AI researcher, technology leader, and XR developer. Explore insights on artificial intelligence, extended reality, innovation, and digital transformation.",
+  "inLanguage": "en-US",
+  "datePublished": "2023-11-13",
+  "dateModified": "2023-11-13",
+  "author": {
+    "@type": "Person",
+    "name": "Tobias Weiss",
+    "url": "https:\/\/tobias-weiss.org\/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Tobias Weiss",
+    "url": "https:\/\/tobias-weiss.org\/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/tobias-weiss.org\/xr\/behavioral-graphs-in-xr\/"
+  }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Tobias Weiss - AI Research \u0026 Leadership | XR Development \u0026 Technology Innovation",
+  "url": "https:\/\/tobias-weiss.org\/",
+  "description": "Personal homepage of Tobias Weiss - AI researcher, technology leader, and XR developer. Explore insights on artificial intelligence, extended reality, innovation, and digital transformation.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https:\/\/tobias-weiss.org\/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://tobias-weiss.org/css/main.css">
+<link rel="stylesheet" href="https://tobias-weiss.org/css/custom.css">
+<link id="dark-mode-theme" rel="stylesheet" href="https://tobias-weiss.org/css/dark.css">
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/dark-mode.css' rel='stylesheet'>
+
+
+
+
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+  <div id="dark-mode-pane">
+      <a id="dark-mode-toggle" class="gg-dark-mode"></a>
+  </div>
+
+<script type="text/javascript">
+  
+  console.log("Test1");
+  var toggle = document.getElementById("dark-mode-toggle");
+  var darkTheme = document.getElementById("dark-mode-theme");
+
+  function setTheme() {
+      if (darkTheme.disabled) {
+          darkTheme.disabled = false;
+      } else {
+          darkTheme.disabled = true;
+      }
+
+  }
+
+  toggle.addEventListener("click", () => {
+     setTheme(); 
+    });
+</script>
+
+
+
+
+
+
+<header class="row text-left title">
+  <h1 class="title">Behavioral Graphs: Enhancing XR Interaction</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    <p>Behavioral Graphs (BGs) represent an innovative extension to platforms like Mozilla Hubs, designed to enrich XR environments with interactive features 📊. We believe BGs offer a significant advancement beyond traditional &ldquo;gallery-like&rdquo; scenes, pushing the boundaries of user engagement in virtual spaces 🌌.</p>
+<h2 id="what-are-behavioral-graphs-">What are Behavioral Graphs? 🧠</h2>
+<p>Behavioral Graphs are dynamic, data-driven systems that analyze and respond to user actions within XR environments. They enable more personalized and interactive experiences by modeling user behavior and providing context-aware assistance or content 🤖.</p>
+<h2 id="key-benefits-for-xr-platforms-">Key Benefits for XR Platforms 🔑:</h2>
+<ul>
+<li><strong>Enhanced User Engagement:</strong> Create more captivating and responsive virtual experiences ✨.</li>
+<li><strong>Personalized Interactions:</strong> Tailor content and assistance based on user behavior 🎯.</li>
+<li><strong>Deeper Insights:</strong> Analyze user patterns to optimize environment design and functionality 📈.</li>
+</ul>
+<h2 id="explore-our-interactive-instance-">Explore Our Interactive Instance 🚀:</h2>
+<p>We invite you to explore a testing instance of our Behavioral Graphs integration with Hubs. This provides a firsthand look at how dynamic interactions can transform virtual spaces 🥽.</p>
+<ul>
+<li><strong>Access the Hubs Testing Instance:</strong> <a href="https://testing.dev.myhubs.net/y2JZXuM/authentic-wry-adventure?newLoader&amp;ecsDebug&amp;vr_entry_type=2d_now&amp;entity_state_api&amp;&amp;debugLocalScene">Behavoral Graphs Testing Instance</a> 🌐</li>
+</ul>
+<p>To access this instance and provide valuable feedback, please sign up for our alpha testing program:</p>
+<ul>
+<li><strong>Alpha Testing Sign-up:</strong> <a href="https://forms.gle/8VFzV39V6yreMEhB6">Sign up Form</a> 📝</li>
+</ul>
+<p>We look forward to your participation in shaping the future of XR interaction 🤝.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+</section>
+
+
+
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  <h4 class="text-center"><a class="menu-item" href="https://tobias-weiss.org/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2025. Tobias Weiß. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>. | <a href="/imprint/">Imprint</a> | <a href="/privacy/">Privacy</a></h6>
+  
+  
+</footer>
+
+</div>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'XYZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

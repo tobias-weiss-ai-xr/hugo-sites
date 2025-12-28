@@ -1,14 +1,272 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on My New Hugo Site</title>
-    <link>http://example.org/categories/</link>
-    <description>Recent content in Categories on My New Hugo Site</description>
+    <title>Categories on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/categories/</link>
+    <description>Recent content in Categories on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 23 Dec 2025 10:00:00 +0100</lastBuildDate><atom:link href="https://graphwiz.ai/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ai</title>
+      <link>https://graphwiz.ai/categories/ai/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/ai/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>prompt-engineering</title>
+      <link>https://graphwiz.ai/categories/prompt-engineering/</link>
+      <pubDate>Tue, 23 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/prompt-engineering/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>development</title>
+      <link>https://graphwiz.ai/categories/development/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ops</title>
+      <link>https://graphwiz.ai/categories/ops/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/ops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://graphwiz.ai/categories/python/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://graphwiz.ai/categories/tools/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chemistry</title>
+      <link>https://graphwiz.ai/categories/chemistry/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/chemistry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>education</title>
+      <link>https://graphwiz.ai/categories/education/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>https://graphwiz.ai/categories/projects/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vr</title>
+      <link>https://graphwiz.ai/categories/vr/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/vr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ar</title>
+      <link>https://graphwiz.ai/categories/ar/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/ar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hello webxr</title>
+      <link>https://graphwiz.ai/categories/hello-webxr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/hello-webxr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webxr api</title>
+      <link>https://graphwiz.ai/categories/webxr-api/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/webxr-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xr</title>
+      <link>https://graphwiz.ai/categories/xr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/xr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metaverse</title>
+      <link>https://graphwiz.ai/categories/metaverse/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/metaverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>community</title>
+      <link>https://graphwiz.ai/categories/community/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://graphwiz.ai/categories/devops/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>events</title>
+      <link>https://graphwiz.ai/categories/events/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://graphwiz.ai/categories/security/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strategy</title>
+      <link>https://graphwiz.ai/categories/strategy/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/strategy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://graphwiz.ai/categories/architecture/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://graphwiz.ai/categories/monitoring/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://graphwiz.ai/categories/automation/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-analysis</title>
+      <link>https://graphwiz.ai/categories/data-analysis/</link>
+      <pubDate>Thu, 18 Dec 2025 02:30:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://graphwiz.ai/categories/technology/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vision</title>
+      <link>https://graphwiz.ai/categories/vision/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>enterprise-solutions</title>
+      <link>https://graphwiz.ai/categories/enterprise-solutions/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/enterprise-solutions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workflow-automation</title>
+      <link>https://graphwiz.ai/categories/workflow-automation/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/workflow-automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business-strategy</title>
+      <link>https://graphwiz.ai/categories/business-strategy/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/categories/business-strategy/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

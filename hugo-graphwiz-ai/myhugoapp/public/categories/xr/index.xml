@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xr on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/categories/xr/</link>
+    <description>Recent content in xr on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Dec 2025 00:00:00 -0100</lastBuildDate><atom:link href="https://graphwiz.ai/categories/xr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello WebXR: Your Gateway to Immersive Web Experiences</title>
+      <link>https://graphwiz.ai/xr/hello_webxr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/xr/hello_webxr/</guid>
+      <description>Hello WebXR: Your Gateway to Immersive Web Experiences Hello WebXR showcase technology stack:
+WebXR API for native browser support Three.js for 3D graphics Spatial Audio with Web Audio API Responsive Design for cross-platform Experience the Future of Web XR Hello WebXR demonstrates the power of modern web technologies for creating immersive virtual and augmented reality experiences directly in your browser. No downloads required - just open the page and step into virtual reality!</description>
+    </item>
+    
+    <item>
+      <title>Extended Reality (XR) Environments: A Comprehensive Overview</title>
+      <link>https://graphwiz.ai/xr/extended-reality-environments/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/xr/extended-reality-environments/</guid>
+      <description>Extended Reality (XR) is an umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR). These digital ecosystems redefine human-computer interaction by creating immersive and interactive experiences.
+Understanding XR Modalities XR environments integrate digital elements with the physical world to varying degrees:
+Virtual Reality (VR): Fully immerses users in a simulated digital space, blocking out the physical environment. Ideal for complete escapism and simulation. Augmented Reality (AR): Overlays digital information onto the real world, enhancing perception without replacing reality.</description>
+    </item>
+    
+  </channel>
+</rss>

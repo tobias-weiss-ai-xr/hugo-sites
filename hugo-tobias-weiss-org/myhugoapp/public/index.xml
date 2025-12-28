@@ -1,14 +1,177 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/</link>
+    <description>Recent content on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://tobias-weiss.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://tobias-weiss.org/contact/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/contact/</guid>
+      <description>Have questions or want to collaborate? I&amp;rsquo;d love to hear from you!
+You can reach me via encrypted email using my PGP public key below, or use the contact form.
+Pretty Good Privacy (PGP) Pretty Good Privacy (PGP) is a method for encrypting and decrypting data, providing cryptographic privacy and authentication when used with properly configured email software.
+Feel free to contact me via encrypted email using the following PGP public key:</description>
+    </item>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datenschutzerklärung / Privacy Policy</title>
+      <link>https://tobias-weiss.org/privacy/</link>
+      <pubDate>Mon, 22 Dec 2025 12:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/privacy/</guid>
+      <description>Datenschutzerklärung / Privacy Policy Stand / Last Updated: 22. Dezember 2025
+Allgemeines / General Information Der Schutz Ihrer persönlichen Daten ist mir ein wichtiges Anliegen. Diese Webseite erhebt und verarbeitet grundsätzlich keine personenbezogenen Daten, sofern Sie dies nicht freiwillig im Rahmen der Kontaktaufnahme tun.
+The protection of your personal data is important to me. This website generally does not collect or process personal data unless you voluntarily provide it in the context of contact.</description>
+    </item>
     
+    <item>
+      <title>Imprint</title>
+      <link>https://tobias-weiss.org/imprint/</link>
+      <pubDate>Mon, 22 Dec 2025 12:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/imprint/</guid>
+      <description>Impressum / Imprint Angaben gemäß § 5 TMG und § 55 Abs. 2 RStV
+Anbieter / Provider Tobias Weiß
+Grundstraße 69
+78628 Rottweil
+Germany
+(Einzelunternehmer / Sole Proprietorship)
+Kontakt / Contact E-Mail: spam@tobias-weiss.org Website: https://tobias-weiss.org
+Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV / Responsible for Content Tobias Weiß
+Grundstraße 69
+78628 Rottweil
+Germany
+EU-Streitschlichtung / EU Dispute Resolution Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.</description>
+    </item>
+    
+    <item>
+      <title>Leadership &amp; Change Leadership</title>
+      <link>https://tobias-weiss.org/leadership/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/leadership/</guid>
+      <description>Leadership in digital transformation requires balancing technical excellence with empathetic change leadership 🚀.
+The Change Leadership Curve 📈 Every new system creates temporary productivity loss. Understanding these emotional phases is crucial for effective change leadership:
+The Change Leadership Curve: Productivity temporarily drops during change management before reaching new levels of effectiveness.
+The Seven Phases of Change Leadership The Challenge of IT Change in Organizations 🎓 Digital transformation in organizations is fundamentally a cultural challenge, not just a technical one.</description>
+    </item>
+    
+    <item>
+      <title>Chemie-Lernen.org: My VR Education Project</title>
+      <link>https://tobias-weiss.org/projects/chemie-lernen/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/projects/chemie-lernen/</guid>
+      <description>Educational Innovation Through Virtual Reality This project represents my personal commitment to transforming education through immersive technology. Chemie-Lernen.org combines my expertise in XR development with educational research to create meaningful learning experiences.
+My Role and Vision As the creator and lead developer of Chemie-Lernen.org, I envisioned a platform that would:
+Bridge the gap between abstract chemistry concepts and tangible understanding Democratize access to high-quality science education regardless of location Pioneer web-based VR as an accessible alternative to expensive hardware solutions Contribute to research on the effectiveness of VR in educational settings Technical Implementation Journey Architecture Decisions I chose a stack optimized for accessibility and sustainability:</description>
+    </item>
+    
+    <item>
+      <title>Dr. GraphWiz: Your Partner in AI &amp; XR Innovation</title>
+      <link>https://tobias-weiss.org/graphwiz/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/graphwiz/</guid>
+      <description>Visit graphwiz.ai 🌐 Click the button above to explore our AI &amp; XR solutions Dr. GraphWiz is a cutting-edge technology company 🚀 specializing in Artificial Intelligence (AI) 🤖 and Extended Reality (XR) 👓 solutions. We empower businesses to unlock new potentials through advanced graph visualization 📊, data analytics 📈, and immersive experiences 🌌.
+Explore our innovative solutions and see how we can transform your business.</description>
+    </item>
+    
+    <item>
+      <title>Research and Publications</title>
+      <link>https://tobias-weiss.org/research/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/research/</guid>
+      <description>My research focuses on the intersection of emerging technologies and their impact on digital sovereignty and human-computer interaction 🔬.
+Core Research Areas 📚: 1. Digital Sovereignty in the Age of AI 🛡️ Exploring the socio-technical implications of large-scale AI models and the necessity of open-source, sovereign infrastructure. Key areas include:
+Decentralized model training and execution 🖥️. Privacy-preserving data analytics 🔒. Mitigating vendor lock-in in critical infrastructure 🔓. 2. Immersive Educational Environments (XR) 🥽 Investigating the application of eXtended Reality (XR) for learning complex subjects like chemistry and physics.</description>
+    </item>
+    
+    <item>
+      <title>Page Not Found</title>
+      <link>https://tobias-weiss.org/404/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobias-weiss.org/404/</guid>
+      <description>Oops! Page Not Found I&amp;rsquo;m sorry, but the page you&amp;rsquo;re looking for doesn&amp;rsquo;t exist. It might have been:
+Moved to a new location Removed or renamed Temporarily unavailable What would you like to do? 🔍 Search the Site You can try searching for what you&amp;rsquo;re looking for using your browser&amp;rsquo;s search function or visit one of the main sections below.
+🧭 Navigate to Main Sections Feel free to explore these popular sections:</description>
+    </item>
+    
+    <item>
+      <title>Impact of GenAI Sales Agent Timing in VR Commerce</title>
+      <link>https://tobias-weiss.org/interference-timing-genai-vr/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/interference-timing-genai-vr/</guid>
+      <description>Research Abstract The Scenario Methodology Findings Research Report Visualization Interference Timing of GenAI Sales Agents in Virtual Reality How does the timing of an AI assistant&#39;s approach affect consumer behavior in the Metaverse? This study investigates the impact of Immediate vs. Delayed interference on user experience, decision confidence, and purchase intention. View Results Explore Setup The Experimental Scenario Participants were placed in a Virtual Reality showroom and tasked with choosing a 3D printer.</description>
+    </item>
+    
+    <item>
+      <title>My Personal Hubs Instance: A Dedicated XR Space</title>
+      <link>https://tobias-weiss.org/xr/personal-hubs-instance/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/personal-hubs-instance/</guid>
+      <description>I have set up a personal instance of Mozilla Hubs to explore and demonstrate the capabilities of this versatile VR platform 🥽. This dedicated space allows for a more controlled environment to showcase and experiment with features for socializing, collaboration, and immersive experiences 🌌.
+Key Features and Benefits 🔑: Browser-Native Access: Easily join and interact within 3D environments directly from your web browser, requiring no additional software 🌐. Customizable Presence: Utilize personalized avatars to represent yourself in the virtual space 👤.</description>
+    </item>
+    
+    <item>
+      <title>Behavioral Graphs: Enhancing XR Interaction</title>
+      <link>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</guid>
+      <description>Behavioral Graphs (BGs) represent an innovative extension to platforms like Mozilla Hubs, designed to enrich XR environments with interactive features 📊. We believe BGs offer a significant advancement beyond traditional &amp;ldquo;gallery-like&amp;rdquo; scenes, pushing the boundaries of user engagement in virtual spaces 🌌.
+What are Behavioral Graphs? 🧠 Behavioral Graphs are dynamic, data-driven systems that analyze and respond to user actions within XR environments. They enable more personalized and interactive experiences by modeling user behavior and providing context-aware assistance or content 🤖.</description>
+    </item>
+    
+    <item>
+      <title>Mozilla Hubs XR Experiments: Enhancing Educational Spaces</title>
+      <link>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/mozilla-hubs-xr-experiments/</guid>
+      <description>This section details experiments with Mozilla Hubs, exploring its application in university teaching and creating immersive learning environments 🎓. Our goal is to represent complex subjects, like the periodic table, as interactive networks of virtual spaces 🕸️.
+Project Overview: The Periodic Table in VR 🧪 We are developing virtual environments where each element has its own dedicated space, enriched with relevant information. For example, nitrogen&amp;rsquo;s space could illustrate the formation of nitrogen oxides in car traffic or its role in fertilizer production 💨.</description>
+    </item>
+    
+    <item>
+      <title>Running &#39;Hello WebXR&#39; Instance</title>
+      <link>https://tobias-weiss.org/xr/hello-webxr/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/hello-webxr/</guid>
+      <description>The official WebXR Demo Instance is down 🛑. Luckily, I host a private version of it: https://tobias-weiss.org/hello-webxr/ 🌐
+Please use the right controller and the trigger button (index finger) to navigate 🎮.</description>
+    </item>
+    
+    <item>
+      <title>Tobias Weiss: A Professional Journey</title>
+      <link>https://tobias-weiss.org/story/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/story/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual Gallery: Art, Places, and Inspiration</title>
+      <link>https://tobias-weiss.org/gallery/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/gallery/</guid>
+      <description>Explore a curated collection of visual content showcasing diverse interests and experiences.
+Art &amp;amp; Creativity Places &amp;amp; Travels Interesting Insights </description>
+    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ops on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/ops/</link>
+    <description>Recent content in Ops on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 01 Jan 2022 00:00:00 -0100</lastBuildDate><atom:link href="https://graphwiz.ai/ops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UV: The Ultimate Python Toolchain Modernization</title>
+      <link>https://graphwiz.ai/ops/uv-python-toolchain-modernization/</link>
+      <pubDate>Sun, 21 Dec 2025 20:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/uv-python-toolchain-modernization/</guid>
+      <description>UV: Revolutionizing Python Development with One Tool to Rule Them All Executive Summary: UV represents a paradigm shift in Python development tooling, consolidating over 10 different Python packaging and environment management tools into a single, blazing-fast binary written in Rust. This modernization dramatically improves development speed, reliability, and consistency across projects and teams.
+The Problem: Python Tool Fragmentation Traditional Python development suffers from tool fragmentation:
+Traditional Tool Purpose Limitations pip Package installation Slow, no dependency resolution lock files pip-tools Dependency locking Additional tool, compilation overhead pipx Isolated application installation Separate tool, limited functionality poetry Dependency management &amp;amp; packaging Complex configuration, slower performance pyenv Python version management Shell integration complexity virtualenv Environment isolation Manual management required twine Package publishing Separate upload process build Package building Additional build step required tox Multi-environment testing Complex configuration overhead The UV Solution: One Tool, Infinite Possibilities UV eliminates this fragmentation by providing all functionality in a single command:</description>
+    </item>
+    
+    <item>
+      <title>Mastermind Monitoring Architectures: A Deep Dive</title>
+      <link>https://graphwiz.ai/ops/mastermind-monitoring-architectures/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/mastermind-monitoring-architectures/</guid>
+      <description>Comprehensive Monitoring for &amp;ldquo;Mastermind&amp;rdquo; Ecosystems Executive Summary: Selecting the right monitoring solution is critical for operational resilience, compliance, and business continuity. &amp;ldquo;Mastermind&amp;rdquo; applications span distinct sectors: Honeywell MASterMind™ (security/alarm monitoring), Genomenon Mastermind (genomic intelligence), and MasterMind Tech (IoT property management). Each requires a tailored observability approach.
+This report provides a blueprint for monitoring these environments, covering:
+Honeywell MASterMind™: Focuses on zero-downtime, SQL backend performance, and receiver/telephony interface monitoring. Genomenon Mastermind: Emphasizes API latency, uptime, and data freshness.</description>
+    </item>
+    
+    <item>
+      <title>Automated Visual Testing &amp; Screenshots</title>
+      <link>https://graphwiz.ai/ops/automated-testing-and-screenshots/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/automated-testing-and-screenshots/</guid>
+      <description>Ensuring Quality with Automated Visual Verification As part of our commitment to robust operations, we have implemented an automated screenshot service to verify the health and visual integrity of our deployments.
+The Challenge Ensuring that complex, containerized applications like Mozilla Hubs are not only &amp;ldquo;up&amp;rdquo; (responding to pings) but also visually correct and functional for end-users.
+The Solution We developed a lightweight, Dockerized screenshot-service utilizing Puppeteer. This service automatically:
+Navigates to critical application endpoints (Admin Console, Client Landing Page).</description>
+    </item>
+    
+  </channel>
+</rss>

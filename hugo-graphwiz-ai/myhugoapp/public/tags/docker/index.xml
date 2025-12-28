@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/tags/docker/</link>
+    <description>Recent content in docker on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 18 Dec 2025 12:00:00 -0100</lastBuildDate><atom:link href="https://graphwiz.ai/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automated Visual Testing &amp; Screenshots</title>
+      <link>https://graphwiz.ai/ops/automated-testing-and-screenshots/</link>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/automated-testing-and-screenshots/</guid>
+      <description>Ensuring Quality with Automated Visual Verification As part of our commitment to robust operations, we have implemented an automated screenshot service to verify the health and visual integrity of our deployments.
+The Challenge Ensuring that complex, containerized applications like Mozilla Hubs are not only &amp;ldquo;up&amp;rdquo; (responding to pings) but also visually correct and functional for end-users.
+The Solution We developed a lightweight, Dockerized screenshot-service utilizing Puppeteer. This service automatically:
+Navigates to critical application endpoints (Admin Console, Client Landing Page).</description>
+    </item>
+    
+  </channel>
+</rss>

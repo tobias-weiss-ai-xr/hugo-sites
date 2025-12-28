@@ -1,14 +1,308 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/tags/</link>
+    <description>Recent content in Tags on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Dec 2025 16:00:00 +0100</lastBuildDate><atom:link href="https://tobias-weiss.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>chemistry</title>
+      <link>https://tobias-weiss.org/tags/chemistry/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/chemistry/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>education</title>
+      <link>https://tobias-weiss.org/tags/education/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/education/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>mozilla-hubs</title>
+      <link>https://tobias-weiss.org/tags/mozilla-hubs/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/mozilla-hubs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal-project</title>
+      <link>https://tobias-weiss.org/tags/personal-project/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/personal-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>https://tobias-weiss.org/tags/research/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vr</title>
+      <link>https://tobias-weiss.org/tags/vr/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/vr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ai</title>
+      <link>https://tobias-weiss.org/tags/ai/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business-solutions</title>
+      <link>https://tobias-weiss.org/tags/business-solutions/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/business-solutions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graph-visualization</title>
+      <link>https://tobias-weiss.org/tags/graph-visualization/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/graph-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>innovation</title>
+      <link>https://tobias-weiss.org/tags/innovation/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/innovation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xr</title>
+      <link>https://tobias-weiss.org/tags/xr/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/xr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>augmented-reality</title>
+      <link>https://tobias-weiss.org/tags/augmented-reality/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/augmented-reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>human-computer-interaction</title>
+      <link>https://tobias-weiss.org/tags/human-computer-interaction/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/human-computer-interaction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual-reality</title>
+      <link>https://tobias-weiss.org/tags/virtual-reality/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/virtual-reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>collaboration</title>
+      <link>https://tobias-weiss.org/tags/collaboration/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/collaboration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hubs</title>
+      <link>https://tobias-weiss.org/tags/hubs/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/hubs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-hosting</title>
+      <link>https://tobias-weiss.org/tags/self-hosting/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/self-hosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual-environments</title>
+      <link>https://tobias-weiss.org/tags/virtual-environments/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/virtual-environments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analytics</title>
+      <link>https://tobias-weiss.org/tags/analytics/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interaction-design</title>
+      <link>https://tobias-weiss.org/tags/interaction-design/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/interaction-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webxr</title>
+      <link>https://tobias-weiss.org/tags/webxr/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/webxr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning-environments</title>
+      <link>https://tobias-weiss.org/tags/learning-environments/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/learning-environments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>art</title>
+      <link>https://tobias-weiss.org/tags/art/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bio</title>
+      <link>https://tobias-weiss.org/tags/bio/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/bio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experience</title>
+      <link>https://tobias-weiss.org/tags/experience/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gallery</title>
+      <link>https://tobias-weiss.org/tags/gallery/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inspiration</title>
+      <link>https://tobias-weiss.org/tags/inspiration/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/inspiration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it</title>
+      <link>https://tobias-weiss.org/tags/it/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photography</title>
+      <link>https://tobias-weiss.org/tags/photography/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/photography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>places</title>
+      <link>https://tobias-weiss.org/tags/places/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/places/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portfolio</title>
+      <link>https://tobias-weiss.org/tags/portfolio/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/portfolio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>story</title>
+      <link>https://tobias-weiss.org/tags/story/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/story/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visuals</title>
+      <link>https://tobias-weiss.org/tags/visuals/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/tags/visuals/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

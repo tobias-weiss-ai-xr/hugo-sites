@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vr on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/tags/vr/</link>
+    <description>Recent content in vr on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Dec 2025 16:00:00 +0100</lastBuildDate><atom:link href="https://graphwiz.ai/tags/vr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chemie-Lernen.org: Virtual Reality Chemistry Education</title>
+      <link>https://graphwiz.ai/projects/chemie-lernen/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/projects/chemie-lernen/</guid>
+      <description>Transforming Chemistry Education Through Immersive VR Project Overview: Chemie-Lernen.org represents a breakthrough in educational technology, leveraging Virtual Reality to create an engaging, interactive learning platform for chemistry education. This innovative project demonstrates our commitment to applying cutting-edge XR technologies to solve real-world educational challenges.
+The Challenge: Making Abstract Concepts Tangible Traditional chemistry education often struggles with:
+Abstract molecular structures difficult to visualize Limited laboratory access due to safety and resource constraints Passive learning methods that fail to engage modern students Complex periodic table relationships hard to comprehend Our Solution: Immersive Learning Environments Chemie-Lernen.</description>
+    </item>
+    
+    <item>
+      <title>Hello WebXR: Your Gateway to Immersive Web Experiences</title>
+      <link>https://graphwiz.ai/xr/hello_webxr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/xr/hello_webxr/</guid>
+      <description>Hello WebXR: Your Gateway to Immersive Web Experiences Hello WebXR showcase technology stack:
+WebXR API for native browser support Three.js for 3D graphics Spatial Audio with Web Audio API Responsive Design for cross-platform Experience the Future of Web XR Hello WebXR demonstrates the power of modern web technologies for creating immersive virtual and augmented reality experiences directly in your browser. No downloads required - just open the page and step into virtual reality!</description>
+    </item>
+    
+  </channel>
+</rss>

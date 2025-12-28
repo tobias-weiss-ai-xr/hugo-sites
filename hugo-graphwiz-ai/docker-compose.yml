@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  hugo-graphwiz-ai:
+    build: .
+    image: hugo-graphwiz-ai:latest
+    container_name: hugo-graphwiz-ai
+    restart: unless-stopped
+    command: hugo server --bind 0.0.0.0 --baseURL https://${HUGO_DOMAIN:-graphwiz.ai} --appendPort=false
+    working_dir: /app/myhugoapp
+    volumes:
+      - ./myhugoapp:/app/myhugoapp
+      - ./public:/app/myhugoapp/public
+    ports:
+      - "1313:1313"
+    environment:
+      - HUGO_BASEURL=https://${HUGO_DOMAIN:-graphwiz.ai}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik-web"
+      # HTTP router with redirect to HTTPS
+      - "traefik.http.routers.hugo-graphwiz.rule=Host(`${HUGO_DOMAIN:-graphwiz.ai}`, `www.${HUGO_DOMAIN:-graphwiz.ai}`, `graphwiz.de`, `www.graphwiz.de`)"
+      - "traefik.http.routers.hugo-graphwiz.entrypoints=web"
+      - "traefik.http.routers.hugo-graphwiz.middlewares=https-redirect@file"
+      # HTTPS router
+      - "traefik.http.routers.hugo-graphwiz-secure.rule=Host(`${HUGO_DOMAIN:-graphwiz.ai}`, `www.${HUGO_DOMAIN:-graphwiz.ai}`, `graphwiz.de`, `www.graphwiz.de`)"
+      - "traefik.http.routers.hugo-graphwiz-secure.entrypoints=websecure"
+      - "traefik.http.routers.hugo-graphwiz-secure.tls=true"
+      - "traefik.http.routers.hugo-graphwiz-secure.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.hugo-graphwiz-secure.middlewares=security-headers@file,compression@file"
+      - "traefik.http.services.hugo-graphwiz.loadbalancer.server.port=1313"
+    networks:
+      - traefik-web
+
+networks:
+  traefik-web:
+    external: true
+    name: traefik-web

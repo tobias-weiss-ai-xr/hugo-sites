@@ -1,14 +1,218 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on My New Hugo Site</title>
-    <link>http://example.org/categories/</link>
-    <description>Recent content in Categories on My New Hugo Site</description>
+    <title>Categories on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/categories/</link>
+    <description>Recent content in Categories on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 26 Dec 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://tobias-weiss.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>contact</title>
+      <link>https://tobias-weiss.org/categories/contact/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/contact/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>change-leadership</title>
+      <link>https://tobias-weiss.org/categories/change-leadership/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/change-leadership/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>digital-transformation</title>
+      <link>https://tobias-weiss.org/categories/digital-transformation/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/digital-transformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leadership</title>
+      <link>https://tobias-weiss.org/categories/leadership/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/leadership/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>education</title>
+      <link>https://tobias-weiss.org/categories/education/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal-portfolio</title>
+      <link>https://tobias-weiss.org/categories/personal-portfolio/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/personal-portfolio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>https://tobias-weiss.org/categories/projects/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vr</title>
+      <link>https://tobias-weiss.org/categories/vr/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/vr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>https://tobias-weiss.org/categories/about/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>company</title>
+      <link>https://tobias-weiss.org/categories/company/</link>
+      <pubDate>Fri, 19 Dec 2025 10:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/company/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>publications</title>
+      <link>https://tobias-weiss.org/categories/publications/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>https://tobias-weiss.org/categories/research/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://tobias-weiss.org/categories/technology/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xr</title>
+      <link>https://tobias-weiss.org/categories/xr/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/xr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>collaboration</title>
+      <link>https://tobias-weiss.org/categories/collaboration/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/collaboration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hubs</title>
+      <link>https://tobias-weiss.org/categories/hubs/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/hubs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>behavioral-analytics</title>
+      <link>https://tobias-weiss.org/categories/behavioral-analytics/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/behavioral-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ar</title>
+      <link>https://tobias-weiss.org/categories/ar/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/ar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hello webxr</title>
+      <link>https://tobias-weiss.org/categories/hello-webxr/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/hello-webxr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>biography</title>
+      <link>https://tobias-weiss.org/categories/biography/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/biography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gallery</title>
+      <link>https://tobias-weiss.org/categories/gallery/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal</title>
+      <link>https://tobias-weiss.org/categories/personal/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>portfolio</title>
+      <link>https://tobias-weiss.org/categories/portfolio/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/categories/portfolio/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

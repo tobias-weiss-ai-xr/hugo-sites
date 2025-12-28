@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vr on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/tags/vr/</link>
+    <description>Recent content in vr on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Dec 2025 16:00:00 +0100</lastBuildDate><atom:link href="https://tobias-weiss.org/tags/vr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chemie-Lernen.org: My VR Education Project</title>
+      <link>https://tobias-weiss.org/projects/chemie-lernen/</link>
+      <pubDate>Sun, 21 Dec 2025 16:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/projects/chemie-lernen/</guid>
+      <description>Educational Innovation Through Virtual Reality This project represents my personal commitment to transforming education through immersive technology. Chemie-Lernen.org combines my expertise in XR development with educational research to create meaningful learning experiences.
+My Role and Vision As the creator and lead developer of Chemie-Lernen.org, I envisioned a platform that would:
+Bridge the gap between abstract chemistry concepts and tangible understanding Democratize access to high-quality science education regardless of location Pioneer web-based VR as an accessible alternative to expensive hardware solutions Contribute to research on the effectiveness of VR in educational settings Technical Implementation Journey Architecture Decisions I chose a stack optimized for accessibility and sustainability:</description>
+    </item>
+    
+  </channel>
+</rss>

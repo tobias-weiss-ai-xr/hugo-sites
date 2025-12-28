@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/posts/</link>
+    <description>Recent content in Posts on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 18 Dec 2025 02:30:00 +0100</lastBuildDate><atom:link href="https://graphwiz.ai/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Dr. GraphWiz AI: Intelligent Graph Analysis</title>
+      <link>https://graphwiz.ai/posts/welcome-to-graphwiz-ai/</link>
+      <pubDate>Thu, 18 Dec 2025 02:30:00 +0100</pubDate>
+      
+      <guid>https://graphwiz.ai/posts/welcome-to-graphwiz-ai/</guid>
+      <description>GraphWiz AI is a leading platform for intelligent graph visualization, analysis, and knowledge representation 📊.
+Core Capabilities 🔑: AI-Driven Insights: Uncover patterns and relationships in complex data using advanced machine learning techniques 🤖. Interactive Visualization: Explore data through sophisticated 2D and 3D graph visualizations 🧊. Knowledge Graph Construction: Build and query knowledge graphs for powerful AI applications 🕸️. Real-time Collaboration: Enhance teamwork with collaborative graph analysis tools 🤝. Scalable Architecture: Manage and analyze large-scale graphs efficiently, supporting millions of nodes and edges ☁️.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,154 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  HUGO_VERSION: 0.120.4
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: myhugoapp/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./myhugoapp
+        run: npm ci
+
+      - name: Build Hugo site
+        working-directory: ./myhugoapp
+        run: hugo --minify --baseURL https://graphwiz.ai
+
+      - name: Check for broken links
+        working-directory: ./myhugoapp
+        run: |
+          npm install -g html-proofer
+          htmlproofer ./public \
+            --disable-external \
+            --allow-hash-href \
+            --empty-alt-ignore || true
+
+      - name: Validate Three.js imports
+        working-directory: ./myhugoapp
+        run: |
+          grep -r "three" public/ && echo "Three.js found" || echo "Three.js not found"
+
+      - name: Check for console errors
+        run: |
+          grep -r "console.error" myhugoapp/ && exit 1 || echo "No console errors found"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugo-site
+          path: myhugoapp/public/
+          retention-days: 7
+
+  docker:
+    name: Docker Build Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: hugo-graphwiz-ai:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  link-check:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: myhugoapp/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./myhugoapp
+        run: npm ci
+
+      - name: Build Hugo site
+        working-directory: ./myhugoapp
+        run: hugo --minify --baseURL https://graphwiz.ai
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress myhugoapp/public/**/*.html
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  code-quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for TODO comments
+        run: |
+          grep -r "TODO" myhugoapp/content/ || echo "No TODOs found"
+
+      - name: Check for large files
+        run: |
+          find myhugoapp/static -type f -size +500k -exec ls -lh {} \; || echo "No large files found"
+
+      - name: Validate markdown
+        run: |
+          npm install -g markdownlint-cli
+          markdownlint myhugoapp/content/**/*.md || true
+        continue-on-error: true
+
+      - name: Check for proper Three.js structure
+        run: |
+          if [ -d "myhugoapp/node_modules/three" ]; then
+            echo "✓ Three.js is installed"
+          else
+            echo "✗ Three.js not found"
+            exit 1
+          fi

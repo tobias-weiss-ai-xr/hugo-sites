@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>architecture on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/tags/architecture/</link>
+    <description>Recent content in architecture on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 18 Dec 2025 14:00:00 -0100</lastBuildDate><atom:link href="https://graphwiz.ai/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mastermind Monitoring Architectures: A Deep Dive</title>
+      <link>https://graphwiz.ai/ops/mastermind-monitoring-architectures/</link>
+      <pubDate>Thu, 18 Dec 2025 14:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/ops/mastermind-monitoring-architectures/</guid>
+      <description>Comprehensive Monitoring for &amp;ldquo;Mastermind&amp;rdquo; Ecosystems Executive Summary: Selecting the right monitoring solution is critical for operational resilience, compliance, and business continuity. &amp;ldquo;Mastermind&amp;rdquo; applications span distinct sectors: Honeywell MASterMind™ (security/alarm monitoring), Genomenon Mastermind (genomic intelligence), and MasterMind Tech (IoT property management). Each requires a tailored observability approach.
+This report provides a blueprint for monitoring these environments, covering:
+Honeywell MASterMind™: Focuses on zero-downtime, SQL backend performance, and receiver/telephony interface monitoring. Genomenon Mastermind: Emphasizes API latency, uptime, and data freshness.</description>
+    </item>
+    
+  </channel>
+</rss>

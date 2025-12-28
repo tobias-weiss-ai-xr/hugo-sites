@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebXR on Dr. GraphWiz AI &amp; XR Consulting and Development Services</title>
+    <link>https://graphwiz.ai/tags/webxr/</link>
+    <description>Recent content in WebXR on Dr. GraphWiz AI &amp; XR Consulting and Development Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Dec 2025 00:00:00 -0100</lastBuildDate><atom:link href="https://graphwiz.ai/tags/webxr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello WebXR: Your Gateway to Immersive Web Experiences</title>
+      <link>https://graphwiz.ai/xr/hello_webxr/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 -0100</pubDate>
+      
+      <guid>https://graphwiz.ai/xr/hello_webxr/</guid>
+      <description>Hello WebXR: Your Gateway to Immersive Web Experiences Hello WebXR showcase technology stack:
+WebXR API for native browser support Three.js for 3D graphics Spatial Audio with Web Audio API Responsive Design for cross-platform Experience the Future of Web XR Hello WebXR demonstrates the power of modern web technologies for creating immersive virtual and augmented reality experiences directly in your browser. No downloads required - just open the page and step into virtual reality!</description>
+    </item>
+    
+  </channel>
+</rss>

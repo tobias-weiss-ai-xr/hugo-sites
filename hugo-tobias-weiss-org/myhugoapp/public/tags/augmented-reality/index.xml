@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>augmented-reality on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/tags/augmented-reality/</link>
+    <description>Recent content in augmented-reality on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 18 Dec 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://tobias-weiss.org/tags/augmented-reality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Extended Reality (XR) Research and Projects</title>
+      <link>https://tobias-weiss.org/xr/</link>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/</guid>
+      <description>Explore my research into the intersection of emerging technologies and their impact on human-computer interaction. My work focuses on Extended Reality (XR), encompassing Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR), with a particular emphasis on their application in commercial and educational contexts.
+Core Research Areas: 1. Digital Sovereignty in AI &amp;amp; XR Investigating the socio-technical implications of AI and XR, focusing on open-source infrastructure, privacy-preserving analytics, and mitigating vendor lock-in.</description>
+    </item>
+    
+  </channel>
+</rss>

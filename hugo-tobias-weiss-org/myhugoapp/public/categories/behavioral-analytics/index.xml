@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>behavioral-analytics on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</title>
+    <link>https://tobias-weiss.org/categories/behavioral-analytics/</link>
+    <description>Recent content in behavioral-analytics on Tobias Weiss - AI Research &amp; Leadership | XR Development &amp; Technology Innovation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 13 Nov 2023 00:00:00 -0100</lastBuildDate><atom:link href="https://tobias-weiss.org/categories/behavioral-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behavioral Graphs: Enhancing XR Interaction</title>
+      <link>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 -0100</pubDate>
+      
+      <guid>https://tobias-weiss.org/xr/behavioral-graphs-in-xr/</guid>
+      <description>Behavioral Graphs (BGs) represent an innovative extension to platforms like Mozilla Hubs, designed to enrich XR environments with interactive features 📊. We believe BGs offer a significant advancement beyond traditional &amp;ldquo;gallery-like&amp;rdquo; scenes, pushing the boundaries of user engagement in virtual spaces 🌌.
+What are Behavioral Graphs? 🧠 Behavioral Graphs are dynamic, data-driven systems that analyze and respond to user actions within XR environments. They enable more personalized and interactive experiences by modeling user behavior and providing context-aware assistance or content 🤖.</description>
+    </item>
+    
+  </channel>
+</rss>
