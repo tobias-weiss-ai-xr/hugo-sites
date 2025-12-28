@@ -72,8 +72,3 @@ hightlightjs = true
     identifier = "leadership"
     weight = 350
     url = "/leadership/"
-[[menu.main]]
-    name = "pretty good privacy"
-    weight = 400
-    identifier = "pgp"
-    url = "/pgp/"
