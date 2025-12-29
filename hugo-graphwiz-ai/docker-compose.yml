@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   hugo-graphwiz-ai:
     build: .
@@ -12,7 +10,7 @@ services:
       - ./myhugoapp:/app/myhugoapp
       - ./public:/app/myhugoapp/public
     ports:
-      - "1313:1313"
+      - "1314:1313"
     environment:
       - HUGO_BASEURL=https://${HUGO_DOMAIN:-graphwiz.ai}
     labels:
