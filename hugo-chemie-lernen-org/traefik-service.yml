@@ -1,0 +1,43 @@
+# Service configuration to add to existing Traefik setup at /opt/git/docker-traefik
+# Add this service to your existing docker-compose.yml
+
+services:
+  chemie-lernen:
+    image: nginx:alpine
+    container_name: chemie-lernen
+    restart: unless-stopped
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      # HTTP routing with automatic HTTPS redirect
+      - "traefik.http.routers.chemie-lernen-http.rule=Host(`chemie-lernen.org`) || Host(`www.chemie-lernen.org`)"
+      - "traefik.http.routers.chemie-lernen-http.entrypoints=web"
+      - "traefik.http.routers.chemie-lernen-http.middlewares=redirect-to-https"
+      # HTTPS routing
+      - "traefik.http.routers.chemie-lernen.rule=Host(`chemie-lernen.org`) || Host(`www.chemie-lernen.org`)"
+      - "traefik.http.routers.chemie-lernen.entrypoints=websecure"
+      - "traefik.http.routers.chemie-lernen.tls=true"
+      - "traefik.http.routers.chemie-lernen.tls.certresolver=letsencrypt"
+      # Service definition
+      - "traefik.http.services.chemie-lernen.loadbalancer.server.port=80"
+      # Security headers
+      - "traefik.http.middlewares.chemie-lernen-headers.headers.customrequestheaders.X-Frame-Options=SAMEORIGIN"
+      - "traefik.http.middlewares.chemie-lernen-headers.headers.customrequestheaders.X-Content-Type-Options=nosniff"
+      - "traefik.http.middlewares.chemie-lernen-headers.headers.customrequestheaders.X-XSS-Protection=1;mode=block"
+      - "traefik.http.routers.chemie-lernen.middlewares=chemie-lernen-headers"
+
+# Instructions:
+# 1. SSH to the server: ssh root@v22290
+# 2. Navigate to Traefik: cd /opt/git/docker-traefik
+# 3. Backup current config: cp docker-compose.yml docker-compose.yml.backup
+# 4. Edit docker-compose.yml and add the chemie-lernen service above
+# 5. Create nginx.conf: nano nginx.conf (see below for content)
+# 6. Build the site locally first:
+#    cd ~/git/hugo-sites/hugo-chemie-lernen-org/myhugoapp
+#    hugo --minify
+#    rsync -av public/ root@v22290:/opt/git/docker-traefik/chemie-lernen/public/
+# 7. Start service: docker compose up -d

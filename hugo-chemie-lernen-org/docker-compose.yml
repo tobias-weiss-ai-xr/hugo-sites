@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  traefik:
+    image: traefik:v2.10
+    container_name: traefik
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"  # Traefik dashboard
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik/acme.json:/acme.json:rw
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.rule=Host(`traefik.local`)"
+      - "traefik.http.routers.dashboard.service=api@internal"
+      - "traefik.http.routers.dashboard.middlewares=auth"
+      - "traefik.http.middlewares.auth.basicauth.users=admin:$$apr1$$h6xi4k9s.$$hE7yxpPYZHqJF/qjKJ3q.0"
+
+  chemie-lernen:
+    image: nginx:alpine
+    container_name: chemie-lernen
+    restart: unless-stopped
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.chemie-lernen.rule=Host(`chemie-lernen.local`) || Host(`www.chemie-lernen.local`)"
+      - "traefik.http.routers.chemie-lernen.entrypoints=websecure"
+      - "traefik.http.routers.chemie-lernen.tls.certresolver=letsencrypt"
+      - "traefik.http.services.chemie-lernen.loadbalancer.server.port=80"
+      # Redirect HTTP to HTTPS
+      - "traefik.http.routers.chemie-lernen-http.rule=Host(`chemie-lernen.local`) || Host(`www.chemie-lernen.local`)"
+      - "traefik.http.routers.chemie-lernen-http.entrypoints=web"
+      - "traefik.http.routers.chemie-lernen-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
+networks:
+  proxy:
+    external: true

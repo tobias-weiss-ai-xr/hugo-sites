@@ -131,6 +131,131 @@ let controls;
 const objects = [];
 const targets = { table: [], sphere: [], helix: [], grid: [] };
 
+<<<<<<< Updated upstream
+=======
+// German Wikipedia name mappings (English -> German)
+const germanNames = {
+    'Hydrogen': 'Wasserstoff',
+    'Helium': 'Helium',
+    'Lithium': 'Lithium',
+    'Beryllium': 'Beryllium',
+    'Boron': 'Bor',
+    'Carbon': 'Kohlenstoff',
+    'Nitrogen': 'Stickstoff',
+    'Oxygen': 'Sauerstoff',
+    'Fluorine': 'Fluor',
+    'Neon': 'Neon',
+    'Sodium': 'Natrium',
+    'Magnesium': 'Magnesium',
+    'Aluminium': 'Aluminium',
+    'Silicon': 'Silicium',
+    'Phosphorus': 'Phosphor',
+    'Sulfur': 'Schwefel',
+    'Chlorine': 'Chlor',
+    'Argon': 'Argon',
+    'Potassium': 'Kalium',
+    'Calcium': 'Calcium',
+    'Scandium': 'Scandium',
+    'Titanium': 'Titan',
+    'Vanadium': 'Vanadium',
+    'Chromium': 'Chrom',
+    'Manganese': 'Mangan',
+    'Iron': 'Eisen',
+    'Cobalt': 'Kobalt',
+    'Nickel': 'Nickel',
+    'Copper': 'Kupfer',
+    'Zinc': 'Zink',
+    'Gallium': 'Gallium',
+    'Germanium': 'Germanium',
+    'Arsenic': 'Arsen',
+    'Selenium': 'Selen',
+    'Bromine': 'Brom',
+    'Krypton': 'Krypton',
+    'Rubidium': 'Rubidium',
+    'Strontium': 'Strontium',
+    'Yttrium': 'Yttrium',
+    'Zirconium': 'Zircon',
+    'Niobium': 'Niob',
+    'Molybdenum': 'Molybdän',
+    'Technetium': 'Technetium',
+    'Ruthenium': 'Ruthenium',
+    'Rhodium': 'Rhodium',
+    'Palladium': 'Palladium',
+    'Silver': 'Silber',
+    'Cadmium': 'Cadmium',
+    'Indium': 'Indium',
+    'Tin': 'Zinn',
+    'Antimony': 'Antimon',
+    'Tellurium': 'Tellur',
+    'Iodine': 'Iod',
+    'Xenon': 'Xenon',
+    'Caesium': 'Caesium',
+    'Barium': 'Barium',
+    'Lanthanum': 'Lanthan',
+    'Cerium': 'Cer',
+    'Praseodymium': 'Praseodym',
+    'Neodymium': 'Neodym',
+    'Promethium': 'Promethium',
+    'Samarium': 'Samarium',
+    'Europium': 'Europium',
+    'Gadolinium': 'Gadolinium',
+    'Terbium': 'Terbium',
+    'Dysprosium': 'Dysprosium',
+    'Holmium': 'Holmium',
+    'Erbium': 'Erbium',
+    'Thulium': 'Thulium',
+    'Ytterbium': 'Ytterbium',
+    'Lutetium': 'Lutetium',
+    'Hafnium': 'Hafnium',
+    'Tantalum': 'Tantal',
+    'Tungsten': 'Wolfram',
+    'Rhenium': 'Rhenium',
+    'Osmium': 'Osmium',
+    'Iridium': 'Iridium',
+    'Platinum': 'Platin',
+    'Gold': 'Gold',
+    'Mercury': 'Quecksilber',
+    'Thallium': 'Thallium',
+    'Lead': 'Blei',
+    'Bismuth': 'Bismut',
+    'Polonium': 'Polonium',
+    'Astatine': 'Astat',
+    'Radon': 'Radon',
+    'Francium': 'Francium',
+    'Radium': 'Radium',
+    'Actinium': 'Actinium',
+    'Thorium': 'Thorium',
+    'Protactinium': 'Protactinium',
+    'Uranium': 'Uran',
+    'Neptunium': 'Neptunium',
+    'Plutonium': 'Plutonium',
+    'Americium': 'Americium',
+    'Curium': 'Curium',
+    'Berkelium': 'Berkelium',
+    'Californium': 'Californium',
+    'Einstenium': 'Einsteinium',
+    'Fermium': 'Fermium',
+    'Mendelevium': 'Mendelevium',
+    'Nobelium': 'Nobelium',
+    'Lawrencium': 'Lawrencium',
+    'Rutherfordium': 'Rutherfordium',
+    'Dubnium': 'Dubnium',
+    'Seaborgium': 'Seaborgium',
+    'Bohrium': 'Bohrium',
+    'Hassium': 'Hassium',
+    'Meitnerium': 'Meitnerium',
+    'Darmstadium': 'Darmstadium',
+    'Roentgenium': 'Roentgenium',
+    'Copernicium': 'Copernicium',
+    'Nihonium': 'Nihonium',
+    'Flerovium': 'Flerovium',
+    'Moscovium': 'Moscovium',
+    'Livermorium': 'Livermorium',
+    'Tennessine': 'Tenness',
+    'Oganesson': 'Oganesson'
+};
+
+>>>>>>> Stashed changes
 // Responsive centering configuration
 let tableOffsetX = -1330;
 let tableOffsetY = 990;
@@ -234,9 +359,20 @@ function init() {
         element.appendChild( symbol );
 
         element.style.cursor = 'pointer';
+<<<<<<< Updated upstream
         element.onclick = () => {
             window.open(`https://de.wikipedia.org/wiki/${table[i+1]}`, '_blank');
         };
+=======
+        element.title = `📖 Doppelklick für Wikipedia: ${table[i+1]}`;
+
+        // Double-click to open German Wikipedia
+        element.addEventListener('dblclick', () => {
+            const englishName = table[i+1];
+            const germanName = germanNames[englishName] || englishName;
+            window.open(`https://de.wikipedia.org/wiki/${encodeURIComponent(germanName)}`, '_blank');
+        });
+>>>>>>> Stashed changes
 
         const details = document.createElement( 'div' );
         details.className = 'details';

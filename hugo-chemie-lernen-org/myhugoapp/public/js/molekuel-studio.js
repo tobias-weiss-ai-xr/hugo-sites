@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 
+<<<<<<< Updated upstream
 // Set loaded flag immediately to prevent timeout
 console.log('Molekülstudio script loaded');
 window.moleculeStudioLoaded = true;
@@ -9,6 +10,11 @@ window.addEventListener('error', (e) => {
     console.error('Global error:', e.error);
     // Don't set moleculeStudioLoaded to false on global errors
     // The script is loaded, even if there's a runtime error
+=======
+// Error handler
+window.addEventListener('error', (e) => {
+    console.error('Global error:', e.error);
+>>>>>>> Stashed changes
 });
 
 window.addEventListener('unhandledrejection', (e) => {
@@ -17,10 +23,13 @@ window.addEventListener('unhandledrejection', (e) => {
 
 console.log('Molekülstudio script loaded');
 
+<<<<<<< Updated upstream
 // Global flag to track initialization
 window.moleculeStudioInitialized = false;
 window.moleculeStudioError = null;
 
+=======
+>>>>>>> Stashed changes
 // Globale Variablen (Modul-Scope)
 let scene, camera, renderer;
 let moleculeGroup = null;
@@ -36,7 +45,10 @@ let errorMessage, welcomeScreen, loadingScreen, controlsInfo, autoRotateCheckbox
 const moleculeData = {
     'Wasser': {
         formula: 'H₂O',
+<<<<<<< Updated upstream
         wikipedia: 'https://de.wikipedia.org/wiki/Wasser',
+=======
+>>>>>>> Stashed changes
         elements: {
             'H': { radius: 0.3, color: '#FFFFFF' },
             'O': { radius: 0.6, color: '#FF0D0D' }
@@ -214,6 +226,7 @@ const moleculeData = {
             { atom1: 'C-14', atom2: 'H-14', type: 'single' },
             { atom1: 'C-14', atom2: 'H-15', type: 'single' }
         ]
+<<<<<<< Updated upstream
     },
     'Ethanol': {
         formula: 'C₂H₅OH',
@@ -957,6 +970,8 @@ const moleculeData = {
             { atom1: 'N-1', atom2: 'H-10', type: 'single' },
             { atom1: 'N-1', atom2: 'H-11', type: 'single' }
         ]
+=======
+>>>>>>> Stashed changes
     }
 };
 
@@ -985,6 +1000,7 @@ function init() {
 
     if (!container || !canvas || !moleculeInput || !visualizeBtn) {
         console.error('Ein oder mehrere Elemente nicht gefunden!');
+<<<<<<< Updated upstream
         showError('Die erforderlichen HTML-Elemente wurden nicht gefunden. Bitte laden Sie die Seite neu.');
         return;
     }
@@ -993,6 +1009,12 @@ function init() {
         console.log('Molekülstudio wird initialisiert...');
         window.moleculeStudioInitialized = true;
         window.moleculeStudioLoaded = true; // Ensure this is set
+=======
+        return;
+    }
+
+    console.log('Molekülstudio wird initialisiert...');
+>>>>>>> Stashed changes
 
     // Scene
     scene = new THREE.Scene();
@@ -1032,6 +1054,7 @@ function init() {
 
     // Animation
     animate();
+<<<<<<< Updated upstream
 
     } catch (error) {
         console.error('Fehler bei der Initialisierung:', error);
@@ -1081,6 +1104,8 @@ function showError(message) {
         errorMessage.textContent = message;
         errorMessage.style.display = 'block';
     }
+=======
+>>>>>>> Stashed changes
 }
 
 function updateRendererSize() {
@@ -1123,17 +1148,25 @@ function setupEventListeners() {
         }
     });
 
+<<<<<<< Updated upstream
     // Suggestion chips - only add listeners if not already added by early-init script
     const chipsWithoutListeners = Array.from(document.querySelectorAll('.suggestion-chip'))
         .filter(chip => !chip.hasAttribute('data-listener-attached'));
 
     chipsWithoutListeners.forEach(chip => {
+=======
+    // Suggestion chips
+    document.querySelectorAll('.suggestion-chip').forEach(chip => {
+>>>>>>> Stashed changes
         chip.addEventListener('click', () => {
             const molecule = chip.dataset.molecule;
             moleculeInput.value = molecule;
             visualizeMolecule(molecule);
         });
+<<<<<<< Updated upstream
         chip.setAttribute('data-listener-attached', 'true');
+=======
+>>>>>>> Stashed changes
     });
 
     // Auto-rotate toggle
@@ -1189,7 +1222,11 @@ function visualizeMolecule(name) {
     const data = moleculeData[name];
 
     if (!data) {
+<<<<<<< Updated upstream
         showError(`Molekül "${name}" nicht gefunden. Versuchen Sie: Wasser, Methan, Ammoniak, Kohlendioxid, Ethen, Ethanol, Essigsäure, Benzol, Acetylen, Koffein, Aspirin, Serotonin, Ozon, Schwefelhexafluorid oder Glucose.`);
+=======
+        showError(`Molekül "${name}" nicht gefunden. Versuchen Sie: Wasser, Methan, Ammoniak, Kohlendioxid oder Ethen.`);
+>>>>>>> Stashed changes
         return;
     }
 
@@ -1269,6 +1306,7 @@ function renderMolecule(data) {
             );
             moleculeGroup.add(cylinder1);
             moleculeGroup.add(cylinder2);
+<<<<<<< Updated upstream
         } else if (bond.type === 'triple') {
             const offset = 0.1;
             const perpendicular = calculatePerpendicular(direction);
@@ -1292,6 +1330,8 @@ function renderMolecule(data) {
             );
             moleculeGroup.add(cylinder1);
             moleculeGroup.add(cylinder2);
+=======
+>>>>>>> Stashed changes
         }
     });
 
@@ -1343,6 +1383,7 @@ function showLoading(show) {
 }
 
 function showMoleculeInfo(data) {
+<<<<<<< Updated upstream
     let infoHtml = 'Formel: ' + data.formula + ' • Atome: ' + data.atoms.length + ' • Bindungen: ' + data.bonds.length;
 
     // Add Wikipedia link if available
@@ -1354,6 +1395,17 @@ function showMoleculeInfo(data) {
     moleculeInfo.style.display = 'block';
 }
 
+=======
+    const info = 'Formel: ' + data.formula + ' • Atome: ' + data.atoms.length + ' • Bindungen: ' + data.bonds.length;
+    moleculeInfo.textContent = info;
+    moleculeInfo.style.display = 'block';
+}
+
+function showError(message) {
+    errorMessage.textContent = message;
+    errorMessage.style.display = message ? 'block' : 'none';
+}
+>>>>>>> Stashed changes
 
 function animate() {
     requestAnimationFrame(animate);
@@ -1381,6 +1433,7 @@ if (document.readyState === 'loading') {
     console.log('DOM already loaded, calling init() immediately');
     init();
 }
+<<<<<<< Updated upstream
 
 // Process any molecules that were queued before the module loaded
 setTimeout(() => {
@@ -1438,3 +1491,5 @@ let queueChecker = setInterval(() => {
 setTimeout(() => {
     clearInterval(queueChecker);
 }, 5000);
+=======
+>>>>>>> Stashed changes
