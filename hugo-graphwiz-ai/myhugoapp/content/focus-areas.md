@@ -11,7 +11,7 @@ showpagemeta = false
 +++
 
 
-GraphWiz is dedicated to transforming complex technology into tangible business outcomes 💡. Our expertise spans several key areas crucial for modern enterprise growth:
+graphwiz.ai is dedicated to transforming complex technology into tangible business outcomes 💡. Our expertise spans several key areas crucial for modern enterprise growth:
 
 ---
 

@@ -49,4 +49,4 @@ These implementations showcase how XR environments transform professional develo
 
 As XR hardware advances (lighter, more powerful devices), XR environments are poised to become pervasive interfaces. The paradigm is shifting towards **Spatial Computing**, where digital information is seamlessly integrated into our physical surroundings.
 
-At **Dr. GraphWiz**, we champion the development of open and sovereign XR environments, empowering users and businesses to control their digital futures.
+At **graphwiz.ai**, we champion the development of open and sovereign XR environments, empowering users and businesses to control their digital futures.

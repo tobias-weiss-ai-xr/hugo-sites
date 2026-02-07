@@ -4,28 +4,28 @@ date = "2025-12-19T00:00:00-01:00"
 draft = false
 slug = "workshops"
 tags = ["workshops", "innovation", "collaboration", "digital-strategy", "future-readiness"]
-title = "Dr. GraphWiz at CoCreate: Advancing Open Science and Collaboration"
+title = "graphwiz.ai: Advancing Digital Sovereignty and Fostering Public Discourse"
 comments = false
 showcomments = false
 showpagemeta = false
 +++
 
 
-Dr. GraphWiz recently participated in the **CoCreate: Open Science** workshop at Philipps-Universität Marburg 🏛️. This event convened researchers, students, and administrators to foster dialogue on the future of transparent and collaborative research practices 🤝.
+graphwiz.ai is pushing the boundaries of digital sovereignty and fostering public discourse on the future of transparent and collaborative research practices 🤝.
 
-## Key Takeaways and Contributions 🔑:
+At Philipps-Universität Marburg, graphwiz.ai engaged with researchers, students, and administrators to advance the conversation on open, user-controlled digital ecosystems 🏛️. This initiative highlights our commitment to driving meaningful dialogue around digital autonomy and data empowerment.
 
-*   **Promoting Open Science:** The workshop emphasized practical strategies for integrating Open Science principles into research and education, focusing on reproducibility and accessibility 📖.
-*   **Showcasing Innovation:** Dr. GraphWiz presented projects centered on **data sovereignty** and transparency, demonstrating our commitment to open and user-controlled digital environments 💡.
-*   **Community Building:** Engaging with the Marburg research community fostered valuable connections and potential for future collaborations in driving Open Science initiatives 🌍.
+## Key Contributions 🔑:
 
-## Workshop Materials 📄
+*   **Advancing Digital Sovereignty:** graphwiz.ai presented innovative approaches to data sovereignty and transparency, demonstrating practical implementations of open and user-controlled digital environments 💡.
+*   **Fostering Public Discourse:** By engaging with the academic community, we're helping shape the conversation around digital rights, autonomous infrastructure, and community-driven innovation strategies 🌍.
+*   **Building Bridges:** Connecting with researchers and administrators creates valuable opportunities for collaboration in advancing digital sovereignty initiatives and open science methodologies 📖.
 
-### CoCreate Workshop Documentation
+## Presentation Materials 📄
 
-**Download the complete CoCreate workshop presentation:**
+**Download the digital sovereignty presentation:**
 
-🔗 [CoCreate: Digitale Souveränität Workshop (PDF)](/data/CoCreate-Werkstattgespraech-Digitale-Souveraenitaet_75dpi.pdf)
+🔗 [Digital Sovereignty Workshop (PDF)](/data/CoCreate-Werkstattgespraech-Digitale-Souveraenitaet_75dpi.pdf)
 
 This presentation covers:
 - Digital sovereignty principles and implementation
@@ -38,4 +38,4 @@ This presentation covers:
 
 ---
 
-Dr. GraphWiz remains dedicated to the principles of Open Science and Digital Sovereignty, actively seeking opportunities to collaborate with academic institutions and partners to advance these critical areas 🚀.
+graphwiz.ai remains dedicated to the principles of Digital Sovereignty and Open Science, actively seeking opportunities to collaborate with academic institutions and partners to advance these critical areas 🚀.
